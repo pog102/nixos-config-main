@@ -6,23 +6,23 @@
 {
   imports =
     [ ../../system/hardware-configuration.nix
-      ../../system/hardware/systemd.nix # systemd config
+  #    ../../system/hardware/systemd.nix # systemd config
       ../../system/hardware/kernel.nix # Kernel config
       ../../system/hardware/power.nix # Power management
       ../../system/hardware/time.nix # Network time sync
-      ../../system/hardware/opengl.nix
-      ../../system/hardware/printing.nix
+    #  ../../system/hardware/opengl.nix
+    #  ../../system/hardware/printing.nix
       ../../system/hardware/bluetooth.nix
       (./. + "../../../system/wm"+("/"+wm)+".nix") # My window manager
-      ../../system/app/flatpak.nix
-      ../../system/app/virtualization.nix
+     # ../../system/app/flatpak.nix
+     # ../../system/app/virtualization.nix
       ( import ../../system/app/docker.nix {storageDriver = "btrfs"; inherit userSettings lib;} )
       ../../system/security/doas.nix
       ../../system/security/gpg.nix
-      ../../system/security/blocklist.nix
-      ../../system/security/firewall.nix
-      ../../system/security/firejail.nix
-      ../../system/security/openvpn.nix
+     # ../../system/security/blocklist.nix
+     # ../../system/security/firewall.nix
+     # ../../system/security/firejail.nix
+     # ../../system/security/openvpn.nix
       ../../system/security/automount.nix
       ../../system/style/stylix.nix
     ];
@@ -80,7 +80,7 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
-    vim
+    nvim
     wget
     zsh
     git
