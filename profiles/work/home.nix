@@ -48,8 +48,6 @@
     mate.atril
     xournalpp
     glib
-    newsflash
-    protonmail-bridge
     texliveSmall
    
    
