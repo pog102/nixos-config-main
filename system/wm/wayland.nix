@@ -3,7 +3,7 @@
 {
   imports = [ ./pipewire.nix
               ./dbus.nix
-              ./gnome-keyring.nix
+          #    ./gnome-keyring.nix
               ./fonts.nix
             ];
 
@@ -16,7 +16,7 @@
     xkbVariant = "";
     xkbOptions = "caps:escape";
     displayManager.gdm = {
-      enable = true;
+      enable = false;
       wayland = true;
     };
   };

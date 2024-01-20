@@ -23,7 +23,6 @@
     dmenu
     rofi
     git
-    syncthing
 
     # Media
     tuxpaint

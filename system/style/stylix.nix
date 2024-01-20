@@ -36,9 +36,9 @@ in
     };
   };
 
-  stylix.targets.lightdm.enable = true;
+  stylix.targets.lightdm.enable = false;
   services.xserver.displayManager.lightdm = {
-      greeters.slick.enable = true;
+      greeters.slick.enable = false;
       greeters.slick.theme.name = myLightDMTheme;
   };
   stylix.targets.console.enable = true;
