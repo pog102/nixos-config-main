@@ -8,13 +8,15 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../pkgs/nvidia/nvidia.nix
 	# inputs.home-manager.nixosModules.default
     ];
 
-  # Bootloader.
-  #boot.loader.grub.enable = true;
- # boot.loader.grub.device = "/dev/sda";
- # boot.loader.grub.useOSProber = true;
+# Bootloader.
+# boot.loader.grub.enable = true;
+# boot.loader.grub.device = "nodev";
+# boot.loader.efi.efiSysMountPoint = "/boot";
+#  boot.loader.efi.canTouchEfiVariables = true;
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
