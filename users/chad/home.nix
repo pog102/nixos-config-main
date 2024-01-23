@@ -20,6 +20,7 @@
 	../../pkgs/shell/zsh.nix
 	../../pkgs/git.nix
 	../../pkgs/term/foot.nix
+      ../../pkgs/nvidia/nvidia.nix
  ];
   # The home.packages option allows you to install Nix packages into your
   # environment.

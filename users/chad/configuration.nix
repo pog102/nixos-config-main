@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../pkgs/nvidia/nvidia.nix
+#      ../../pkgs/nvidia/nvidia.nix
 	# inputs.home-manager.nixosModules.default
     ];
 
