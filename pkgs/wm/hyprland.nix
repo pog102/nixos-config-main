@@ -7,8 +7,8 @@ settings ={
 decoration = {
 shadow_offset = "0.5";
 
-};
 
+  };
 "$mod" = "SUPER";
 
 bind = [
@@ -16,8 +16,9 @@ bind = [
        "$mod, D, exec, firefox"
 ];
 
-  };
+};
     xwayland = { enable = true; };
 	systemd.enable = true;
 };
+
 }
