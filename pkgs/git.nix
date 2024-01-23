@@ -4,8 +4,8 @@
 
 programs.git = {
   enable = true;
- userNmae = "Ernestas Damanskis";
- userEmail = "ernestasdamanskis@gmail.com";
+# userNmae = "Ernestas Damanskis";
+# userEmail = "ernestasdamanskis@gmail.com";
 };
 
 }
