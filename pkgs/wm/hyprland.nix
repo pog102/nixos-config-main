@@ -11,9 +11,9 @@ shadow_offset = "0.5";
 
 "$mod" = "SUPER";
 
-bindm = [
-       "$mod,RETURN,exec,foot"
-       "$mod,D,exec,firefox"
+bind = [
+       "$mod, Return, exec, foot"
+       "$mod, D, exec, firefox"
 ];
 
   };

@@ -18,6 +18,7 @@
 	../../pkgs/wm/hyprland.nix
 	../../pkgs/editor/nvim.nix
 	../../pkgs/shell/zsh.nix
+	../../pkgs/git.nix
 	../../pkgs/term/foot.nix
  ];
   # The home.packages option allows you to install Nix packages into your
