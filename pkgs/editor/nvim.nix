@@ -3,7 +3,7 @@
 {
 	imports = [
 		inputs.nixvim.homeManagerModules.nixvim
-		../../pkgs/col2.nix
+		 # ../../pkgs/col2.nix
 	];
 
 	programs.nixvim = {
@@ -14,6 +14,8 @@
 		};
 		colorschemes.base16 = {
 			enable = true;
+		setUpBar = true;
+		useTruecolor = true;
 			# customColorScheme = with config.colorScheme.colors; {
 			# 	base00 = "#${base00}";
 			# 	base01 ="#${base00}";

@@ -2,7 +2,7 @@
 programs.nixvim = {
 		colorschemes.base16 = {
 			customColorScheme =  {
-    base00 = "#16161D";
+    base00 = "#2c313c";
     base01 = "#2c313c";
     base02 = "#3e4451";
     base03 = "#6c7891";
