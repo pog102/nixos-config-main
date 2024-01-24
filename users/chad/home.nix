@@ -15,15 +15,15 @@
 # release notes.
 	home.stateVersion = "23.11"; # Please read the comment before changing.
 		imports = [
-		../../pkgs/color.nix
 			../../pkgs/wm/hyprland.nix
 			../../pkgs/editor/nvim.nix
 			../../pkgs/shell/zsh.nix
+		(if userSettings.wal then ../../pkgs/pywal/pywal.nix else ../../pkgs/color.nix)
 			../../pkgs/git.nix
 			../../pkgs/dunst.nix
 			../../pkgs/term/foot.nix
 			../../pkgs/firefox.nix
-# ../../pkgs/pywal/pywal.nix
+ 
 		] ;
 # The home.packages option allows you to install Nix packages into your
 # environment.
@@ -59,7 +59,8 @@
 # (pkgs.writeShellScriptBin "my-hello" ''
 #   echo "Hello, ${config.home.username}!"
 # '')
-			]++ (if userSettings.wal then [pkgs.pywall] else []);
+			];
+			 # ++ (if userSettings.wal then [pkgs.pywall] else []);
 
 # Home Manager is pretty good at managing dotfiles. The primary way to manage
 # plain files is through 'home.file'.
