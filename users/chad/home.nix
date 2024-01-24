@@ -24,6 +24,7 @@
 			../../pkgs/dunst.nix
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
+			../../pkgs/cursor.nix
 			../../pkgs/firefox.nix
 		] ;
 # The home.packages option allows you to install Nix packages into your
