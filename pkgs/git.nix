@@ -4,8 +4,13 @@
 
 programs.git = {
   enable = true;
-# userNmae = "Ernestas Damanskis";
-# userEmail = "ernestasdamanskis@gmail.com";
+   aliases = {
+      a = "!git add -A && git commit -m 'the usual' && git push";
+      co = "checkout";
+      s = "status";
+    };
+ userName = "Ernestas Damanskis";
+ userEmail = "ernestasdamanskis@gmail.com";
 };
 
 }
