@@ -10,6 +10,7 @@ programs.zsh = {
   shellAliases = {
     ll = "ls -l";
     n = "nvim";
+    ls = "lsd";
     up = "sudo nixos-rebuild switch --flake .#default";
   };
    initExtra = ''

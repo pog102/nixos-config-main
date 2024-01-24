@@ -15,11 +15,12 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
  imports = [
-	../../pkgs/agg.nix
+	# ../../pkgs/agg.nix
 	../../pkgs/wm/hyprland.nix
 	../../pkgs/editor/nvim.nix
 	../../pkgs/shell/zsh.nix
 	../../pkgs/git.nix
+	../../pkgs/dunst.nix
 	../../pkgs/term/foot.nix
 	../../pkgs/firefox.nix
  ];
@@ -29,6 +30,12 @@
     fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+  lsd
+tree
+wl-clipboard
+
+
+  nerdfonts
         dejavu_fonts
 	  liberation_ttf
   fira-code
