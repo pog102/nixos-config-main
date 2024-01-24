@@ -13,6 +13,7 @@
        inputs.nixpkgs.follows = "nixpkgs";
 
      };
+     nix-colors.url = "github:misterio77/nix-colors";
       firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,19 +25,26 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
-    let
+  let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      userSettings = rec {
+      wal = false;
+      name = "chad";
+      };
     in
     {
     
       nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
           modules = [ 
             ./users/chad/configuration.nix
              inputs.home-manager.nixosModules.default
           ];
+          specialArgs = {
+	  inherit inputs;
+	    inherit userSettings;
+	  };
         };
 	};
 

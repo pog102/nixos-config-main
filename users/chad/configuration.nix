@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{userSettings, config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -55,7 +55,9 @@ programs.zsh.enable = true;
 # programs.hyprland.enable = true;
 
 home-manager = {
-extraSpecialArgs = { inherit inputs; };
+extraSpecialArgs = { inherit inputs; 
+inherit userSettings;
+};
 users = {
 "chad" = import ./home.nix;
 };

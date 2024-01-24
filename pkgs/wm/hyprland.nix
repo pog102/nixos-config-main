@@ -1,9 +1,9 @@
-{ config, lib, pkgs, ... }:
+{ config, userSettings, lib, pkgs, ... }:
 
 {
  wayland.windowManager.hyprland = {
     enable = true;
-settings ={
+settings = {
 decoration = {
 ##shadow_offset = "0.5";
 rounding  = 18;
@@ -17,8 +17,7 @@ rounding  = 18;
 
   };
 "$mod" = "SUPER";
-
-
+# source = (if (userSettings.wal) then "~/.config/hypr/myColors.conf" else "~/" );
 monitor = [
 "eDP-1,1920x1080@60,0x0,1"
 "HDMI-A-2,1920x1080@144,1920x0, 1"
