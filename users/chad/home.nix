@@ -15,7 +15,7 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
  imports = [
-	../../pkgs/ags.nix
+	../../pkgs/agg.nix
 	../../pkgs/wm/hyprland.nix
 	../../pkgs/editor/nvim.nix
 	../../pkgs/shell/zsh.nix
