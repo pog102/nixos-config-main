@@ -45,6 +45,7 @@ style = "bg:none fg:#${config.colorScheme.colors.base01}";
 modified = "[󰏬 $count](fg:#FFD700 bg:#${config.colorScheme.colors.base01})";
 staged = "[ $count](fg:#228B22 bg:#${config.colorScheme.colors.base01})";
 deleted = "[ $count](fg:#DE3163 bg:#${config.colorScheme.colors.base01})";
+up_to_date = "";
 };
 cmd_duration = {
 min_time = 1;
