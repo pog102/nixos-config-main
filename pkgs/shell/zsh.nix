@@ -18,10 +18,10 @@ programs.zsh = {
  bindkey '^[[B' history-substring-search-down # or '\eOB'
 # HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
-    PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
-     %F{green}→%f "
-    RPROMPT="%F{red}▂%f%F{yellow}▄%f%F{green}▆%f%F{cyan}█%f%F{blue}▆%f%F{magenta}▄%f%F{white}▂%f"
-    [ $TERM = "dumb" ] && unsetopt zle && PS1='$ '
+    # PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
+    #  %F{green}→%f "
+    # RPROMPT="%F{red}▂%f%F{yellow}▄%f%F{green}▆%f%F{cyan}█%f%F{blue}▆%f%F{magenta}▄%f%F{white}▂%f"
+    # [ $TERM = "dumb" ] && unsetopt zle && PS1='$ '
     '';
     plugins = [
     {

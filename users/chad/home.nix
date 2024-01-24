@@ -20,6 +20,7 @@
 			../../pkgs/editor/nvim.nix
 			../../pkgs/shell/zsh.nix
 			../../pkgs/git.nix
+			../../pkgs/starship.nix
 			../../pkgs/dunst.nix
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
