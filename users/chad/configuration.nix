@@ -84,6 +84,7 @@ users = {
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+   hardware.brillo.enable = true; 
   users.users.chad = {
     isNormalUser = true;
     description = "chad";

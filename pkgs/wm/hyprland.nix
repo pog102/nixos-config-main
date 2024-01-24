@@ -78,7 +78,13 @@ bind = [
 "$mod, down, movefocus, d"
 
 ];
+binde = [
+"CONTROL, right, exec, brillo -q -A 1"
+ "CONTROL, left, exec, brillo -q -U 1 "
+"CONTROL, up, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+"CONTROL, down, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
 
+];
 };
     xwayland = { enable = true; };
 	systemd.enable = true;
