@@ -20,6 +20,41 @@ colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-dark;
 	'';
 
 
+programs.starship.settings = {
+# Prompt symbols 
+character = {
+success_symbol = "[](#a6e3a1 bold)";
+error_symbol = "[](#f38ba8)";
+vicmd_symbol = "[](#f9e2af)";
+};
+directory = {
+format = "[]($style)[ ](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[$path](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)[ ]($style)";
+style = "bg:none fg:#${config.colorScheme.colors.base01}";
+truncation_length = 3;
+truncate_to_repo=false;
+};
+
+git_branch = {
+format = "[]($style)[[ ](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)$branch](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[ ]($style)";
+style = "bg:none fg:#${config.colorScheme.colors.base01}";
+};
+git_status = {
+# $all status$ahead_behind
+format = "[]($style)[$all_status$ahead_behind](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[ ]($style)";
+style = "bg:none fg:#${config.colorScheme.colors.base01}";
+modified = "[󰏬 $count](fg:#FFD700 bg:#${config.colorScheme.colors.base01})";
+staged = "[ $count](fg:#228B22 bg:#${config.colorScheme.colors.base01})";
+deleted = "[ $count](fg:#DE3163 bg:#${config.colorScheme.colors.base01})";
+};
+cmd_duration = {
+min_time = 1;
+# duration & style 
+format = "[]($style)[[ ](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)$duration](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[ ]($style)";
+disabled = false;
+style = "bg:none fg:#${config.colorScheme.colors.base01}";
+
+};
+};
 
 programs.foot.settings = with config.colorScheme.colors; {
 colors = {
