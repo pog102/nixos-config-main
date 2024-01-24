@@ -9,7 +9,8 @@ programs.zsh = {
     syntaxHighlighting.enable = true;
   shellAliases = {
     ll = "ls -l";
-    update = "sudo nixos-rebuild switch --flake .#default";
+    n = "nvim";
+    up = "sudo nixos-rebuild switch --flake .#default";
   };
    initExtra = ''
     PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f

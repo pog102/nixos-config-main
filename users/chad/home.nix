@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -20,12 +20,20 @@
 	../../pkgs/shell/zsh.nix
 	../../pkgs/git.nix
 	../../pkgs/term/foot.nix
-      ../../pkgs/nvidia/nvidia.nix
+	../../pkgs/firefox.nix
+	../../pkgs/ags.nix
  ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
+
+    fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
-  firefox
+        dejavu_fonts
+	  liberation_ttf
+  fira-code
+  fira-code-symbols
+#  firefox
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-#      ../../pkgs/nvidia/nvidia.nix
+      ../../pkgs/nvidia/nvidia.nix
 	# inputs.home-manager.nixosModules.default
     ];
 
@@ -17,9 +17,11 @@
 # boot.loader.grub.device = "nodev";
 # boot.loader.efi.efiSysMountPoint = "/boot";
 #  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+  systemd-boot.enable = true;
+  efi.canTouchEfiVariables = true;
+   systemd-boot.configurationLimit = 3;
+  };
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -35,7 +37,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
+programs.zsh.enable = true;
   # Enable the X11 windowing system.
   #services.xserver.enable = true;
 
@@ -85,6 +87,7 @@ users = {
   users.users.chad = {
     isNormalUser = true;
     description = "chad";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
 #      firefox
