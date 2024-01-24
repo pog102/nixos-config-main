@@ -23,6 +23,7 @@
 	../../pkgs/dunst.nix
 	../../pkgs/term/foot.nix
 	../../pkgs/firefox.nix
+	../../pkgs/brillo.nix
  ];
   # The home.packages option allows you to install Nix packages into your
   # environment.

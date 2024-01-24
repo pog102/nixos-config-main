@@ -88,7 +88,7 @@ users = {
     isNormalUser = true;
     description = "chad";
     shell = pkgs.zsh;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" ];
     packages = with pkgs; [
 #      firefox
 #      kate
