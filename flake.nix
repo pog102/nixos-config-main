@@ -29,7 +29,7 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
       userSettings = rec {
-      wal = true;
+      wal = false;
       name = "chad";
       };
     in

@@ -22,8 +22,8 @@
 			../../pkgs/git.nix
 			../../pkgs/dunst.nix
 			../../pkgs/term/foot.nix
+			../../pkgs/wlsunset.nix
 			../../pkgs/firefox.nix
- 
 		] ;
 # The home.packages option allows you to install Nix packages into your
 # environment.
