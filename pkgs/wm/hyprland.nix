@@ -16,6 +16,15 @@ rounding  = 18;
    };
 
   };
+
+general = {
+    cursor_inactive_timeout = 4;
+    "col.active_border" = "rgba(${config.colorScheme.colors.base0E}ff) rgba(${config.colorScheme.colors.base09}ff) 45deg";
+    "col.inactive_border" = "rgba(${config.colorScheme.colors.base00}ff)";
+    layout = "dwindle";
+};
+
+
 "$mod" = "SUPER";
 # source = (if (userSettings.wal) then "~/.config/hypr/myColors.conf" else "~/" );
 monitor = [
