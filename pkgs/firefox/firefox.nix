@@ -1,93 +1,86 @@
-  { config, pkgs, inputs, ... }:
-  {
-  programs.firefox = {
-    enable = true;
-    profiles.chad = {
+{ inputs, config, lib, pkgs, ... }:
 
-      search.engines = {
-        "Nix Packages" = {
-          urls = [{
-            template = "https://search.nixos.org/packages";
-            params = [
-              { name = "type"; value = "packages"; }
-              { name = "query"; value = "{searchTerms}"; }
-            ];
-          }];
+# with lib;
+# with lib.campground;
+# let
+#   cfg = config.campground.apps.firefox;
+# in
+{
+  # options.campground.apps.firefox = with types; {
+  #   enable = mkBoolOpt false "Whether or not to enable Firefox.";
+  #   cac = mkBoolOpt false "Enable CAC Support";
+  # };
+  #
+  # config = mkIf cfg.enable {
+    # environment.systemPackages = with pkgs; [
+    #   nssTools
+    #   firefox
+    # ];
 
-          icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-          definedAliases = [ "@np" ];
+    programs.firefox = {
+      enable = true;
+      profiles = {
+        default = {
+          id = 0;
+          name = "default";
+          isDefault = true;
+          settings = {
+            "browser.startup.homepage" = "https://duckduckgo.com";
+            "browser.search.defaultenginename" = "Searx";
+            "browser.search.order.1" = "Searx";
+          };
+          search = {
+            force = true;
+            default = "Searx";
+            order = [ "Searx" "Google" ];
+            engines = {
+              "Nix Packages" = {
+                urls = [{
+                  template = "https://search.nixos.org/packages";
+                  params = [
+                    { name = "type"; value = "packages"; }
+                    { name = "query"; value = "{searchTerms}"; }
+                  ];
+                }];
+                icon = "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+                definedAliases = [ "@np" ];
+              };
+              "NixOS Wiki" = {
+                urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
+                iconUpdateURL = "https://nixos.wiki/favicon.png";
+                updateInterval = 24 * 60 * 60 * 1000; # every day
+                definedAliases = [ "@nw" ];
+              };
+              "Searx" = {
+                urls = [{ template = "https://duckduckgo.com/?q={searchTerms}"; }];
+                iconUpdateURL = "https://nixos.wiki/favicon.png";
+                updateInterval = 24 * 60 * 60 * 1000; # every day
+                definedAliases = [ "@dd" ];
+              };
+              "Bing".metaData.hidden = true;
+              "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
+            };
+          };
+          extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+            ublock-origin
+            darkreader
+          ];
         };
       };
-      search.force = true;
-
-      bookmarks = [
-        {
-          name = "wikipedia";
-          tags = [ "wiki" ];
-          keyword = "wiki";
-          url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
-        }
-      ];
-
-      settings = {
-        "dom.security.https_only_mode" = true;
-        "browser.download.panel.shown" = true;
-        "identity.fxaccounts.enabled" = false;
-        "signon.rememberSignons" = false;
-      };
-
-      userChrome = ''                         
-	/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
-   https://github.com/Godiesc/firefox-gx */
-
-/* ############# Required files ############## */
-
-@import url('components/ogx_root.css');
-@import url('components/ogx_root-personal.css');
-@import url('components/ogx_containers.css');
-@import url('components/ogx_tabs-bar.css');
-@import url('components/ogx_urlbar-searchbar.css');
-@import url('components/ogx_windows-controls.css');
-@import url('components/ogx_customize-styles.css');
-@import url('components/ogx_sound.css');
-@import url('components/ogx_arrowpanel.css');
-@import url('components/ogx_contextual-menu.css');
-@import url('components/ogx_notifications.css');
-@import url('components/ogx_close-button.css');
-@import url('components/ogx_button-styles.css');
-@import url('components/ogx_library.css');
-@import url('components/ogx_menu.css');
-@import url('components/ogx_icons.css');
-
-/* ############## Extra Files ###############  */
-
-@import url('components/ogx_left-sidebar.css');
-@import url('components/ogx_oneline.css');
-@import url('components/ogx_tab-shapes.css');
-@import url('components/ogx_tree-tabs.css');
-@import url('components/ogx_autohide_bookmark-bar.css');
-@import url('components/ogx_main-image.css');
-
-/* ############# Your Personal File ##############  */
-
-@import url('components/ogx_tricks.css');
-
-      '';                                      
-userContent = ''
-/* Source file made available under Mozilla Public License v. 2.0 See the main repository for updates as well as full license text. 
-   https://github.com/Godiesc/opera-gx */  
-
-@import url(components/ogx_root-personal.css);
-@import url(components/ogx_UC-newtabpage.css);
-@import url(components/ogx_UC-settings-addons-pages.css);
-@import url(components/ogx_UC-addons-store.css);
-
-                '';
-      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
-      ublock-origin
-      darkreader
-      ];
-
     };
-  };
+    # # TODO: Add things to exploade cac certs and install them into firefox here
+    # campground.services.cac.enable = mkIf cfg.cac true;
   }
+
+
+# TODO: Read this and do something with it
+# https://github.com/NixOS/nixpkgs/issues/171978
+# Firefox needs to be convinced to use p11-kit-proxy by running a command like this:
+#
+# modutil -add p11-kit-proxy -libfile ${p11-kit}/lib/p11-kit-proxy.so -dbdir ~/.mozilla/firefox/*.default
+# I was also able to accomplish the same by making use of extraPolciies when overriding the firefox package:
+#
+#         extraPolicies = {
+#           SecurityDevices.p11-kit-proxy = "${pkgs.p11-kit}/lib/p11-kit-proxy.so";
+#         };
+
