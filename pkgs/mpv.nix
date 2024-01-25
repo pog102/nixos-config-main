@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ self, config, pkgs, ... }:
 
 {
 
@@ -8,7 +8,10 @@ programs.mpv = {
 nixpkgs.overlays = [
   (self: super: {
     mpv = super.mpv.override {
-      scripts = [ self.mpvScripts.mpv_thumbnail_script ];
+      scripts = [ self.mpvScripts.thumbnail
+		# self.mpvScripts.chapterskip
+
+      ];
     };
   })
 ];

@@ -24,6 +24,7 @@
 			../../pkgs/dunst.nix
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
+			../../pkgs/mpv.nix
 			../../pkgs/cursor.nix
 			../../pkgs/firefox.nix
 		] ;
