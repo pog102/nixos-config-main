@@ -1,5 +1,4 @@
 { inputs, config, lib, pkgs, ... }:
-
 {
 
 	imports = [
@@ -40,6 +39,12 @@
 			};
 		};
 		plugins = {
+		gitsigns.enable = true;
+		lint.enable = true;
+		luasnip.enable = true;
+		# fugitive.enable = true;
+		# auto-save.enable = true;
+
 			nvim-colorizer.enable =true;
 			treesitter.enable = true;
 			# surround.enable = true;
