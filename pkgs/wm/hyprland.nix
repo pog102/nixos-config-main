@@ -18,13 +18,21 @@ decoration = {
 rounding  = 18;
    blur = {
 enabled=true;
+ brightness = 1.0;
+        contrast = 1.0;
+        noise = 0.02;
+
+        passes = 3;
+        size = 4;
    # passes = 1;
-   new_optimizations = true;
-   size = "4.8";
    # vibrancy = 0.5;
    # brightness = 1;
    };
-
+ drop_shadow = true;
+      shadow_ignore_window = true;
+      shadow_offset = "0 2";
+      shadow_range = 16;
+      shadow_render_power = 2;
   };
 
 misc = {

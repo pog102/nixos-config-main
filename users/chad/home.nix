@@ -39,6 +39,7 @@
 #      zsh-history-substring-search
 		lsd
 		swww
+		neofetch
 			tree
 			wl-clipboard
 

@@ -3,10 +3,10 @@
 imports = [
 inputs.nix-colors.homeManagerModules.default
 ];
-# colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
  # colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-dark;
 
- colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-storm;
+ # colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-storm;
 	
 
 
@@ -14,8 +14,10 @@ inputs.nix-colors.homeManagerModules.default
  general {
      cursor_inactive_timeout = 4
      col.active_border = rgba(${config.colorScheme.colors.base0E}ff) rgba(${config.colorScheme.colors.base09}ff) 45deg
-     col.inactive_border = rgba(${config.colorScheme.colors.base00}ff)
+     col.inactive_border = rgba(${config.colorScheme.colors.base05}ff)
      layout = dwindle
+      border_size = 3;
+      allow_tearing = true;
  }
 	'';
 
