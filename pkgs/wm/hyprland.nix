@@ -1,9 +1,18 @@
 { config, userSettings, lib, pkgs, ... }:
 
+let 
+start = pkgs.pkgs.writeShellScript "start" ''
+swww init &
+sleep 1
+swww img /home/chad/im.png &
+
+'';
+in
 {
  wayland.windowManager.hyprland = {
     enable = true;
 settings = {
+exec-once= ''${start}'';
 decoration = {
 ##shadow_offset = "0.5";
 rounding  = 18;

@@ -1,24 +1,27 @@
 { inputs, config, lib, pkgs, ... }:
 
 {
+
 	imports = [
 		inputs.nixvim.homeManagerModules.nixvim
-		 # ../../pkgs/col2.nix
+# ../../pkgs/col2.nix
 	];
 
 	programs.nixvim = {
 		enable = true;
+
 		clipboard.providers.wl-copy = {
-		enable = true;
-		package = pkgs.wl-clipboard;
+			enable = true;
+			package = pkgs.wl-clipboard;
 		};
 		colorschemes.base16 = {
 			enable = true;
-		setUpBar = true;
-		useTruecolor = true;
+			setUpBar = true;
+			useTruecolor = true;
 			customColorScheme = with config.colorScheme.colors; {
-				base00 = "#${base00}";
-				base01 ="#${base00}";
+# base00 = "#${base00}";
+				base00 = "";
+				base01 ="#${base01}";
 				base02 ="#${base02}";
 				base03 ="#${base03}";
 				base04 ="#${base04}";
@@ -37,7 +40,10 @@
 			};
 		};
 		plugins = {
-
+			nvim-colorizer.enable =true;
+			treesitter.enable = true;
+			# surround.enable = true;
+			nvim-autopairs.enable = true;
 			telescope.enable = true;
 			comment-nvim.enable = true;
 			lualine.enable = true;
@@ -89,7 +95,7 @@
 
 #environment.variables.EDITOR = "nvim";
 
-  home.sessionVariables = {
-EDITOR = "nvim";
-  };
+	home.sessionVariables = {
+		EDITOR = "nvim";
+	};
 }

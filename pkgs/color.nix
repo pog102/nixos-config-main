@@ -1,16 +1,14 @@
 { lib,inputs,config, pkgs, ... }:
-
 {
 imports = [
 inputs.nix-colors.homeManagerModules.default
 ];
 # colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
-colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-dark;
+ colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-dark;
 	
 
 
 	wayland.windowManager.hyprland.extraConfig = ''
-		source = ~/.cache/wal/hyprland
  general {
      cursor_inactive_timeout = 4
      col.active_border = rgba(${config.colorScheme.colors.base0E}ff) rgba(${config.colorScheme.colors.base09}ff) 45deg

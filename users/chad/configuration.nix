@@ -20,7 +20,7 @@
 	boot.loader = {
 		systemd-boot.enable = true;
 		efi.canTouchEfiVariables = true;
-		systemd-boot.configurationLimit = 3;
+		#systemd-boot.configurationLimit = 3;
 	};
 	networking.hostName = "nixos"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

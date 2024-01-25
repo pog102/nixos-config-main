@@ -35,6 +35,7 @@
 	home.packages = with pkgs; [
 #      zsh-history-substring-search
 		lsd
+		swww
 			tree
 			wl-clipboard
 
