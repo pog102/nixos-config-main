@@ -4,7 +4,7 @@ let
 start = pkgs.pkgs.writeShellScript "start" ''
 swww init &
 sleep 1
-swww img /home/chad/im.png &
+swww img "$(find ~/Pictures/wallpaper -type f | shuf -n 1)" &
 
 '';
 in
@@ -18,9 +18,11 @@ decoration = {
 rounding  = 18;
    blur = {
 enabled=true;
-   passes = 2;
-   new_optimizations = false;
-   size = 6.8;
+   # passes = 1;
+   new_optimizations = true;
+   size = "4.8";
+   # vibrancy = 0.5;
+   # brightness = 1;
    };
 
   };
