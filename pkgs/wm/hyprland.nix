@@ -17,8 +17,7 @@ decoration = {
 ##shadow_offset = "0.5";
 rounding  = 18;
    blur = {
-
-   # blur = 1
+enabled=true;
    passes = 2;
    new_optimizations = false;
    size = 6.8;

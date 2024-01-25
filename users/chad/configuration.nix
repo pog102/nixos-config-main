@@ -51,7 +51,7 @@
 		xkbVariant = "";
 	};
 
-
+# boot.kernelPackages = pkgs.linuxPackages_latest;
 # programs.hyprland.enable = true;
 
 	home-manager = {

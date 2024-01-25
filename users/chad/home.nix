@@ -28,6 +28,7 @@
 			../../pkgs/cursor.nix
 			# ../../pkgs/transmission.nix
 			../../pkgs/firefox/firefox.nix
+			../../pkgs/wallpaper/wallpaper.nix
 		] ;
 # The home.packages option allows you to install Nix packages into your
 # environment.
