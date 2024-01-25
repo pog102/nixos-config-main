@@ -19,6 +19,7 @@ autoload -U compinit
  zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors 
 zstyle ':completion:*' list-colors "$${(s.:.)LS_COLORS}"
+# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -1 $realpath'
 # zstyle ':completion:*:*:cp:*' file-sort modification reverse
 zmodload zsh/complist
 compinit

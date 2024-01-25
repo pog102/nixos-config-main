@@ -38,6 +38,7 @@
 	home.packages = with pkgs; [
 #      zsh-history-substring-search
 		lsd
+		fzf
 		swww
 		neofetch
 			tree
