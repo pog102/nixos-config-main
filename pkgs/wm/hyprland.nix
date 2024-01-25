@@ -1,18 +1,18 @@
 { config, userSettings, lib, pkgs, ... }:
 
-let 
-start = pkgs.pkgs.writeShellScript "start" ''
-swww init &
-sleep 1
-swww img "$(find ~/Pictures/wallpaper -type f | shuf -n 1)" &
-
-'';
-in
+# let 
+# start = pkgs.pkgs.writeShellScript "start" ''
+# swww init &
+# sleep 1
+# swww img "$(find ~/Pictures | shuf -n 1)" &
+# '';
+# in
 {
  wayland.windowManager.hyprland = {
     enable = true;
 settings = {
-exec-once= ''${start}'';
+# exec-once= ''${start}'';
+exec-once="swww init &";
 decoration = {
 ##shadow_offset = "0.5";
 rounding  = 18;
