@@ -58,6 +58,8 @@
 				servers = {
 
 					rnix-lsp.enable = true;
+					bashls.enable = true;
+
 				};
 
 			};
