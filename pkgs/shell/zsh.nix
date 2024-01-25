@@ -14,8 +14,23 @@ programs.zsh = {
     up = "sudo nixos-rebuild switch --flake .#default";
   };
    initExtra = ''
-    bindkey '^[[A' history-substring-search-up # or '\eOA'
- bindkey '^[[B' history-substring-search-down # or '\eOB'
+autoload -U compinit
+
+ zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors 
+zstyle ':completion:*' list-colors "$${(s.:.)LS_COLORS}"
+# zstyle ':completion:*:*:cp:*' file-sort modification reverse
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)	
+
+
+   if [ ! -f /tmp/.neofetch ]; then
+  touch /tmp/.neofetch
+  neofetch
+fi
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 # HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
     # PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
@@ -46,6 +61,8 @@ programs.zsh = {
     #   };
     # }
    ];
+
+
   };
 
   # home.packages = with pkgs; [
