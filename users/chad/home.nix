@@ -26,8 +26,8 @@
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv.nix
 			../../pkgs/cursor.nix
-			../../pkgs/transmission.nix
-			../../pkgs/firefox.nix
+			# ../../pkgs/transmission.nix
+			../../pkgs/firefox/firefox.nix
 		] ;
 # The home.packages option allows you to install Nix packages into your
 # environment.
