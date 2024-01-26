@@ -7,7 +7,7 @@
 
 		settings = {
 
-			color_theme = "Nix";
+			color_theme = "nix";
 
 #* If the theme set background should be shown, set to False if you want terminal background transparency.
 			theme_background = true;
