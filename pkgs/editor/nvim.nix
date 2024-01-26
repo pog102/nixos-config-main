@@ -54,7 +54,13 @@ base0F ="#${base0F}";
                 treesitter.enable = true;
                         # surround.enable = true;
                         nvim-autopairs.enable = true;
-                        telescope.enable = true;
+                        telescope = {
+			enable = true;
+
+
+			# keymaps = {
+			# };
+			};
                         comment-nvim.enable = true;
                         lualine.enable = true;
                         notify.enable = true;
