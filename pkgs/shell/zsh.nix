@@ -52,12 +52,12 @@ bindkey "^[[B" history-beginning-search-forward
 
     {
       # will source zsh-autosuggestions.plugin.zsh
-      name = "notify";
+      name = "auto-notify";
       src = pkgs.fetchFromGitHub {
-        owner = "marzocchi";
-        repo = "zsh-notify";
-        rev = "v1.0";
-        sha256 = "sha256-d0MD3D4xiYVhMIjAW4npdtwHSobq6yEqyeSbOPq3aQM=";
+        owner = "MichaelAquilina";
+        repo = "zsh-auto-notify";
+        rev = "0.8.1";
+        sha256 = "sha256-4PH7g7OY5hASgq4xdswYaCDnys4pz/wyIVkGgaPcgBI=";
       };
     }
    ];
