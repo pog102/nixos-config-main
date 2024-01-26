@@ -44,7 +44,8 @@
 		luasnip.enable = true;
 		# fugitive.enable = true;
 		# auto-save.enable = true;
-nix.enable = true;
+                
+# nix.enable = true;
 auto-session.enable = true;
 surround.enable = true;
 gitblame.enable = true;
@@ -61,7 +62,7 @@ indent-blankline.enable = true;
 				enable = true;
 				servers = {
 
-					# rnix-lsp.enable = true;
+					rnix-lsp.enable = true;
 					bashls.enable = true;
 
 				};
