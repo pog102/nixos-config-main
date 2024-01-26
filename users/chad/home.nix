@@ -26,6 +26,7 @@
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv.nix
 			../../pkgs/cursor.nix
+			../../pkgs/transg.nix
 			../../pkgs/firefox/firefox.nix
 			../../pkgs/wallpaper/wallpaper.nix
 		] ;
