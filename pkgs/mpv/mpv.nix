@@ -6,13 +6,7 @@ programs.mpv = {
   enable = true;
   config = {
 osc="no";
-
-# Idle = {
-profile-cond="p['idle-active']";
-profile-restore = "copy-equal";
-title = " ";
-keepaspect = "no";
-background = 1;
+border = "no";
 
 # };
   };
