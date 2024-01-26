@@ -26,7 +26,6 @@
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv.nix
 			../../pkgs/cursor.nix
-			# ../../pkgs/transmission.nix
 			../../pkgs/firefox/firefox.nix
 			../../pkgs/wallpaper/wallpaper.nix
 		] ;
@@ -51,6 +50,20 @@
 			liberation_ttf
 			fira-code
 			fira-code-symbols
+			  (pkgs.writeShellScriptBin "transadd" ''
+       #!/bin/sh
+       transmission-remote -U --add "$@" && notify-send "Transmission" "Torrent added."
+    '')
+			   (pkgs.makeDesktopItem {
+      name = "torrent";
+      desktopName = "Torrent";
+      exec = "transadd  %U";
+      terminal = false;
+      type = "Application";
+      mimeTypes = ["application/x.bittorrent"
+		"x-scheme-handler/magnet"
+      ];
+    })
 #  firefox
 # # Adds the 'hello' command to your environment. It prints a friendly
 # # "Hello, world!" when run.
@@ -103,6 +116,15 @@
 #
 	home.sessionVariables = {
 	};
+	 xdg.enable = true;
+	 xdg.mime.enable = true;
+  xdg.mimeApps.enable = true;
+    xdg.mimeApps.associations.added = {
+  "application/x.bittorrent" ="torrent.desktop";
+"x-scheme-handler/magnet"="torrent.desktop";
+
+  };
+
 
 # Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
