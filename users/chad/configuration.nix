@@ -16,12 +16,38 @@
 # boot.loader.grub.enable = true;
 # boot.loader.grub.device = "nodev";
 # boot.loader.efi.efiSysMountPoint = "/boot";
+boot.loader = {
+  efi = {
+    canTouchEfiVariables = true;
+    efiSysMountPoint = "/boot"; # ← use the same mount point here.
+  };
+  grub = {
+     efiSupport = true;
+     #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
+     device = "nodev";
+minegrub-theme = {
+        enable = true;
+      };
+     # extraConfig = "set theme=${pkgs.nixos-grub2-theme}";
+# theme=${pkgs.nixos-grub2-theme}/grub/themes/breeze/theme.txt";
+  };
+};
+
+
+
+
+
+
+
+
+
 #  boot.loader.efi.canTouchEfiVariables = true;
-	boot.loader = {
-		systemd-boot.enable = true;
-		efi.canTouchEfiVariables = true;
-		#systemd-boot.configurationLimit = 3;
-	};
+
+	# boot.loader = {
+	# 	systemd-boot.enable = true;
+	# 	efi.canTouchEfiVariables = true;
+	# 	#systemd-boot.configurationLimit = 3;
+	# };
 	networking.hostName = "nixos"; # Define your hostname.
 # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -46,7 +72,8 @@
 # services.xserver.desktopManager.plasma5.enable = true;
 
 # Configure keymap in X11
-	services.xserver = {
+	services.xserver = 
+	{
 		layout = "us";
 		xkbVariant = "";
 	};

@@ -14,6 +14,7 @@
        inputs.nixpkgs.follows = "nixpkgs";
 
      };
+     grub-theme.url = "github:Lxtharia/minegrub-theme";
      nix-colors.url = "github:misterio77/nix-colors";
       firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
@@ -39,6 +40,7 @@
       nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
           modules = [ 
+          inputs.grub-theme.nixosModules.default
             ./users/chad/configuration.nix
              inputs.home-manager.nixosModules.default
           ];
