@@ -37,7 +37,9 @@
 	home.packages = with pkgs; [
 #      zsh-history-substring-search
 		lsd
+		pamixer
 		fzf
+		# papirus-icon-theme
 		libnotify
 		imv
 		swww

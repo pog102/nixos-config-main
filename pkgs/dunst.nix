@@ -57,7 +57,7 @@ urgency_low = {
     horizontal_padding = 24;
 
     # The frame color and width of the notification
-    frame_color = "#2339B6";
+    frame_color = "#${config.colorScheme.colors.base03}";
     frame_width = 0;
 
     # How long a user needs to be idle for sticky notifications
@@ -70,7 +70,7 @@ urgency_low = {
     icons_position = "Left";
     max_icon_size = 77;
     #icon_size = 33
-    # icon_path = /home/chad/.local/share/icons/custom/
+     icon_path = "${pkgs.papirus-icon-theme}/share/icons/Papirus/16x16/apps:${pkgs.papirus-icon-theme}/share/icons/Papirus/16x16/panel";
     word_wrap = "yes";
     ellipsize = "end";
     origin = "top-center";
@@ -83,7 +83,7 @@ urgency_low = {
     progress_bar_frame_width = 1;
     #frame_color = "#1D36C1"
 
-    highlight="#2339B6";
+    highlight="#${config.colorScheme.colors.base06}";
     progress_bar_corner_radius = 20;
     progress_bar_max_corner_radius = 40;
     transparency = 73;

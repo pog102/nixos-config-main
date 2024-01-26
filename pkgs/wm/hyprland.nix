@@ -1,12 +1,42 @@
 { config, userSettings, lib, pkgs, ... }:
 
-# let 
-# start = pkgs.pkgs.writeShellScript "start" ''
-# swww init &
-# sleep 1
-# swww img "$(find ~/Pictures | shuf -n 1)" &
-# '';
-# in
+let 
+bright = pkgs.pkgs.writeShellScript "bright" ''
+
+#!/bin/sh
+brillo -q -$1 1
+
+brightness=$(printf "%.0f\n" $(brillo -G))
+icon="xfpm-brightness-lcd"
+# if [ "$brightness" -gt 70 ]; then
+# 	icon="sun"
+# elif [ "$brightness" -gt 45 ]; then
+# 	icon="sun_half"
+# #elif [  "$brightness" -gt 25  ]; then
+# #	icon="sun_low"
+# else
+# 	icon="sun_emp"
+# fi
+	dunstify -a "mediakeys" -u low -r 50 -h int:value:"$brightness" -i "$icon" "$brightness%" -t 1100
+'';
+
+
+volume = pkgs.pkgs.writeShellScript "volume" ''
+#!/bin/sh
+pamixer -$1 2
+volume=$(pamixer --get-volume)
+noti () {
+dunstify -a "mediakeys" -u low -r 51 -h int:value:"$volume" -i "volume-level-$1"  "$volume%" -t 1100
+}
+if [ $volume -lt 30 ]; then
+	noti low
+elif [ $volume -lt 60 ];then
+	noti medium
+else
+	noti high
+fi
+'';
+in
 {
  wayland.windowManager.hyprland = {
     enable = true;
@@ -108,11 +138,10 @@ bind = [
 
 ];
 binde = [
-"CONTROL, right, exec, brillo -q -A 1"
- "CONTROL, left, exec, brillo -q -U 1 "
-"CONTROL, up, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-"CONTROL, down, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-
+"CONTROL, right, exec, ${bright} A"
+ "CONTROL, left, exec, ${bright} U"
+"CONTROL, up, exec, ${volume} i"
+"CONTROL, down, exec, ${volume} d"
 ];
 };
     xwayland = { enable = true; };
