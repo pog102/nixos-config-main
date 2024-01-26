@@ -25,6 +25,7 @@
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv/mpv.nix
+			../../pkgs/btop.nix
 			../../pkgs/cursor.nix
 			# ../../pkgs/transg.nix
 			../../pkgs/firefox/firefox.nix
