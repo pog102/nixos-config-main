@@ -17,12 +17,12 @@ background = 1;
 # };
   };
 };
-	home.file.".config/mpv/scripts" = {
+	home.file.".config/mpv/scripts/modern.lua" = {
 		recursive = false;
 		source = ./modern.lua;
 	};
 
-	home.file.".config/mpv/fonts" = {
+	home.file.".config/mpv/fonts/Material-Design-Iconic-Font.ttf" = {
 		recursive = false;
 		source = ./Material-Design-Iconic-Font.ttf;
 	};

@@ -14,6 +14,7 @@ programs.zsh = {
     up = "sudo nixos-rebuild switch --flake .#default";
   };
    initExtra = ''
+   export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n")
 autoload -U compinit
 
  zstyle ':completion:*' menu select
