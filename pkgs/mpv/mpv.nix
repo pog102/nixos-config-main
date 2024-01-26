@@ -16,9 +16,9 @@ border = "no";
 		source = ./modern.lua;
 	};
 
-	home.file.".config/mpv/fonts/Material-Design-Iconic-Font.ttf" = {
+	home.file.".config/mpv/fonts/modernx-osc-icon.ttf" = {
 		recursive = false;
-		source = ./Material-Design-Iconic-Font.ttf;
+		source = ./modernx-osc-icon.ttf;
 	};
 
 nixpkgs.overlays = [
