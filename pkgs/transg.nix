@@ -1,9 +1,11 @@
 { inputs, pkgs, ... }:
 {
   # add the home manager module
-  imports = [ inputs.transg-tui.homeManagerModules.default ];
+  imports = [ 
+  # inputs.grub-theme.nixosModules.default
+  inputs.transg-tui.apps ];
 
-  packages.transgression-tui = {
-    enable = true;
-  };
+  # packages.transgression-tui = {
+  #   enable = true;
+  # };
 }

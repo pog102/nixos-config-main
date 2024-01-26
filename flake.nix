@@ -14,7 +14,11 @@
     inputs.nixpkgs.follows = "nixpkgs";
 
   };
-  transg-tui.url = "github:PanAeon/transg-tui";
+  transg-tui = {
+
+  url = "github:PanAeon/transg-tui";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
   grub-theme.url = "github:Lxtharia/minegrub-theme";
   nix-colors.url = "github:misterio77/nix-colors";
   firefox-addons = {
