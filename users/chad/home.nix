@@ -39,6 +39,7 @@
 		lsd
 		fzf
 		libnotify
+		imv
 		swww
 		neofetch
 			tree

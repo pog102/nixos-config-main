@@ -102,6 +102,7 @@ base0F ="#${base0F}";
                       };
                       extraConfigVim = ''
                       set number
+		      set clipboard=unnamedplus
                       '';
                     };
 
