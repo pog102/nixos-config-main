@@ -17,7 +17,6 @@ colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
      col.inactive_border = rgba(${config.colorScheme.colors.base05}ff)
      layout = dwindle
       border_size = 3;
-      allow_tearing = true;
  }
 	'';
 

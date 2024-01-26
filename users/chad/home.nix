@@ -39,6 +39,7 @@
 #      zsh-history-substring-search
 		lsd
 		fzf
+		libnotify
 		swww
 		neofetch
 			tree

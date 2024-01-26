@@ -17,13 +17,11 @@ programs.zsh = {
 autoload -U compinit
 
  zstyle ':completion:*' menu select
-zstyle ':completion:*' list-colors 
-zstyle ':completion:*' list-colors "$${(s.:.)LS_COLORS}"
-# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -1 $realpath'
-# zstyle ':completion:*:*:cp:*' file-sort modification reverse
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)	
+ zstyle ':completion:*' list-colors 
+ zstyle ':completion:*' list-colors "$${(s.:.)LS_COLORS}"
+# zmodload zsh/complist
+# compinit
+# _comp_options+=(globdots)	
 
 
    if [ ! -f /tmp/.neofetch ]; then
@@ -41,26 +39,27 @@ bindkey "^[[B" history-beginning-search-forward
     '';
     profileExtra = "if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then Hyprland; fi";
     plugins = [
-    {
-       name = "zsh-history-substring-search";
-      src = pkgs.fetchFromGitHub {
-      owner = "zsh-users";
-    repo = "zsh-history-substring-search";
-    rev = "v1.1.0";
-    sha256 = "0vjw4s0h4sams1a1jg9jx92d6hd2swq4z908nbmmm2qnz212y88r";
-    };
-    }
 
     # {
-    #   # will source zsh-autosuggestions.plugin.zsh
-    #   name = "zsh-autosuggestions";
+    #    name = "zsh-history-substring-search";
     #   src = pkgs.fetchFromGitHub {
-    #     owner = "zsh-users";
-    #     repo = "zsh-autosuggestions";
-    #     rev = "v0.4.0";
-    #     sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
-    #   };
+    #   owner = "zsh-users";
+    # repo = "zsh-history-substring-search";
+    # rev = "v1.1.0";
+    # sha256 = "0vjw4s0h4sams1a1jg9jx92d6hd2swq4z908nbmmm2qnz212y88r";
+    # };
     # }
+
+    {
+      # will source zsh-autosuggestions.plugin.zsh
+      name = "notify";
+      src = pkgs.fetchFromGitHub {
+        owner = "marzocchi";
+        repo = "zsh-notify";
+        rev = "v1.0";
+        sha256 = "sha256-d0MD3D4xiYVhMIjAW4npdtwHSobq6yEqyeSbOPq3aQM=";
+      };
+    }
    ];
 
 
