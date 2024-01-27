@@ -41,6 +41,7 @@
 #      zsh-history-substring-search
 		lsd
 		pamixer
+		sassc
 		fzf
 		# papirus-icon-theme
 		libnotify

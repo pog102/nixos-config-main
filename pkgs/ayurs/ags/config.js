@@ -9,7 +9,10 @@ import { launcher } from "./modules/launcher/launcher.js";
 // import { Dock } from "./modules/dock/dock.js";
 import { Popups } from "./modules/popups/popups.js";
 
-import { Terminal } from "./modules/terminal/terminal.js";
+import { execAsync, timeout } from 'resource:///com/github/Aylur/ags/utils.js';
+import { notificationPopup } from "./modules/popups/notify.js";
+
+// import { Terminal } from "./modules/terminal/terminal.js";
 
 const criticalPowerNotification = new Gio.Notification();
 criticalPowerNotification.set_title("Battery exhausted");
@@ -65,4 +68,23 @@ export default {
     terminal: 150,
   },
   windows: [Bar(), ControlPanel(), launcher, Popups() /*Terminal()*/],
+};
+
+
+
+
+timeout(100, () => execAsync([
+    'notify-send',
+    'Notification Popup Example',
+    'Lorem ipsum dolor sit amet, qui minim labore adipisicing ' +
+    'minim sint cillum sint consectetur cupidatat.',
+    '-A', 'Cool!',
+    '-i', 'info-symbolic',
+]));
+
+export default {
+    style: App.configDir + '/style.css',
+    windows: [
+        notificationPopup,
+    ],
 };
