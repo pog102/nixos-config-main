@@ -21,7 +21,7 @@
 			../../pkgs/shell/zsh.nix
 			../../pkgs/git.nix
 			../../pkgs/starship.nix
-			../../pkgs/dunst.nix
+			# ../../pkgs/dunst.nix
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv/mpv.nix
