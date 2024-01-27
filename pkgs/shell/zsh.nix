@@ -17,11 +17,27 @@ programs.zsh = {
    export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop")
 export AUTO_NOTIFY_TITLE="%command has just finished"
 export AUTO_NOTIFY_BODY="It completed in %elapsed seconds"
+
+
+
+# Zsh Options
+setopt AUTOCD              # change directory just by typing its name
+setopt PROMPT_SUBST        # enable command substitution in prompt
+setopt MENU_COMPLETE       # Automatically highlight first element of completion menu
+setopt LIST_PACKED		   # The completion menu takes less space.
+setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
+setopt HIST_IGNORE_DUPS	   # Do not write events to history that are duplicates of previous events
+setopt HIST_FIND_NO_DUPS   # When searching history don't display results already cycled through twice
+setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
+
 autoload -U compinit
 
- zstyle ':completion:*' menu select
- zstyle ':completion:*' list-colors 
- zstyle ':completion:*' list-colors "$${(s.:.)LS_COLORS}"
+zstyle ':completion:*' verbose true
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*:default' list-colors $${(s.:.)LS_COLORS}
+zstyle ':completion:*' matcher-list \'\' 'm:{a-zA-Z}={A-Za-z}'
+
+
 # zmodload zsh/complist
 # compinit
 # _comp_options+=(globdots)	

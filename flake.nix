@@ -25,10 +25,10 @@
     url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     inputs.nixpkgs.follows = "nixpkgs";
   };
- #        ags = {
-        # url = "github:Aylur/ags";
- #      inputs.nixpkgs.follows = "nixpkgs";
- #  };
+        ags = {
+        url = "github:Aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
+  };
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -48,6 +48,11 @@
           inputs.grub-theme.nixosModules.default
           ./users/chad/configuration.nix
           inputs.home-manager.nixosModules.default
+	  {
+	  home-manager.extraSpecialArgs = {
+          inherit userSettings;
+	  };
+	  }
         ];
         specialArgs = {
           inherit inputs;
