@@ -27,7 +27,7 @@
 			../../pkgs/mpv/mpv.nix
 			../../pkgs/btop.nix
 			../../pkgs/cursor.nix
-			../../pkgs/ags/ags.nix
+			../../pkgs/ayurs/ags.nix
 			# ../../pkgs/transg.nix
 			../../pkgs/firefox/firefox.nix
 			../../pkgs/wallpaper/wallpaper.nix
