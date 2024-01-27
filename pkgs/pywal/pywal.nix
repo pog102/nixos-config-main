@@ -6,16 +6,16 @@
 			enable = true;
 		};
 
-	 nixvim.extraConfigLua = ''
-	 require("~/.cache/wal/nixvim.lua")
-	 '';
-
+                      # nixvim.path = "/home/chad/.cache/wal/nixvim.lua";
+                      nixvim.extraConfigVim = ''
+	 luafile /home/chad/.cache/wal/nixvim.lua
+                      '';
 	foot.settings.main = {
 	include="~/.cache/wal/foot";
 		};
 	};
 	wayland.windowManager.hyprland.extraConfig = ''
-		source = ~/.cache/wal/hyprland
+		source = /home/chad/.cache/wal/hyprland
 	'';
 
 

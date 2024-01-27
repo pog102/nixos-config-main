@@ -25,7 +25,7 @@
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv/mpv.nix
-			../../pkgs/btop.nix
+			# ../../pkgs/btop.nix
 			../../pkgs/cursor.nix
 			../../pkgs/ayurs/ags.nix
 			# ../../pkgs/transg.nix
