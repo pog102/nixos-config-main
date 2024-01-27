@@ -7,9 +7,14 @@
     enable = true;
 
     # null or path, leave as null if you don't want hm to manage the config
-    configDir = /home/chad/.config/ags;
+        configDir = ../ags;
 
     # additional packages to add to gjs's runtime
     extraPackages = [ pkgs.libsoup_3 ];
   };
+
+	# home.file.".config/ags" = {
+	# 	recursive = true;
+	# 	source = ./config;
+	# };
 }

@@ -34,7 +34,7 @@ autoload -U compinit
 
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:*:*:*' menu select
-zstyle ':completion:*:default' list-colors $${(s.:.)LS_COLORS}
+zstyle ':completion:*:default' list-colors $\{(s.:.)LS_COLORS}
 zstyle ':completion:*' matcher-list \'\' 'm:{a-zA-Z}={A-Za-z}'
 
 
