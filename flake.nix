@@ -36,7 +36,7 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     userSettings = rec {
-      wal = false;
+      theme = "wals";
       name = "chad";
     };
   in

@@ -1,4 +1,4 @@
-{ inputs, config, lib, pkgs, ... }:
+{ userSettings, inputs, config, lib, pkgs, ... }:
 {
 
   imports = [
@@ -8,35 +8,60 @@
 
         programs.nixvim = {
           enable = true;
+	  keymaps = [
+{
+    action = "<cmd>bdelete<CR>";
+    key = "d<Tab>";
+mode = "n";
+    options = {
+      silent = true;
+    };
+  }
+{
+    action = "<cmd>bnext<CR>";
+    key = "<Tab>";
+mode = "n";
+    options = {
+      silent = true;
+    };
+  }
+
+{
+    action = "<cmd>Telescope find_files<CR>";
+    key = "ff";
+mode = "n";
+    options = {
+      silent = true;
+    };
+  }
+{
+    action = "<cmd>Telescope live_grep<CR>";
+    key = "fg";
+mode = "n";
+    options = {
+      silent = true;
+    };
+  }
+	  {
+    action = "<cmd>Telescope oldfiles<CR>";
+    key = "fd";
+mode = "n";
+    options = {
+      silent = true;
+    };
+  }
+];
 
           clipboard.providers.wl-copy = {
             enable = true;
             package = pkgs.wl-clipboard;
           };
+
           colorschemes.base16 = {
-            enable = true;
+            # enable = if userSettings.theme == "wal" then false else true;
+            enable =true;
             setUpBar = true;
             useTruecolor = true;
-            customColorScheme = with config.colorScheme.colors; {
-# base00 = "#${base00}";
-base00 = "";
-base01 ="#${base01}";
-base02 ="#${base02}";
-base03 ="#${base03}";
-base04 ="#${base04}";
-base05 ="#${base05}";
-base06 ="#${base06}";
-base07 ="#${base07}";
-base08 ="#${base08}";
-base09 ="#${base09}";
-base0A ="#${base0A}";
-base0B ="#${base0B}";
-base0C ="#${base0C}";
-base0D ="#${base0D}";
-base0E ="#${base0E}";
-base0F ="#${base0F}";
-
-                        };
                       };
                       plugins = {
                         gitsigns.enable = true;

@@ -5,7 +5,12 @@
 		pywal= {
 			enable = true;
 		};
-		foot.settings.main = {
+
+	 nixvim.extraConfigLua = ''
+	 require("~/.cache/wal/nixvim.lua")
+	 '';
+
+	foot.settings.main = {
 	include="~/.cache/wal/foot";
 		};
 	};
