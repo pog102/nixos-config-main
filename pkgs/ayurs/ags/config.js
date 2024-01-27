@@ -82,9 +82,3 @@ timeout(100, () => execAsync([
     '-i', 'info-symbolic',
 ]));
 
-export default {
-    style: App.configDir + '/style2.css',
-    windows: [
-        notificationPopup,
-    ],
-};
