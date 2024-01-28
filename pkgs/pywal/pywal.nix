@@ -3,7 +3,7 @@
 {
 	programs = {
 	
-   #  starship.enable = true;
+    starship.enable = true;
    # zsh.initExtra = ''
    # '';
 
@@ -30,7 +30,7 @@
 		source = ./template;
 	};
 
-	home.sessionVariables = {
-   STARSHIP_CONFIG="~/.cache/wal/starship";
-	};
+	# home.sessionVariables = {
+ #   STARSHIP_CONFIG="/home/chad/.cache/wal/starship";
+	# };
 }
