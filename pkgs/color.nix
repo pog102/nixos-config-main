@@ -1,12 +1,13 @@
-{ lib,inputs,config, pkgs, ... }:
-{
+{ userSettings,lib,inputs,config, pkgs, ... }:
+{ 
   imports = [
     inputs.nix-colors.homeManagerModules.default
+		../pkgs/starship.nix
   ];
-  # colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+  # colorScheme = inputs.nix-colors.colorSchemes."gruvbox-dark-medium";
  # colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-dark;
 
- colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-storm;
+ colorScheme = inputs.nix-colors.colorSchemes.${userSettings.theme};
 
 
 
@@ -22,42 +23,6 @@
  programs.nixvim.extraConfigLua = ''
 require('base16-colorscheme').setup({["base00"] = "",["base01"] = "#${config.colorScheme.colors.base01}",["base02"] = "#${config.colorScheme.colors.base02}",["base03"] = "#${config.colorScheme.colors.base03}",["base04"] = "#${config.colorScheme.colors.base04}",["base05"] = "#${config.colorScheme.colors.base05}",["base06"] = "#${config.colorScheme.colors.base06}",["base07"] = "#${config.colorScheme.colors.base07}",["base08"] = "#${config.colorScheme.colors.base08}",["base09"] = "#${config.colorScheme.colors.base09}",["base0A"] = "#${config.colorScheme.colors.base0A}",["base0B"] = "#${config.colorScheme.colors.base0B}",["base0C"] = "#${config.colorScheme.colors.base0C}",["base0D"] = "#${config.colorScheme.colors.base0D}",["base0E"] = "#${config.colorScheme.colors.base0E}",["base0F"] = "#${config.colorScheme.colors.base0F}"})
       '';
- programs.starship.settings = {
-# Prompt symbols 
-character = {
-  success_symbol = "[](#a6e3a1 bold)";
-  error_symbol = "[](#f38ba8)";
-  vicmd_symbol = "[](#f9e2af)";
-};
-directory = {
-  format = "[]($style)[ ](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[$path](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)[ ]($style)";
-  style = "bg:none fg:#${config.colorScheme.colors.base01}";
-  truncation_length = 3;
-  truncate_to_repo=false;
-};
-
-git_branch = {
-  format = "[]($style)[[ ](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)$branch](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[ ]($style)";
-  style = "bg:none fg:#${config.colorScheme.colors.base01}";
-};
-git_status = {
-# $all status$ahead_behind
-format = "[]($style)[$all_status$ahead_behind](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[ ]($style)";
-style = "bg:none fg:#${config.colorScheme.colors.base01}";
-modified = "[󰏬 $count](fg:#FFD700 bg:#${config.colorScheme.colors.base01})";
-staged = "[ $count](fg:#228B22 bg:#${config.colorScheme.colors.base01})";
-deleted = "[ $count](fg:#DE3163 bg:#${config.colorScheme.colors.base01})";
-up_to_date = "";
-};
-cmd_duration = {
-  min_time = 1;
-# duration & style 
-format = "[]($style)[[ ](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)$duration](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[ ]($style)";
-disabled = false;
-style = "bg:none fg:#${config.colorScheme.colors.base01}";
-
-};
-};
 
 programs.foot.settings = with config.colorScheme.colors; {
   colors = {

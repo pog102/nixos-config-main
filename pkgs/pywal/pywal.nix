@@ -2,6 +2,11 @@
 
 {
 	programs = {
+	
+   #  starship.enable = true;
+   # zsh.initExtra = ''
+   # '';
+
 		pywal= {
 			enable = true;
 		};
@@ -19,9 +24,13 @@
 	'';
 
 
+
 	home.file.".config/wal/templates" = {
 		recursive = true;
 		source = ./template;
 	};
 
+	home.sessionVariables = {
+   STARSHIP_CONFIG="~/.cache/wal/starship";
+	};
 }

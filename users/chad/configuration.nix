@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../pkgs/nvidia/nvidia.nix
-../../pkgs/transmission.nix
+    ../../pkgs/transmission.nix
 # inputs.home-manager.nixosModules.default
                 ];
 
