@@ -3,13 +3,12 @@
 
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
-# ../../pkgs/col2.nix
         ];
 
         programs.nixvim = {
           enable = true;
 	  keymaps = [
-{
+{ 
     action = "<cmd>bdelete<CR>";
     key = "d<Tab>";
 mode = "n";
@@ -17,7 +16,7 @@ mode = "n";
       silent = true;
     };
   }
-{
+{ 
     action = "<cmd>bnext<CR>";
     key = "<Tab>";
 mode = "n";
@@ -69,11 +68,25 @@ mode = "n";
                         luasnip.enable = true;
                 # fugitive.enable = true;
                 # auto-save.enable = true;
-
                 # nix.enable = true;
                 # auto-session.enable = true;
                 surround.enable = true;
+		# lsp-format.enable = true;
+		# lspkind.enable = true;
+		lspsaga = {
+		enable = true;
+		ui = {
+		lines = ["┗" "┣" "┃" "━" "┏"];
+		devicon = true;
+		impSign = "󰳛";
+		};
+		
+		};
                 gitblame.enable = true;
+		bufferline = {
+		enable = true;
+		alwaysShowBufferline = false;
+		};
                 indent-blankline.enable = true;
                 nvim-colorizer.enable =true;
                 treesitter.enable = true;
@@ -93,7 +106,7 @@ mode = "n";
                           enable = true;
                           servers = {
 
-                            rnix-lsp.enable = true;
+                            nixd.enable = true;
                             bashls.enable = true;
 
                           };
@@ -102,6 +115,17 @@ mode = "n";
                         nvim-cmp = {
                           enable = true;
                           autoEnableSources = true;
+# 			  extraOptions = {
+#
+# window = {
+#  completion = {
+#     border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+#
+#
+#     };
+#     };
+#
+# 			  };
                           sources = [
                             {name = "nvim_lsp";}
                             {name = "path";}
