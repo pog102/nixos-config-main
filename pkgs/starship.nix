@@ -34,11 +34,12 @@ git_branch = {
 git_status = {
 # $all status$ahead_behind
 format = "[]($style)[$all_status$ahead_behind](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[ ]($style)";
-style = "bg:none fg:#${config.colorScheme.colors.base01}";
+# format = "[$all_status$ahead_behind]($style)";
 modified = "[󰏬 $count](fg:#FFD700 bg:#${config.colorScheme.colors.base01})";
 staged = "[ $count](fg:#228B22 bg:#${config.colorScheme.colors.base01})";
 deleted = "[ $count](fg:#DE3163 bg:#${config.colorScheme.colors.base01})";
 up_to_date = "";
+style = "bg:none fg:#${config.colorScheme.colors.base01}";
 };
 cmd_duration = {
   min_time = 1;
@@ -77,6 +78,7 @@ golang.disabled = true;
 conda = {
 format = " [$symbol$environment](dimmed green) ";
 };
+
 git_status = {
 conflicted = "=";
 ahead =	"⇡\${count}";
