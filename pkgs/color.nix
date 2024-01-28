@@ -3,6 +3,7 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
 		../pkgs/starship.nix
+		# ../pkgs/dunst.nix
   ];
   # colorScheme = inputs.nix-colors.colorSchemes."gruvbox-dark-medium";
  # colorScheme = inputs.nix-colors.colorSchemes.tokyo-night-dark;

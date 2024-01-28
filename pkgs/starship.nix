@@ -13,7 +13,15 @@ character = {
   vicmd_symbol = "[](#f9e2af)";
 };
 directory = {
-  format = "[]($style)[ ](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[$path](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)[ ]($style)";
+	substitutions = {
+	" ~/Pictures" = "  Pictures";
+	" ~/.config" = " config";
+	" ~/Downloads" = " Downloads";
+	 "~" = " ~";
+ 
+	};
+  format = "[]($style)(bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[$path](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)[ ]($style)";
+  # format = "[]($style)[ ](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[$path](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)[ ]($style)";
   style = "bg:none fg:#${config.colorScheme.colors.base01}";
   truncation_length = 3;
   truncate_to_repo=false;
@@ -52,6 +60,15 @@ python.disabled = true;
 ruby.disabled = true;
 rust.disabled = true;
 perl.disabled = true;
+# custom.nix = {
+# # command = 'echo foo' # shows output of command
+# detect_files = "['flake.nix']"; # can specify filters but wildcards are not supported
+# # when = ''' test "$HOME" = "$PWD" '''
+# format = "[nix]($style)";
+#
+#
+#
+# };
 package.disabled = true;
 lua.disabled = true;
 nodejs.disabled = true;

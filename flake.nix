@@ -37,9 +37,9 @@
     pkgs = nixpkgs.legacyPackages.${system};
     userSettings = rec {
       # theme = "wal";
- # theme = "tokyo-night-dark";
+ theme = "tokyo-night-dark";
  	# theme="gruvbox-dark-medium";
- 	theme="catppuccin-frappe";
+ 	# theme="catppuccin-frappe";
       name = "chad";
     };
   in
