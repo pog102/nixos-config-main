@@ -130,6 +130,7 @@
 #  /etc/profiles/per-user/chad/etc/profile.d/hm-session-vars.sh
 #
 	home.sessionVariables = {
+	BROWSER="firefox";
 	};
 	 xdg.enable = true;
 	 xdg.mime.enable = true;

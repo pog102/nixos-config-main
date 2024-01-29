@@ -11,6 +11,7 @@ programs.zsh = {
     ll = "ls -l";
     n = "nvim";
     man = "batman";
+    fman = "man -H$BROWSER";
     cat = "prettybat";
     less = "prettybat";
     ls = "lsd";
