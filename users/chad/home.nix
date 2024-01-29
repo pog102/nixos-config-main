@@ -29,7 +29,7 @@
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv/mpv.nix
 			# ../../pkgs/btop.nix
-			../../pkgs/cursor.nix
+			# ../../pkgs/cursor.nix
 			../../pkgs/ayurs/ags.nix
 			# ../../pkgs/transg.nix
 			../../pkgs/firefox/firefox.nix
