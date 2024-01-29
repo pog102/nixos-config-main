@@ -56,10 +56,10 @@ diverged = "⇕⇡${{ahead_count}}⇣${{behind_count}}"
 up_to_date = ""
 untracked = "?${{count}}"
 stashed = "stash"
-modified = "[](bg:none fg:{color0})[󰏬 $count ](fg:#FFD700)[ ](bg:none fg:{color0})"
-staged = "[](bg:none fg:{color0})[ $count ](fg:#228B22)[ ](bg:none fg:{color0})"
-renamed = "[](bg:none fg:{color0})»${{count}}[ ](bg:none fg:{color0})"
-deleted = "[](bg:none fg:{color0})[ $count ](fg:#DE3163)[ ](bg:none fg:{color0})"
+modified = "[](bg:none fg:{color0})[󰏬 $count ](bg:{color0} fg:#FFD700)[ ](bg:none fg:{color0})"
+staged = "[](bg:none fg:{color0})[ $count ](bg:{color0} fg:#228B22)[ ](bg:none fg:{color0})"
+renamed = "[](bg:none fg:{color0})»${{count}}[ ](bg:{color0} fg:{color0})"
+deleted = "[](bg:none fg:{color0})[ $count ](bg:{color0} fg:#DE3163)[ ](bg:none fg:{color0})"
 
 [cmd_duration]
 min_time = 1
