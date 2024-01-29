@@ -63,6 +63,7 @@ mode = "n";
             useTruecolor = true;
                       };
                       plugins = {
+		      noice.enable=true;
                         gitsigns.enable = true;
                         lint.enable = true;
                         luasnip.enable = true;
