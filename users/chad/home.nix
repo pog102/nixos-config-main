@@ -43,6 +43,9 @@
 	home.packages = with pkgs; [
 #      zsh-history-substring-search
 		lsd
+		bat
+		bat-extras.batman
+		bat-extras.prettybat
 		pamixer
 		chafa
 		ripgrep

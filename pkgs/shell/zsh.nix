@@ -10,6 +10,9 @@ programs.zsh = {
   shellAliases = {
     ll = "ls -l";
     n = "nvim";
+    man = "batman";
+    cat = "prettybat";
+    less = "prettybat";
     ls = "lsd";
     up = "sudo nixos-rebuild switch --flake .#default";
   };
