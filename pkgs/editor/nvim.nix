@@ -1,13 +1,12 @@
 { userSettings, inputs, config, lib, pkgs, ... }:
 {
-
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
         ];
-
         programs.nixvim = {
           enable = true;
 	  keymaps = [
+	  
 { 
     action = "<cmd>bdelete<CR>";
     key = "d<Tab>";
@@ -16,6 +15,7 @@ mode = "n";
       silent = true;
     };
   }
+
 { 
     action = "<cmd>bnext<CR>";
     key = "<Tab>";
@@ -72,10 +72,15 @@ mode = "n";
                 # auto-session.enable = true;
                 surround.enable = true;
 		# lsp-format.enable = true;
-		# lspkind.enable = true;
+		lspkind.enable = true;
 		lspsaga = {
 		enable = true;
 		ui = {
+	# 	kind = {
+ # # error_sign = "ss";
+ #
+ #
+	# 	};
 		lines = ["┗" "┣" "┃" "━" "┏"];
 		devicon = true;
 		impSign = "󰳛";
@@ -100,36 +105,78 @@ mode = "n";
 			# };
 			};
                         comment-nvim.enable = true;
-                        lualine.enable = true;
-                        notify.enable = true;
+                        lualine = {
+			enable = true;
+# 			sectionSeparators.left = "";
+# 			sectionSeparators.right = "";
+# 	sections.lualine_a.mode = {
+# separator.left =  "";
+#
+# padding.right = 2;
+# 	};
+
+
+
+# lualine_b = { 'filename', 'branch' };
+#     lualine_c = { 'fileformat' };
+#     lualine_x = {};
+#     lualine_y = { 'filetype', 'progress' },
+#     lualine_z = {
+#       { 'location', separator = { right = '' }, left_padding = 2 },
+#    };
+
+
+			};
+                        notify = {
+			enable = true;
+			backgroundColour = "#000000";
+			};
                         lsp = {
                           enable = true;
                           servers = {
-
+			    # tailwindcss.enable = true;
+			    tsserver.enable = true;
                             nixd.enable = true;
+			    html.enable = true;
                             bashls.enable = true;
+                            cssls.enable = true;
 
                           };
 
                         };
+			cmp_luasnip.enable = true;
+			cmp-nvim-lsp.enable=true;
                         nvim-cmp = {
+			snippet.expand = "luasnip";
+
                           enable = true;
                           autoEnableSources = true;
-# 			  extraOptions = {
+			  extraOptions = {
+     window = {
+        completion = {
+          winhighlight =
+            # "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
+            "FloatBorder:CmpBorder,Normal:CmpBorder";
+	    # winhighlight = "Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None";
+          scrollbar = false;
+          sidePadding = 0;
+          border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+        };
+
+        documentation = {
+          border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+          winhighlight =
+            "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
+            # "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
+        };
+      };
 #
-# window = {
-#  completion = {
-#     border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
-#
-#
-#     };
-#     };
-#
-# 			  };
+			  };
                           sources = [
-                            {name = "nvim_lsp";}
-                            {name = "path";}
-                            {name = "buffer";}
+                            { name = "nvim_lsp"; }
+			        { name = "luasnip"; } #For luasnip users.
+                        { name = "path"; }
+                            { name = "buffer"; }
                           ];
                           mapping = {
                             "<C-Space>" = "cmp.mapping.complete()";
@@ -155,10 +202,19 @@ mode = "n";
                           };
                         };
                       };
-                      extraConfigVim = ''
-                      set number
-		      set clipboard=unnamedplus
-                      '';
+		      options = {
+number = true;
+relativenumber = false;
+showmode = false;
+clipboard="unnamedplus";
+
+
+		      };
+        #               extraConfigVim = ''
+		      # set noshowmode
+        #               set number
+		      # set clipboard=unnamedplus
+        #               '';
                     };
 
 #environment.variables.EDITOR = "nvim";

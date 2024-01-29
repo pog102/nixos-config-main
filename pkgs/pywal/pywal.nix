@@ -4,8 +4,9 @@
 	programs = {
 	
     starship.enable = true;
-   # zsh.initExtra = ''
-   # '';
+   zsh.initExtra = ''
+    export STARSHIP_CONFIG="/home/chad/.cache/wal/starship";
+   '';
 
 		pywal= {
 			enable = true;

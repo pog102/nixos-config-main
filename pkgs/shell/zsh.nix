@@ -18,7 +18,6 @@ programs.zsh = {
 export AUTO_NOTIFY_TITLE="%command has just finished"
 export AUTO_NOTIFY_BODY="It completed in %elapsed seconds"
 
- export STARSHIP_CONFIG="/home/chad/.cache/wal/starship";
 
 
 # Zsh Options

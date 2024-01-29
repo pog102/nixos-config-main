@@ -4,7 +4,11 @@
     
 
     # programs.starship.enable = true;
-    programs.starship.settings = {
+    programs.starship = {
+
+    enable = true;
+
+    settings = {
 
 # Prompt symbols 
 character = {
@@ -91,7 +95,7 @@ renamed = "»\${count}";
 };
 
 
-
+};
 
   
 };
