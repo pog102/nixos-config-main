@@ -37,11 +37,11 @@ git_branch = {
 };
 git_status = {
 # $all status$ahead_behind
-format = "[]($style)[$all_status$ahead_behind](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[ ]($style)";
+format = "[$all_status$ahead_behind](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})";
 # format = "[$all_status$ahead_behind]($style)";
-modified = "[󰏬 $count](fg:#FFD700 bg:#${config.colorScheme.colors.base01})";
-staged = "[ $count](fg:#228B22 bg:#${config.colorScheme.colors.base01})";
-deleted = "[ $count](fg:#DE3163 bg:#${config.colorScheme.colors.base01})";
+modified = "[](bg:none fg:#${config.colorScheme.colors.base01})[󰏬 $count](fg:#FFD700 bg:#${config.colorScheme.colors.base01})[ ](bg:none fg:#${config.colorScheme.colors.base01})";
+staged = "[](bg:none fg:#${config.colorScheme.colors.base01})[ $count](fg:#228B22 bg:#${config.colorScheme.colors.base01})[ ](bg:none fg:#${config.colorScheme.colors.base01})";
+deleted = "[](bg:none fg:#${config.colorScheme.colors.base01})[ $count](fg:#DE3163 bg:#${config.colorScheme.colors.base01})[ ](bg:none fg:#${config.colorScheme.colors.base01})";
 up_to_date = "";
 style = "bg:none fg:#${config.colorScheme.colors.base01}";
 };
