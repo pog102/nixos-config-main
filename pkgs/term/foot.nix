@@ -10,7 +10,13 @@ pad = "20x20";
 dpi-aware="no";
 };
 
-
+ cursor ={
+	 style="beam";
+	# color=<inverse foreground/background>
+	blink=true;
+	 # beam-thickness="1.0";
+	# underline-thickness=<font underline thickness>
+};
  key-bindings = {
  clipboard-copy = "Control+c XF86Copy";
  clipboard-paste = "Control+v XF86Paste";
