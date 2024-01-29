@@ -41,6 +41,11 @@ in
  wayland.windowManager.hyprland = {
     enable = true;
 settings = {
+env = [
+# "LIBVA_DRIVER_NAME,nvidia"
+# "XDG_SESSION_TYPE,wayland"
+"WLR_NO_HARDWARE_CURSORS,1"
+];
 # exec-once= ''${start}'';
 exec-once="swww init &";
 decoration = {
