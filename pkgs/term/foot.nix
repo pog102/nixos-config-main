@@ -5,9 +5,9 @@
   enable = true;
   settings = {
 main = {
-font = "Hack Nerd Font:size=11";
+font = "Hack Nerd Font:size=15";
 pad = "20x20";
-dpi-aware="yes";
+dpi-aware="no";
 };
 
 
