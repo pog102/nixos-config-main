@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if pgrep -x "ags" > /dev/null; then
-  pkill -x "ags"
-fi
-
-/bin/ags &> /dev/null &

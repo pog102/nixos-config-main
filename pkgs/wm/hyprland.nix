@@ -86,6 +86,7 @@ swallow_regex = "^(foot)$";
 monitor = [
 "eDP-1,1920x1080@60,0x0,1"
 "HDMI-A-2,1920x1080@144,1920x0, 1"
+# "HDMI-A-2,1920x1080@144,0x0,1,eDP-1,disable"
 ",preferred,auto,1"
 ];
 animations = {

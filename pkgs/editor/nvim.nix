@@ -8,6 +8,22 @@
 	  keymaps = [
 	  
 { 
+    action = "function() require('dap').toggle_breakpoint()";
+    key = "<F1>";
+mode = "n";
+    options = {
+      silent = true;
+    };
+  }
+{ 
+    action = "function() require('dap').continue()";
+    key = "<F5>";
+mode = "n";
+    options = {
+      silent = true;
+    };
+  }
+{ 
     action = "<cmd>bdelete<CR>";
     key = "d<Tab>";
 mode = "n";
@@ -63,6 +79,42 @@ mode = "n";
             useTruecolor = true;
                       };
                       plugins = {
+		      dap = {
+		      enable = false;
+
+		#       configurations ={ 
+		#       typescript = 
+		#       {
+  #
+		#        name = "Debug with Firefox";
+  # type = "firefox";
+  # request = "launch";
+  # # reAttach = true;
+  # # url = "http://localhost:3000";
+  # # webRoot = '${workspaceFolder}',
+  # # firefoxExecutable = "/usr/bin/firefox";
+		#       };
+		#       };
+
+
+		      # };
+		      adapters.executables.firefox = {
+command = "node";
+
+  args = [ "{os.getenv('HOME') .. '/path/to/vscode-firefox-debug/dist/adapter.bundle.js'}"];
+
+
+		      };
+# 		      adapters.firefox = {
+#   type = "executable";
+#   command = "node";
+#   args ="{os.getenv('HOME') .. '/path/to/vscode-firefox-debug/dist/adapter.bundle.js'}";
+# };
+		      extensions = {
+		      dap-virtual-text.enable = false;
+		      dap-ui.enable = false;
+		      };
+		      };
 		      noice.enable=true;
                         gitsigns.enable = true;
                         lint.enable = true;
@@ -211,6 +263,7 @@ clipboard="unnamedplus";
 
 
 		      };
+		      enableMan = true;
         #               extraConfigVim = ''
 		      # set noshowmode
         #               set number
