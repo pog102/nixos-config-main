@@ -36,9 +36,9 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     userSettings = rec {
-      theme = "wal";
+      # theme = "wal";
  # theme = "tokyo-night-dark";
- 	# theme="gruvbox-dark-medium";
+ 	theme="gruvbox-dark-medium";
  	 # theme="catppuccin-frappe";
       name = "chad";
     };

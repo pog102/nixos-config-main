@@ -25,6 +25,7 @@
 			../../pkgs/shell/zsh.nix
 			../../pkgs/git.nix
 			# ../../pkgs/dunst.nix
+			 ../../pkgs/mako.nix
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv/mpv.nix

@@ -57,12 +57,12 @@ window#notifications box.notifications {
 }
 
 .title {
-    color: #${config.colorScheme.colors.base06};;
+    color: #${config.colorScheme.colors.base05};;
     font-size: 1.4em;
 }
 
 .body {
-    color: #${config.colorScheme.colors.base08};
+    color: #${config.colorScheme.colors.base06};
 }
 
 .actions .action-button {
