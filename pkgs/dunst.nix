@@ -34,7 +34,8 @@ urgency_low = {
 };
       global = {
       
-     font = "Fira Code 13";
+     # font = "Fira Code 13";
+     font = "FiraCode Nerd Font 13";
      corner_radius = 16;
     # Make the width 3740 (3840 - 100), have 50 left margin and 95 above
     follow = "mouse";

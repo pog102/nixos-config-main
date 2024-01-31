@@ -40,7 +40,8 @@
  # theme = "tokyo-night-dark";
  	# theme="gruvbox-dark-medium";
  	# theme="pasque";
- 	theme="eva";
+ 	# theme="eva";
+	 theme="tokyodark"; 
  	 # theme="catppuccin-frappe";
       # name = "chad";
     };

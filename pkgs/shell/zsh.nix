@@ -18,9 +18,9 @@ programs.zsh = {
     up = "sudo nixos-rebuild switch --flake .#default";
   };
    initExtra = ''
-   export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop")
-export AUTO_NOTIFY_TITLE="%command has just finished"
-export AUTO_NOTIFY_BODY="It completed in %elapsed seconds"
+   export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop" "man")
+export AUTO_NOTIFY_TITLE=" : %command"
+export AUTO_NOTIFY_BODY="󱎫 : %elapsed s"
 
 
 
