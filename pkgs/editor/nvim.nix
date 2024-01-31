@@ -6,10 +6,16 @@
         programs.nixvim = {
           enable = true;
 	  autoCmd = [
+
+    {
+      event = [ "bufnewfile" ];
+      pattern = [ "*.nix" ];
+      command = "0r ~/.config/nvim/templates/skel.nix";
+    }
     {
       event = [ "bufnewfile" ];
       pattern = [ "*.sh" ];
-      command = "0r ~/.config/nvim/templates skeleton.sh";
+      command = "0r ~/.config/nvim/templates/skeleton.sh";
     }
   ];
 	  keymaps = [
