@@ -41,8 +41,8 @@
  	# theme="gruvbox-dark-medium";
  	# theme="pasque";
  	# theme="eva";
-	 theme="tokyodark"; 
- 	 # theme="catppuccin-frappe";
+	 # theme="tokyodark"; 
+ 	 theme="catppuccin-frappe";
       # name = "chad";
     };
   in

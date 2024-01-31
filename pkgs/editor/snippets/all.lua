@@ -1,3 +1,7 @@
 return {
-	s("bash", t("#!/bin/sh"))
+	s("bash", 
+	t("#!/bin/sh"),
+	i(0)
+
+	)
 }
