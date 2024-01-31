@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ../../pkgs/nvidia/nvidia.nix
     ../../pkgs/transmission.nix
+    ../pkgs/
 # inputs.home-manager.nixosModules.default
                 ];
 
