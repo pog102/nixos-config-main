@@ -144,7 +144,7 @@ command = "node";
 			fromLua = [
 
 {
-paths = "/home/chad/nvim/snippet";
+paths = "/home/chad/.config/nvim/snippets";
 }
 
 			];
@@ -223,6 +223,7 @@ paths = "/home/chad/nvim/snippet";
 			    html.enable = true;
                             bashls.enable = true;
                             cssls.enable = true;
+			    lua-ls.enable = true;
 
                           };
 
