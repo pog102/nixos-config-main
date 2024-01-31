@@ -139,7 +139,16 @@ command = "node";
 		      noice.enable=true;
                         gitsigns.enable = true;
                         lint.enable = true;
-                        luasnip.enable = true;
+                        luasnip = {
+			enable = true;
+			fromLua = [
+
+{
+paths = "/home/chad/nvim/snippet";
+}
+
+			];
+			};
                 # fugitive.enable = true;
                 # auto-save.enable = true;
                 # nix.enable = true;
@@ -294,6 +303,10 @@ clipboard="unnamedplus";
 
 #environment.variables.EDITOR = "nvim";
 
+	home.file.".config/nvim/snippets" = {
+		recursive = true;
+		source = ./snippets;
+	};
 	home.file.".config/nvim/templates" = {
 		recursive = true;
 		source = ./templates;
