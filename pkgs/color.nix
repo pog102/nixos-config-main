@@ -4,6 +4,7 @@
     inputs.nix-colors.homeManagerModules.default
 		../pkgs/starship.nix
 		../pkgs/dunst.nix
+		../pkgs/genicon.nix
 		# ../pkgs/dunst.nix
   ];
   # colorScheme = inputs.nix-colors.colorSchemes."gruvbox-dark-medium";

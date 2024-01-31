@@ -8,16 +8,16 @@ brillo -q -$1 1
 
 brightness=$(printf "%.0f\n" $(brillo -G))
 icon="xfpm-brightness-lcd"
-# if [ "$brightness" -gt 70 ]; then
-# 	icon="sun"
-# elif [ "$brightness" -gt 45 ]; then
-# 	icon="sun_half"
-# #elif [  "$brightness" -gt 25  ]; then
-# #	icon="sun_low"
-# else
-# 	icon="sun_emp"
-# fi
-	dunstify -a "mediakeys" -u low -r 50 -h int:value:"$brightness" -i "$icon" "$brightness%" -t 1100
+if [ "$brightness" -gt 70 ]; then
+	icon="sun"
+elif [ "$brightness" -gt 45 ]; then
+	icon="sun_half"
+#elif [  "$brightness" -gt 25  ]; then
+#	icon="sun_low"
+else
+	icon="sun_emp"
+fi
+	notify-send -a "mediakeys" -u low -r 50 -h int:value:"$brightness" -i "$icon" "$brightness%" -t 1100
 '';
 
 
@@ -25,16 +25,16 @@ volume = pkgs.pkgs.writeShellScript "volume" ''
 #!/bin/sh
 pamixer -$1 2
 volume=$(pamixer --get-volume)
-noti () {
-dunstify -a "mediakeys" -u low -r 51 -h int:value:"$volume" -i "volume-level-$1"  "$volume%" -t 1100
-}
-if [ $volume -lt 30 ]; then
-	noti low
-elif [ $volume -lt 60 ];then
-	noti medium
-else
-	noti high
-fi
+# noti () {
+notify-send -a "mediakeys" -u low -r 51 -h int:value:"$volume" -i "volume$1"  "$volume%" -t 1100
+# }
+# if [ $volume -lt 30 ]; then
+# 	noti low
+# elif [ $volume -lt 60 ];then
+# 	noti medium
+# else
+# 	noti high
+# fi
 '';
 in
 {
