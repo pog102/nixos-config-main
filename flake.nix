@@ -2,9 +2,9 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   #  nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
-
+nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+nixos.url = "nixpkgs/23.11-beta";
   home-manager = {
     url = "github:nix-community/home-manager";
     inputs.nixpkgs.follows = "nixpkgs";
@@ -65,7 +65,34 @@
           inherit userSettings;
         };
       };
+
+      exampleIso = nixos.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          "${nixos}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+          ({ pkgs, ... }: {
+            environment.systemPackages = [ pkgs.neovim ];
+          })
+        ];
+      };
     };
+
+
+#       system = "x86_64-linux";
+#       modules = [
+#
+#         (nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
+#
+#           inputs.grub-theme.nixosModules.default
+#           ./users/chad/configuration.nix
+#           inputs.home-manager.nixosModules.default
+# 	  {
+# 	  home-manager.extraSpecialArgs = {
+#           inherit userSettings;
+# 	  };
+# 	  }
+#       ];
+#     };
 
   };
 }

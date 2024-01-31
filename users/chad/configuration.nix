@@ -163,6 +163,16 @@ environment.systemPackages = with pkgs; [
 # networking.firewall.allowedUDPPorts = [ ... ];
 # Or disable the firewall altogether.
 # networking.firewall.enable = false;
+
+  nix.gc = {
+  automatic = true;
+  dates = "weekly";
+  options = "--delete-older-than 2d";
+  };
+ system.autoUpgrade.enable = true;
+
+
+
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
 # This value determines the NixOS release from which the default
 # settings for stateful data, like file locations and database versions
