@@ -5,6 +5,13 @@
         ];
         programs.nixvim = {
           enable = true;
+	  autoCmd = [
+    {
+      event = [ "bufnewfile" ];
+      pattern = [ "*.sh" ];
+      command = "0r ~/.config/nvim/templates skeleton.sh";
+    }
+  ];
 	  keymaps = [
 	  
 { 
@@ -281,6 +288,10 @@ clipboard="unnamedplus";
 
 #environment.variables.EDITOR = "nvim";
 
+	home.file.".config/nvim/templates" = {
+		recursive = true;
+		source = ./templates;
+	};
 home.sessionVariables = {
   EDITOR = "nvim";
 };
