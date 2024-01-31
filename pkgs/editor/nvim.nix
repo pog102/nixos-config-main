@@ -1,4 +1,4 @@
-{ userSettings, inputs, config, lib, pkgs, ... }:
+{ userSettings, self, inputs, config, lib, pkgs, ... }:
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
@@ -66,6 +66,14 @@ mode = "n";
     };
   }
 ];
+# 	  extraPlugins = with pkgs.vimPlugins; [
+# skel-nvim
+# # comment-nvim
+# # {
+# # plugin =skel-nvim;
+# # # config = 
+# # }
+# 	  ];
 
           clipboard.providers.wl-copy = {
             enable = true;

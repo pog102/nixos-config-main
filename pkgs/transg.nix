@@ -1,11 +1,18 @@
-{ inputs, pkgs, ... }:
+{ config,lib, pkgs, ... }:
+# let
 {
-  # add the home manager module
-  imports = [ 
-  # inputs.grub-theme.nixosModules.default
-  inputs.transg-tui.apps.default ];
-
-  # packages.transgression-tui = {
-  #   enable = true;
-  # };
+  home-manager = pkgs.fetchFromGitHub {
+    owner = "PanAeon";
+    repo = "transg-tui";
+    rev = "...";
+    # rev = "main";
+    sha256 = "${lib.fakeSha256}";
+  };
 }
+  # nixos-load = pkgs.callPackage nixos-load-src {};
+# in
+# {
+#    apps.transg-tui = {
+#      enable = true;
+#    };
+# }
