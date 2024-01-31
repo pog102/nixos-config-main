@@ -24,6 +24,10 @@
 		source = /home/chad/.cache/wal/hyprland
 	'';
 
+services.dunst = {
+enable=true;
+configFile="/home/chad/.cache/wal/dunstrc";
+};
 
 
 	home.file.".config/wal/templates" = {

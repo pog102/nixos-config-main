@@ -25,13 +25,13 @@
 			../../pkgs/shell/zsh.nix
 			../../pkgs/git.nix
 			# ../../pkgs/dunst.nix
-			 ../../pkgs/mako.nix
+			 # ../../pkgs/mako.nix
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv/mpv.nix
 			# ../../pkgs/btop.nix
 			../../pkgs/cursor.nix
-			../../pkgs/ayurs/ags.nix
+			# ../../pkgs/ayurs/ags.nix
 			# ../../pkgs/transg.nix
 			../../pkgs/firefox/firefox.nix
 			../../pkgs/wallpaper/wallpaper.nix

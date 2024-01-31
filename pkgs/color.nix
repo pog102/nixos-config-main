@@ -3,6 +3,7 @@
   imports = [
     inputs.nix-colors.homeManagerModules.default
 		../pkgs/starship.nix
+		../pkgs/dunst.nix
 		# ../pkgs/dunst.nix
   ];
   # colorScheme = inputs.nix-colors.colorSchemes."gruvbox-dark-medium";
@@ -12,6 +13,13 @@
 
 
 
+services.dunst = {
+settings = {
+
+
+
+};
+};
  wayland.windowManager.hyprland.extraConfig = ''
  general {
    cursor_inactive_timeout = 4
