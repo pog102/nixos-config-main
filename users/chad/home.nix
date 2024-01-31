@@ -26,6 +26,7 @@
 			../../pkgs/git.nix
 			# ../../pkgs/dunst.nix
 			 # ../../pkgs/mako.nix
+			  ../../pkgs/neofetch.nix
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv/mpv.nix
@@ -56,7 +57,6 @@
 		libnotify
 		imv
 		swww
-		neofetch
 			tree
 			wl-clipboard
 
