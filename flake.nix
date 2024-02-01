@@ -2,7 +2,8 @@
   description = "Nixos config flake";
 
   inputs = {
-  #  nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+  #  nixpkgsops-nix.url = "github:Mic92/sops-nix";s.url = "github:nixos/nixpkgs/nixos-23.11";
+sops-nix.url = "github:Mic92/sops-nix";
 nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 # nixos.url = "nixpkgs/23.11-beta";
   home-manager = {

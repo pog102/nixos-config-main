@@ -10,7 +10,7 @@
     ./hardware-configuration.nix
     ../../pkgs/nvidia/nvidia.nix
     ../../pkgs/transmission.nix
-    ../../pkgs/udev.nix
+    # ../../pkgs/udev.nix
     # ../../pkgs/plymouth.nix
 # inputs.home-manager.nixosModules.default
                 ];
