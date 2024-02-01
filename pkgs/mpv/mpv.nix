@@ -7,10 +7,11 @@ programs.mpv = {
   config = {
 osc = "no";
 border = "no";
-sub-font = "Arial Regular";
+sub-font = "Liberation Mono Regular";
 sub-border-size = 1;
-
-sub-color = "#CDCDCD";
+sub-scale=0.75;
+# sub-color = "#CDCDCD";
+sub-color = "#000000";
 
 sub-shadow = 3;
 

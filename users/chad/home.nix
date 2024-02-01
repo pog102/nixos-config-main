@@ -68,7 +68,7 @@
 			fira-code-symbols
 			  (pkgs.writeShellScriptBin "transadd" ''
        #!/bin/sh
-       transmission-remote -U --add "$@" && notify-send "Transmission" "Torrent added."
+       transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
     '')
 			   (pkgs.makeDesktopItem {
       name = "torrent";
