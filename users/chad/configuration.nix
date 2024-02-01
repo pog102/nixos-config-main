@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ../../pkgs/nvidia/nvidia.nix
     ../../pkgs/transmission.nix
+    ../../pkgs/trans/default.nix
     # ../../pkgs/udev.nix
     # ../../pkgs/plymouth.nix
 # inputs.home-manager.nixosModules.default
@@ -19,6 +20,7 @@
 # boot.loader.grub.enable = true;
 # boot.loader.grub.device = "nodev";
 # boot.loader.efi.efiSysMountPoint = "/boot";
+boot.cleanTmpDir = true;
 boot.loader = {
   efi = {
     canTouchEfiVariables = true;

@@ -9,26 +9,27 @@
 	home.file.".config/neofetch/config.conf".text = 
 		''
 		print_info() {
-    prin "​ ​​ $(color 6)  ​​ ​コンピューター"
-    prin "$(color 16)┌──────────────────────────────────────────┐"
-    info "​ ​ ​​$(color 1)  OS          " distro
-    info "​ ​​ ​$(color 1)  Kernel      " kernel
-    info "​ ​​ ​$(color 2) 󰏓 Packages    " packages
-    info "​ ​​ ​$(color 2)  Shell       " shell
-    info "​ ​​ ​$(color 2) 󰍹 Resolution  " resolution
-    info "​ ​​ ​$(color 3) 󰘔 DE          " de
-    info "​ ​​ ​$(color 3)  Terminal    " term
+    prin "​ ​​ $(color 6)  ​​ ​コンピューター" 
+    prin "$(color 16)┌──────────────────────────────────────────────┐" 
+    info "​ ​ ​​$(color 1)  OS          " distro  
+    info "​ ​​ ​$(color 1)  Kernel      " kernel 
+    info "​ ​​ ​$(color 2) 󰏓 Packages    " packages 
+    info "​ ​​ ​$(color 2)  Shell       " shell 
+    info "​ ​​ ​$(color 2) 󰍹 Resolution  " resolution 
+    info "​ ​​ ​$(color 3) 󰘔 DE          " de 
+    info "​ ​​ ​$(color 3)  Terminal    " term 
+    # info "​ ​​ ​$(color 3)  Theme       " theme 
     prin "​ ​​ ​$(color 3)  Theme       " ${userSettings.theme}
-    prin "$(color 16)└──────────────────────────────────────────┘"
-    prin " "
+    prin "$(color 16)└──────────────────────────────────────────────┘" 
+    prin " " 
     info "​ ​​ ​​​ $(color 6) " title
-    prin "$(color 16)┌──────────────────────────────────────────┐"
-    info "​ ​​ ​$(color 12)  CPU         " cpu
-    info "​ ​​ ​$(color 12)  GPU         " gpu
-    info "​ ​​ ​$(color 13)  GPU Driver  " gpu_driver  
-    info "​ ​​ ​$(color 13) 󰍛﬙ Memory      " memory
-    prin "$(color 16)└──────────────────────────────────────────┘"
-    prin " "
+    prin "$(color 16)┌──────────────────────────────────────────────┐"
+    info "​ ​​ ​$(color 12)  CPU         " cpu 
+    info "​ ​​ ​$(color 12)  GPU         " gpu 
+    info "​ ​​ ​$(color 13)  GPU Driver  " gpu_driver
+    info "​ ​​ ​$(color 13) 󰍛﬙ Memory      " memoy
+    prin "$(color 16)└──────────────────────────────────────────────┘" 
+    prin " " 
     prin "​ ​​ ​​ ​​$(color 1)​ ​​ ​​$(color 2)​ ​​ ​​$(color 3)​ ​​ ​​$(color 4)​ ​​ ​​$(color 5)​ ​​ ​​$(color 6)​ ​​ ​​$(color 7)​ ​​ ​​$(color 8)​ ​​ ​​$(color 16)"
 }
 title_fqdn="off"

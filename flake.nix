@@ -15,11 +15,21 @@ nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     inputs.nixpkgs.follows = "nixpkgs";
 
   };
-  transg-tui = {
+  flake-compat = {
+  url = "github:edolstra/flake-compat";
+  flake = false;
+};
 
-  url = "github:PanAeon/transg-tui";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
+  #  transg-tui = {
+  #   # url = "github:edolstra/flake-compat";
+  #  url = "github:PanAeon/transg-tui";
+  #   flake = false;
+  # };
+  # transg-tui = {
+  #
+  # url = "github:PanAeon/transg-tui";
+  #   inputs.nixpkgs.follows = "nixpkgs";
+  # };
   grub-theme.url = "github:Lxtharia/minegrub-theme";
   nix-colors.url = "github:misterio77/nix-colors";
   firefox-addons = {
@@ -56,6 +66,7 @@ nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
           ./users/chad/configuration.nix
           inputs.home-manager.nixosModules.default
 	  # inputs.transg-tui.packages.transgression-tui #.program
+	  # inputs.transg-tui
 	  # ./pkgs/transg.nix
 	  {
 	  home-manager.extraSpecialArgs = {

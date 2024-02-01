@@ -132,8 +132,29 @@
 #
 	home.sessionVariables = {
 	BROWSER="firefox";
+	THEME="${userSettings.theme}";
 	};
 	 xdg.enable = true;
+	 xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+    music = "${config.home.homeDirectory}/Music";
+    videos = "${config.home.homeDirectory}/Videos";
+    pictures = "${config.home.homeDirectory}/Pictures";
+    # templates = "${config.home.homeDirectory}/Templates";
+    download = "${config.home.homeDirectory}/Downloads";
+    documents = "${config.home.homeDirectory}/Documents";
+    desktop = null;
+    publicShare = null;
+    extraConfig = {
+      XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
+      # XDG_ARCHIVE_DIR = "${config.home.homeDirectory}/Archive";
+      # XDG_VM_DIR = "${config.home.homeDirectory}/Machines";
+      # XDG_ORG_DIR = "${config.home.homeDirectory}/Org";
+      # XDG_PODCAST_DIR = "${config.home.homeDirectory}/Media/Podcasts";
+      XDG_NOTES_DIR = "${config.home.homeDirectory}/Notes";
+    };
+  };
 	 xdg.mime.enable = true;
   xdg.mimeApps.enable = true;
     xdg.mimeApps.associations.added = {
