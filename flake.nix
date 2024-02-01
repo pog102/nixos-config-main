@@ -49,16 +49,15 @@ nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     userSettings = rec {
       # theme = "wal";
  # theme = "tokyo-night-dark";
- 	# theme="gruvbox-dark-medium";
+ 	theme="gruvbox-dark-medium";
  	# theme="pasque";
  	# theme="eva";
 	 # theme="tokyodark"; 
- 	 theme="catppuccin-frappe";
+ 	 # theme="catppuccin-frappe";
       # name = "chad";
     };
   in
   {
-
     nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
         modules = [ 

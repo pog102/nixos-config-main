@@ -137,6 +137,10 @@ bind = [
 "$mod SHIFT, 9, movetoworkspace, 9  "
 "$mod SHIFT, 0, movetoworkspace, 10 "
 
+"$mod SHIFT, left, movewindow, l"
+"$mod SHIFT, right, movewindow, r"
+"$mod SHIFT, up, movewindow, u"
+"$mod SHIFT, down, movewindow, d"
 "$mod, left, movefocus, l"
 "$mod, right, movefocus, r"
 "$mod, up, movefocus, u  "
