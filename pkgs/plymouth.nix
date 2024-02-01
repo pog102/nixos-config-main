@@ -9,6 +9,9 @@ let
   nixos-load = pkgs.callPackage nixos-load-src {};
 in
 {
+boot.initrd.systemd.enable = true;
+boot.kernelParams = ["quiet"];
+
   boot.plymouth = {
     enable = true;
     themePackages = [ nixos-load ];

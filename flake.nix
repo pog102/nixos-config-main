@@ -4,7 +4,7 @@
   inputs = {
   #  nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
 nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-nixos.url = "nixpkgs/23.11-beta";
+# nixos.url = "nixpkgs/23.11-beta";
   home-manager = {
     url = "github:nix-community/home-manager";
     inputs.nixpkgs.follows = "nixpkgs";
@@ -14,11 +14,11 @@ nixos.url = "nixpkgs/23.11-beta";
     inputs.nixpkgs.follows = "nixpkgs";
 
   };
-  # transg-tui = {
-  #
-  # url = "github:PanAeon/transg-tui";
-  #   inputs.nixpkgs.follows = "nixpkgs";
-  # };
+  transg-tui = {
+
+  url = "github:PanAeon/transg-tui";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
   grub-theme.url = "github:Lxtharia/minegrub-theme";
   nix-colors.url = "github:misterio77/nix-colors";
   firefox-addons = {
@@ -54,6 +54,8 @@ nixos.url = "nixpkgs/23.11-beta";
           inputs.grub-theme.nixosModules.default
           ./users/chad/configuration.nix
           inputs.home-manager.nixosModules.default
+	  # inputs.transg-tui.packages.transgression-tui #.program
+	  # ./pkgs/transg.nix
 	  {
 	  home-manager.extraSpecialArgs = {
           inherit userSettings;
@@ -66,33 +68,33 @@ nixos.url = "nixpkgs/23.11-beta";
         };
       };
 
-      exampleIso = nixos.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          "${nixos}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
-          ({ pkgs, ... }: {
-            environment.systemPackages = [ pkgs.neovim ];
-          })
-        ];
-      };
+   #    exampleIso = nixpkgs.lib.nixosSystem {
+   #      system = "x86_64-linux";
+   #      modules = [
+   #        "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix"
+   #        # ({ pkgs, ... }: {
+   #        #   environment.systemPackages = [ pkgs.neovim ];
+			#
+   #        # })
+	  #           inputs.grub-theme.nixosModules.default
+   #        ./users/chad/configuration.nix
+   #        inputs.home-manager.nixosModules.default
+	  # {
+	  # home-manager.extraSpecialArgs = {
+   #        inherit userSettings;
+	  # };
+	  # }
+			#
+   #      ];
+			#
+   #      specialArgs = {
+   #        inherit inputs;
+   #        inherit userSettings;
+   #      };
+   #    };
     };
 
 
-#       system = "x86_64-linux";
-#       modules = [
-#
-#         (nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
-#
-#           inputs.grub-theme.nixosModules.default
-#           ./users/chad/configuration.nix
-#           inputs.home-manager.nixosModules.default
-# 	  {
-# 	  home-manager.extraSpecialArgs = {
-#           inherit userSettings;
-# 	  };
-# 	  }
-#       ];
-#     };
 
   };
 }
