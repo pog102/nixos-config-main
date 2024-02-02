@@ -30,6 +30,7 @@
 			../../pkgs/term/foot.nix
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv/mpv.nix
+			../../pkgs/rofi/rofi.nix
 			# ../../pkgs/btop.nix
 			../../pkgs/cursor.nix
 			# ../../pkgs/ayurs/ags.nix

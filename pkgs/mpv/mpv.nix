@@ -10,8 +10,8 @@ border = "no";
 sub-font = "Liberation Mono Regular";
 sub-border-size = 1;
 sub-scale=0.75;
-# sub-color = "#CDCDCD";
-sub-color = "#000000";
+sub-color = "#FFFFFF";
+# sub-color = "#000000";
 
 sub-shadow = 3;
 
