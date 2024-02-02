@@ -17,6 +17,18 @@ dpi-aware="no";
 	 # beam-thickness="1.0";
 	# underline-thickness=<font underline thickness>
 };
+search-bindings = {
+cancel ="Control+x";
+
+
+};
+ 	url = {
+ launch="firefox \${url}";
+	 label-letters="sadfjklewcmpgh";
+	osc8-underline="url-mode";
+	protocols="http, https, ftp, ftps, file, gemini, gopher";
+	uri-characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.,~:;/?#@!$&%*+=\"'()[]";
+};
  key-bindings = {
  clipboard-copy = "Control+c XF86Copy";
  clipboard-paste = "Control+v XF86Paste";

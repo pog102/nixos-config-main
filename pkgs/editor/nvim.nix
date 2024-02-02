@@ -100,6 +100,11 @@ mode = "n";
             useTruecolor = true;
                       };
                       plugins = {
+		      markdown-preview = {
+		      
+		      enable = true;
+		      browser="firefox";
+		      };
 		      dap = {
 		      enable = false;
 
