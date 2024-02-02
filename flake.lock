@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "ags": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1706887944,
-        "narHash": "sha256-c4CgVb2dXg85djZLWQfG+Lf8xZKFrZcpEVl+T4009pM=",
-        "owner": "Aylur",
-        "repo": "ags",
-        "rev": "942f824c402631e4c1a9b67542a4db7a7f6d6359",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Aylur",
-        "repo": "ags",
-        "type": "github"
-      }
-    },
     "base16-schemes": {
       "flake": false,
       "locked": {
@@ -383,7 +363,6 @@
     },
     "root": {
       "inputs": {
-        "ags": "ags",
         "firefox-addons": "firefox-addons",
         "grub-theme": "grub-theme",
         "home-manager": "home-manager",
