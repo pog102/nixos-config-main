@@ -22,43 +22,43 @@
 # };
 # };
 programs.rofi = {
-extraConfig ={
-theme="~/.config/rofi/themes/color.rasi";
+theme="~/.config/rofi/color.rasi";
 };
-};
-	home.file.".config/rofi/themes/color.rasi".text = ''
-	*{
-   color1:	${config.colorScheme.colors.base01};
-   color2:	${config.colorScheme.colors.base02};
-   color3:	${config.colorScheme.colors.base03};
-   color4:	${config.colorScheme.colors.base04};
-   color5:	${config.colorScheme.colors.base05};
-   color6:	${config.colorScheme.colors.base06};
-   color7:	${config.colorScheme.colors.base07};
-   color8:	${config.colorScheme.colors.base08};
-   color9:	${config.colorScheme.colors.base09};
-	}
+	home.file.".config/rofi/color.rasi".text = ''
+* {
+ //  color0:	#${config.colorScheme.palette.base00}5C;
+   color0:	#${config.colorScheme.palette.base00}CC;
+   color1:	#${config.colorScheme.palette.base01};
+   color2:	#${config.colorScheme.palette.base02};
+   color3:	#${config.colorScheme.palette.base03};
+   color4:	#${config.colorScheme.palette.base04};
+   color5:	#${config.colorScheme.palette.base05};
+   color6:	#${config.colorScheme.palette.base06};
+   color7:	#${config.colorScheme.palette.base07};
+   color8:	#${config.colorScheme.palette.base08};
+   color9:	#${config.colorScheme.palette.base09};
+}
 	'';
 
  wayland.windowManager.hyprland.extraConfig = ''
  general {
    cursor_inactive_timeout = 4
-   col.active_border = rgba(${config.colorScheme.colors.base0C}ee) rgba(${config.colorScheme.colors.base0D}ee) 45deg
-   col.inactive_border = rgba(${config.colorScheme.colors.base0A}aa)
+   col.active_border = rgba(${config.colorScheme.palette.base0C}ee) rgba(${config.colorScheme.palette.base0D}ee) 45deg
+   col.inactive_border = rgba(${config.colorScheme.palette.base0A}aa)
    layout = dwindle
    border_size = 3;
  }
 decoration {
 
-   col.shadow = rgba(${config.colorScheme.colors.base05}ee)
-   col.shadow_inactive=rgba(${config.colorScheme.colors.base00}ee)
+   col.shadow = rgba(${config.colorScheme.palette.base05}ee)
+   col.shadow_inactive=rgba(${config.colorScheme.palette.base00}ee)
 }
  '';
  programs.nixvim.extraConfigLua = ''
-require('base16-colorscheme').setup({["base00"] = "",["base01"] = "#${config.colorScheme.colors.base01}",["base02"] = "#${config.colorScheme.colors.base02}",["base03"] = "#${config.colorScheme.colors.base03}",["base04"] = "#${config.colorScheme.colors.base04}",["base05"] = "#${config.colorScheme.colors.base05}",["base06"] = "#${config.colorScheme.colors.base06}",["base07"] = "#${config.colorScheme.colors.base07}",["base08"] = "#${config.colorScheme.colors.base08}",["base09"] = "#${config.colorScheme.colors.base09}",["base0A"] = "#${config.colorScheme.colors.base0A}",["base0B"] = "#${config.colorScheme.colors.base0B}",["base0C"] = "#${config.colorScheme.colors.base0C}",["base0D"] = "#${config.colorScheme.colors.base0D}",["base0E"] = "#${config.colorScheme.colors.base0E}",["base0F"] = "#${config.colorScheme.colors.base0F}"})
+require('base16-colorscheme').setup({["base00"] = "",["base01"] = "#${config.colorScheme.palette.base01}",["base02"] = "#${config.colorScheme.palette.base02}",["base03"] = "#${config.colorScheme.palette.base03}",["base04"] = "#${config.colorScheme.palette.base04}",["base05"] = "#${config.colorScheme.palette.base05}",["base06"] = "#${config.colorScheme.palette.base06}",["base07"] = "#${config.colorScheme.palette.base07}",["base08"] = "#${config.colorScheme.palette.base08}",["base09"] = "#${config.colorScheme.palette.base09}",["base0A"] = "#${config.colorScheme.palette.base0A}",["base0B"] = "#${config.colorScheme.palette.base0B}",["base0C"] = "#${config.colorScheme.palette.base0C}",["base0D"] = "#${config.colorScheme.palette.base0D}",["base0E"] = "#${config.colorScheme.palette.base0E}",["base0F"] = "#${config.colorScheme.palette.base0F}"})
       '';
 
-programs.foot.settings = with config.colorScheme.colors; {
+programs.foot.settings = with config.colorScheme.palette; {
   colors = {
     alpha=0.63;
     foreground="${base06}";

@@ -21,7 +21,7 @@
 # boot.loader.grub.enable = true;
 # boot.loader.grub.device = "nodev";
 # boot.loader.efi.efiSysMountPoint = "/boot";
-boot.cleanTmpDir = true;
+boot.tmp.cleanOnBoot = true;
 boot.loader = {
   efi = {
     canTouchEfiVariables = true;
