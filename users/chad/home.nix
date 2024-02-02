@@ -62,7 +62,7 @@
 		swww
 			tree
 			wl-clipboard
-
+papirus-icon-theme
 
 			nerdfonts
 			dejavu_fonts
