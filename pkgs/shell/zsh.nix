@@ -15,10 +15,11 @@ programs.zsh = {
     cat = "prettybat";
     less = "prettybat";
     ls = "lsd";
+    neo = "neo -D";
     up = "sudo nixos-rebuild switch --flake .#default";
   };
    initExtra = ''
-   export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop" "man")
+   export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop" "man" "bat")
 export AUTO_NOTIFY_TITLE=" : %command"
 export AUTO_NOTIFY_BODY="󱎫 : %elapsed s"
 

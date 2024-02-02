@@ -47,6 +47,7 @@
 #      zsh-history-substring-search
 		lsd
 		bat
+		neo
 		duf
 		bat-extras.batman
 		bat-extras.prettybat
@@ -67,6 +68,7 @@
 			dejavu_fonts
 			liberation_ttf
 			fira-code
+			source-han-code-jp
 			fira-code-symbols
 			  (pkgs.writeShellScriptBin "transadd" ''
        #!/bin/sh

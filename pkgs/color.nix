@@ -14,13 +14,32 @@
 
 
 
-services.dunst = {
-settings = {
-
-
-
+# services.dunst = {
+# settings = {
+#
+#
+#
+# };
+# };
+programs.rofi = {
+extraConfig ={
+theme="~/.config/rofi/themes/color.rasi";
 };
 };
+	home.file.".config/rofi/themes/color.rasi".text = ''
+	*{
+   color1:	${config.colorScheme.colors.base01};
+   color2:	${config.colorScheme.colors.base02};
+   color3:	${config.colorScheme.colors.base03};
+   color4:	${config.colorScheme.colors.base04};
+   color5:	${config.colorScheme.colors.base05};
+   color6:	${config.colorScheme.colors.base06};
+   color7:	${config.colorScheme.colors.base07};
+   color8:	${config.colorScheme.colors.base08};
+   color9:	${config.colorScheme.colors.base09};
+	}
+	'';
+
  wayland.windowManager.hyprland.extraConfig = ''
  general {
    cursor_inactive_timeout = 4
