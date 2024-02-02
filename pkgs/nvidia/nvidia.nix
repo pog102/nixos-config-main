@@ -13,11 +13,13 @@
 
   hardware.nvidia = {
 prime = { 
-  
-offload ={
-enable = true;
-			enableOffloadCmd = true;
-};
+   reverseSync.enable = true;
+    # Enable if using an external GPU
+    allowExternalGpu = false; 
+# offload ={
+# enable = true;
+# enableOffloadCmd = true;
+# };
 		intelBusId = "PCI:0:2:0";
 		nvidiaBusId = "PCI:1:0:0";
 		};
