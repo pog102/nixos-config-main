@@ -110,7 +110,7 @@ animations = {
 
 bind = [
        "$mod, Return, exec, foot"
-       "$mod, D, exec, firefox"
+	"$mod, D, exec, rofi -show drun -theme gloss"
        "$mod, Q, killactive"
        "$mod, F, fullscreen"
        "$mod, Space, togglefloating"
