@@ -5,7 +5,7 @@ enable= true;
 
 };
 
-	home.file.".config/rofi/themes/color.rasi".source = {
+	home.file.".config/rofi/themes" = {
 
 		recursive = true;
 		source = ./themes/launch2.rasi;
