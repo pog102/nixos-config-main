@@ -46,6 +46,7 @@
 #      zsh-history-substring-search
 		lsd
 		bat
+		duf
 		bat-extras.batman
 		bat-extras.prettybat
 		pamixer
