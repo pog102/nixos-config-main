@@ -79,6 +79,7 @@ papirus-icon-theme
       desktopName = "Torrent";
       exec = "transadd  %U";
       terminal = false;
+	noDisplay = true;
       type = "Application";
       mimeTypes = ["application/x.bittorrent"
 		"x-scheme-handler/magnet"
@@ -159,6 +160,24 @@ papirus-icon-theme
       XDG_NOTES_DIR = "${config.home.homeDirectory}/Notes";
     };
   };
+xdg.desktopEntries = 
+{
+rofi-theme-selector = {
+name = "Rofi Theme Selector";
+noDisplay = true;
+exec = "rofi-theme-selector";
+};
+"org.codeberg.dnkl.footclient" = {
+name = "Foot Client";
+noDisplay = true;
+exec = "footclient";
+};
+"org.codeberg.dnkl.foot-server" = {
+name = "Foot Server";
+noDisplay = true;
+exec = "foot --server";
+};
+};
 	 xdg.mime.enable = true;
   xdg.mimeApps.enable = true;
     xdg.mimeApps.associations.added = {
@@ -166,7 +185,6 @@ papirus-icon-theme
 "x-scheme-handler/magnet"="torrent.desktop";
 
   };
-
 
 # Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
