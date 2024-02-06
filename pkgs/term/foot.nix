@@ -3,6 +3,15 @@
 {
   programs.foot= {
   enable = true;
+#   package = pkgs.foot.overrideAttrs (_: rec {
+#   version = "1.6.1";
+#   src = pkgs.fetchFromGitHub {
+#     owner = "DanteAlighierin";
+#     repo = "foot";
+#     rev = version;
+#     sha256 = "sha256-u39dqB2c6lu5e7fs6Zl0NlsnKfo+2F8uC2XHvyekOR4=";
+#   };
+# });
   settings = {
 main = {
 font = "Hack Nerd Font:size=15";

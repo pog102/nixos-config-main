@@ -157,5 +157,4 @@ binde = [
     xwayland = { enable = true; };
 	systemd.enable = true;
 };
-
 }

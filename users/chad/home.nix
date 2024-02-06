@@ -48,6 +48,8 @@
 		lsd
 		bat
 		neo
+		xdg-desktop-portal-hyprland
+		peaclock
 		duf
 		bat-extras.batman
 		bat-extras.prettybat
