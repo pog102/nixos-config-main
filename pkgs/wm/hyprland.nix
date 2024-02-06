@@ -20,6 +20,37 @@ fi
 	notify-send -a "mediakeys" -u low -r 50 -h int:value:"$brightness" -i "$icon" "$brightness%" -t 1100
 '';
 
+powermenu = pkgs.pkgs.writeShellScript "powermenu" ''
+#!/bin/env bash
+ 
+# Options for powermenu
+shutdown=""
+reboot=""
+sleep=""
+ 
+# Get answer from user via rofi
+selected_option=$(echo "$sleep
+$reboot
+$shutdown" | rofi -dmenu\
+                  -i\
+                  -p "Power"\
+		  -theme power)
+# Do something based on selected option
+if [ "$selected_option" == "$shutdown" ]
+then
+    systemctl poweroff
+elif [ "$selected_option" == "$reboot" ]
+then
+    systemctl reboot
+elif [ "$selected_option" == "$sleep" ]
+then
+    systemctl suspend
+else
+    echo "No match"
+fi
+
+
+'';
 
 volume = pkgs.pkgs.writeShellScript "volume" ''
 #!/bin/sh
@@ -113,6 +144,7 @@ bind = [
 	"$mod, D, exec, rofi -show drun -theme gloss"
        "$mod, Q, killactive"
        "$mod, F, fullscreen"
+       "$mod, M, ${powermenu}"
        "$mod, Space, togglefloating"
 
 "$mod, 1, workspace, 1  "
