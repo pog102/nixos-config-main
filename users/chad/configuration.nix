@@ -23,6 +23,10 @@
 # boot.loader.efi.efiSysMountPoint = "/boot";
 boot.tmp.cleanOnBoot = true;
 boot.loader = {
+grub2-theme={
+theme="vimix";
+icon="color";
+};
   efi = {
     canTouchEfiVariables = true;
     efiSysMountPoint = "/boot"; # ← use the same mount point here.
@@ -31,9 +35,10 @@ boot.loader = {
     efiSupport = true;
      #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
      device = "nodev";
-     minegrub-theme = {
-       enable = true;
-     };
+     # grub2-theme
+     # minegrub-theme = {
+     #   enable = true;
+     # };
      # extraConfig = "set theme=${pkgs.nixos-grub2-theme}";
 # theme=${pkgs.nixos-grub2-theme}/grub/themes/breeze/theme.txt";
   };

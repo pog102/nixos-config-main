@@ -15,7 +15,8 @@ nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     inputs.nixpkgs.follows = "nixpkgs";
 
   };
-  grub-theme.url = "github:Lxtharia/minegrub-theme";
+  # grub-theme.url = "github:Lxtharia/minegrub-theme";
+  grub-theme.url = "github:vinceliuice/grub2-themes";
   nix-colors.url = "github:misterio77/nix-colors";
   firefox-addons = {
     url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
