@@ -2,7 +2,13 @@
 
 {
 
-programs.zsh = {
+programs = {
+
+autojump = {
+enable=true;
+enableZshIntegration = true;
+};
+zsh = {
   enable = true;
   history.ignoreAllDups= true;
   shellAliases = {
@@ -98,7 +104,7 @@ fi
     # searchDownKey=
     };
   };
-
+};
   # home.packages = with pkgs; [
   #     zsh-history-substring-search
   #     ];
