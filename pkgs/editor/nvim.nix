@@ -93,12 +93,6 @@ mode = "n";
             package = pkgs.wl-clipboard;
           };
 
-          colorschemes.base16 = {
-            # enable = if userSettings.theme == "wal" then false else true;
-            enable =true;
-            setUpBar = true;
-            useTruecolor = true;
-                      };
                       plugins = {
 		      markdown-preview = {
 		      
@@ -159,6 +153,7 @@ paths = "/home/chad/.config/nvim/snippets";
                 # nix.enable = true;
                 # auto-session.enable = true;
                 surround.enable = true;
+
 		# lsp-format.enable = true;
 		lspkind.enable = true;
 		lspsaga = {

@@ -18,10 +18,10 @@ character = {
 };
 directory = {
 	substitutions = {
-	" ~/Pictures" = "  Pictures";
-	" ~/.config" = " config";
-	" ~/Downloads" = " Downloads";
-	 "~" = " ~";
+	"󱄅 ~/Pictures" = "  Pictures";
+	"󱄅 ~/.config" = " config";
+	"󱄅 ~/Downloads" = " Downloads";
+	 "~" = "󱄅 ~";
  
 	};
   format = "[]($style)(bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06})[$path](bg:#${config.colorScheme.colors.base01} fg:#${config.colorScheme.colors.base06} bold)[ ]($style)";

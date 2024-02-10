@@ -24,17 +24,16 @@ powermenu = pkgs.pkgs.writeShellScript "powermenu" ''
 #!/bin/env bash
  
 # Options for powermenu
-shutdown=""
-reboot=""
+reboot="󰦛"
 sleep=""
- 
+shutdown=""
 # Get answer from user via rofi
-selected_option=$(echo "$sleep
+selected_option=$(echo "$shutdown
 $reboot
-$shutdown" | rofi -dmenu\
+$sleep" | rofi -dmenu\
                   -i\
                   -p "Power"\
-		  -theme power)
+		  -theme power2)
 # Do something based on selected option
 if [ "$selected_option" == "$shutdown" ]
 then
@@ -141,10 +140,10 @@ animations = {
 
 bind = [
        "$mod, Return, exec, foot"
-	"$mod, D, exec, rofi -show drun -theme gloss"
+	"$mod, D, exec, rofi -show drun -theme gloss &"
        "$mod, Q, killactive"
        "$mod, F, fullscreen"
-       "$mod, M, ${powermenu}"
+       "$mod, M, exec, ${powermenu}"
        "$mod, Space, togglefloating"
 
 "$mod, 1, workspace, 1  "

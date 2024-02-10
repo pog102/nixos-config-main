@@ -1,61 +1,31 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
+ 
 
-/*****----- Configuration -----*****/
 configuration {
-    location:                       0;
-    font:                           "Font Awesome 6 Free:style=regular";
+    location: 0;
 }
 @import "/home/chad/.config/rofi/config.rasi"
 * {
-    // background:     #1E2127FF;
-    //background:     #f1234112;
-    //background:     @color0;
-    // background-alt: #282B31FF;
-    // background-alt:     #f123411C;
-    // foreground:     #FFFFFF1C;
-    // selected:       #FFFFFFFF;
-    // active:         #98C379FF;
-    // urgent:         #E06C75FF;
-}
-* {
   border: 0;
+    font: "Hack Nerd Font 29";
   margin: 0;
   padding: 0;
   spacing: 0;
- // background: @background;
-  background-alt: #282a36;  
-  line: #44475a; 
-  foreground: @foreground;  
-  foreground-alt: #f8f8f2;  
-  Comment: #6272a4; 
-  selected: @color5;
-  Pink: #ff79c6;    
-  Purple: #bd93f9;
-  background-color: @background;
-  text-color: @purple;
 }
- 
- 
+
+
 window {
-    background-color:               @background;
+    background-color:               @color0;
     border:                         2px;
-    border-color:                   @line;
+    border-color:                   @color4;
     border-radius:                  50px;
-    width:                          490px;   
+    width:                          308px;   
     height:                         130px;          
     x-offset:                       -4;
     y-offset:                       0;
 }
  
 listview {
-    background-color:               @background;
+    background-color:               @color0;
     columns:                        1;
     lines:                          5;
     spacing:                        50px;
@@ -63,23 +33,23 @@ listview {
 }
  
 mainbox {
-    background-color:               @background;
+    background-color:               @color0;
     children:                       [ listview ];
     padding:                        40px;
 }
  
 element {
-    background-color:               @background;
-    text-color:                     @line;
+    background-color:               @color0;
+    text-color:                     @color4;
     orientation:                    horizontal;
     /*border-radius:                  100%;*/
-    /*padding:                        8px 32px 8px 32px;*/
+    /* padding:                        8px 32px 8px 32px; */
+    padding:                        0px 18px 0px 0px;
 }
  
 element-text {
     background-color:               inherit;
     text-color:                     inherit;
-    font:                           "Font Awesome 6 Free 30";
     expand:                         false;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
@@ -87,9 +57,16 @@ element-text {
 }
  
 element selected {
-    background-color:               @background;
-    text-color:                     @purple;
+    background-color:               @color0;
+    text-color:                     @color6;
     border:                         0px;
     /*border-radius:                  100%;*/
     border-color:                   @selected;
 }
+
+
+
+
+
+
+

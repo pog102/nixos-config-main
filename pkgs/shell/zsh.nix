@@ -4,9 +4,7 @@
 
 programs.zsh = {
   enable = true;
-   enableAutosuggestions = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
+  history.ignoreAllDups= true;
   shellAliases = {
     ll = "ls -l";
     n = "nvim";
@@ -18,7 +16,7 @@ programs.zsh = {
     neo = "neo -D";
     up = "sudo nixos-rebuild switch --flake .#default";
   };
-   initExtra = ''
+   initExtraFirst = ''
    export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop" "man" "bat")
 export AUTO_NOTIFY_TITLE=" : %command"
 export AUTO_NOTIFY_BODY="󱎫 : %elapsed s"
@@ -52,8 +50,6 @@ zstyle ':completion:*' matcher-list "" 'm:{a-zA-Z}={A-Za-z}'
   touch /tmp/.neofetch
   neofetch
 fi
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
 # HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
     # PROMPT=" ◉ %U%F{magenta}%n%f%u@%U%F{blue}%m%f%u:%F{yellow}%~%f
@@ -87,6 +83,20 @@ bindkey "^[[B" history-beginning-search-forward
    ];
 
 
+   enableAutosuggestions = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+    historySubstringSearch = {
+    enable=true;
+    searchDownKey=[
+"$terminfo[kcud1]"
+    ];
+    searchUpKey=[
+"$terminfo[kcuu1]"
+
+    ];
+    # searchDownKey=
+    };
   };
 
   # home.packages = with pkgs; [
