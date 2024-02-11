@@ -58,6 +58,8 @@
 		ripgrep
 		sassc
 		fzf
+		zip
+		unzip
 		# papirus-icon-theme
 		libnotify
 		imv
