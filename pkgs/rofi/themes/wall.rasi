@@ -1,0 +1,132 @@
+configuration {
+    show-icons:                     true;
+    drun-display-format:            "{name}";
+    drun-match-fields:              "name";
+}
+
+mainbox {
+    children:                       [inputbar-box, listview];
+    padding:                        0px 0px;
+}
+
+listview {
+    padding:                        0px;
+    dynamic:                        true;
+}
+
+inputbar-box {
+    children:                       [dummy, inputbar, dummy];
+    orientation:                    horizontal;
+    expand:                         false;
+}
+
+inputbar {
+    children:                       [textbox-prompt, entry];
+    margin:                         12px 0px 0px 0px;
+    background-color:               @color4;
+    border:                         4px;
+    border-color:                   @color4;
+    border-radius:                  8px;
+}
+
+textbox-prompt {
+    font:                           "Font Awesome 18";
+    text-color:                     @background;
+    padding:                        0px 4px 0px 2px;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    str:                            "";
+    expand:                         false;
+}
+
+entry {
+    expand:                         false;
+    padding:                        4px;
+    margin:                         -6px;
+    horizontal-align:               0;
+    width:                          300;
+    background-color:               @background;
+    border:                         6px;
+    border-color:                   @color4;
+    border-radius:                  8px;
+}
+
+element {
+    children:                       [dummy, element-box, dummy];
+    padding:                        0px;
+    orientation:                    horizontal;
+    border:                         0;
+    border-color:                   transparent;
+}
+
+element-box {
+    children:                       [element-icon];
+    orientation:                    vertical;
+    expand:                         false;
+}
+
+@import "lauch-wall.rasi"
+@import "/home/chad/.config/rofi/config.rasi"
+
+window {
+    location:                       center;
+    anchor:                         center;
+    transparency:                   "real";
+    background-color:               @color0;
+    border:                         3px 3px 3px 3px;
+    border-color:                   @color4;
+    height:                         860;
+    width:                          95%;
+    border-radius:               70px 70px 70px 70px;
+}
+
+listview {
+    padding:                        12px;
+    dynamic:                        true;
+    columns:                        6;
+}
+
+/* @media (min-width: 2400) { */
+/*     listview { */
+/*         columns:                    12; */
+/*     } */
+/* } */
+/**/
+/* @media (min-width: 3440) { */
+/*     listview { */
+/*         columns:                    16; */
+/*     } */
+/* } */
+
+@media (min-width: 2400) {
+    listview {
+        columns:                    12;
+    }
+}
+
+@media (min-width: 3440) {
+    listview {
+        columns:                    16;
+    }
+}
+
+element-icon {
+    padding:                        -50px 0px;
+
+    /* padding:                        0px -40px; */
+    /* horizontal-align:               0.5; */
+    border:                         4px 4px solid 4px 4px;
+    border-color:                   transparent;
+    border-radius:                  16;
+    size:                           240;
+}
+
+element-icon selected {
+    border-color:                   @color4;
+}
+
+element-text {
+    horizontal-align:               0.5;
+    horizontal-align:               0.5;
+    width:                          160px;
+}
