@@ -24,8 +24,8 @@
 		source = /home/chad/.cache/wal/hyprland
 	'';
 
-rofi = {
-theme="~/.cache/wal/colors.rasi";
+programs.rofi = {
+theme=lib.mkForce "~/.cache/wal/colors.rasi";
 };
 services.dunst = {
 enable=true;

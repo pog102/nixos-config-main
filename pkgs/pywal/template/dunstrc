@@ -47,7 +47,7 @@
     markup = full
 	#bar 
     progress_bar_frame_width = 1
-    #frame_color = "{color4}"
+    #frame_color = "{color3}"
 
     highlight="{color3}"
     progress_bar_corner_radius = 20

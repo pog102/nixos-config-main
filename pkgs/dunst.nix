@@ -87,7 +87,7 @@ urgency_low = {
     highlight="#${config.colorScheme.colors.base06}";
     progress_bar_corner_radius = 20;
     progress_bar_max_corner_radius = 40;
-    transparency = 73;
+    #transparency = 73;
 
 
 

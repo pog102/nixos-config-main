@@ -54,7 +54,7 @@
                       };
 
 programs.rofi = {
-theme="~/.config/rofi/color.rasi";
+theme= "~/.config/rofi/color.rasi";
 };
 	home.file.".config/rofi/color.rasi".text = ''
 * {
