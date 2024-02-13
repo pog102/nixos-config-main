@@ -13,9 +13,9 @@
 		};
 
                       # nixvim.path = "/home/chad/.cache/wal/nixvim.lua";
-                      nixvim.extraConfigVim = ''
-	 luafile /home/chad/.cache/wal/nixvim.lua
-                      '';
+       #               nixvim.extraConfigVim = ''
+#	 luafile /home/chad/.cache/wal/nixvim.lua
+ #                     '';
 	foot.settings.main = {
 	include="~/.cache/wal/foot";
 		};
@@ -24,6 +24,9 @@
 		source = /home/chad/.cache/wal/hyprland
 	'';
 
+rofi = {
+theme="~/.cache/wal/colors.rasi";
+};
 services.dunst = {
 enable=true;
 configFile="/home/chad/.cache/wal/dunstrc";

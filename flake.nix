@@ -33,13 +33,13 @@ nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     userSettings = rec {
-      # theme = "wal";
+      theme = "wal";
  # theme = "tokyo-night-dark";
  	# theme="gruvbox-dark-medium";
  	# theme="pasque";
  	# theme="eva";
 	 # theme="tokyodark"; 
- 	 theme="catppuccin-frappe";
+ 	 # theme="catppuccin-frappe";
       # name = "chad";
     };
   in
