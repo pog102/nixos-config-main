@@ -5,6 +5,7 @@
         ];
         programs.nixvim = {
           enable = true;
+	  # autoGroups = {};
 	  autoCmd = [
 
     {
@@ -290,16 +291,19 @@ paths = "/home/chad/.config/nvim/snippets";
 number = true;
 relativenumber = false;
 showmode = false;
+undofile = true;
 clipboard="unnamedplus";
 
 
 		      };
 		      enableMan = true;
-        #               extraConfigVim = ''
-		      # set noshowmode
-        #               set number
-		      # set clipboard=unnamedplus
-        #               '';
+                      extraConfigVim = ''
+		      au BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
+        \ execute("normal `\"") |
+    \ endif
+
+                      '';
                     };
 
 #environment.variables.EDITOR = "nvim";
