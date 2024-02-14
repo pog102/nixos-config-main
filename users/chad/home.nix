@@ -24,6 +24,7 @@
 			../../pkgs/editor/nvim.nix
 			../../pkgs/shell/zsh.nix
 			../../pkgs/git.nix
+			../../pkgs/imv.nix
 			# ../../pkgs/dunst.nix
 			 # ../../pkgs/mako.nix
 			  ../../pkgs/neofetch.nix
@@ -62,7 +63,6 @@
 		unzip
 		# papirus-icon-theme
 		libnotify
-		imv
 		swww
 			tree
 			wl-clipboard
