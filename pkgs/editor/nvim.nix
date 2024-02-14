@@ -313,6 +313,10 @@ clipboard="unnamedplus";
 
 #environment.variables.EDITOR = "nvim";
 
+	home.file.".config/nvim/lua" = {
+		recursive = true;
+		source = ./lua;
+	};
 	home.file.".config/nvim/snippets" = {
 		recursive = true;
 		source = ./snippets;
