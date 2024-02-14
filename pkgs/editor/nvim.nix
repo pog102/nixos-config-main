@@ -95,9 +95,10 @@ mode = "n";
           };
 
                       plugins = {
+		      goyo.enable = true;
 		      markdown-preview = {
 		      
-		      enable = true;
+		      enable = false;
 		      browser="firefox";
 		      };
 		      dap = {
