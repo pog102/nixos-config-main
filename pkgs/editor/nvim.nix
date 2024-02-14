@@ -80,18 +80,13 @@ mode = "n";
     };
   }
 ];
- 	  extraPlugins = with pkgs.vimPlugins; [
-	  overseer-nvim
+#  	  extraPlugins = with pkgs.vimPlugins; [
+# 	  overseer-nvim
 # {
 # plugin =overseer-nvim;
-# config ='' 
-#
-#
-#
-#
-# ''; 
+# config =''lua require("overseer").setup({templates = { "builtin", "user.cpp_build" },})''; 
 # }
- 	  ];
+#  	  ];
 
           clipboard.providers.wl-copy = {
             enable = true;
@@ -99,9 +94,8 @@ mode = "n";
           };
 
                       plugins = {
-		      goyo.enable = true;
+		      # toggleterm.enable=true;
 		      markdown-preview = {
-		      
 		      enable = false;
 		      browser="firefox";
 		      };
