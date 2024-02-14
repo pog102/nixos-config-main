@@ -3,7 +3,7 @@ let
 rename = pkgs.pkgs.writeShellScript "rename" ''
 #!/bin/sh
 new="$(rofi -dmenu -l 1)"
-[ ! -z $new ] && mv $1 "$(dirname $1)/$new; close" 
+[ ! -z $new ] && mv $1 "$(dirname $1)/$new" 
 '';
 in
 {

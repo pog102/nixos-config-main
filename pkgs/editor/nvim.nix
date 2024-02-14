@@ -80,14 +80,18 @@ mode = "n";
     };
   }
 ];
-# 	  extraPlugins = with pkgs.vimPlugins; [
-# skel-nvim
-# # comment-nvim
-# # {
-# # plugin =skel-nvim;
-# # # config = 
-# # }
-# 	  ];
+ 	  extraPlugins = with pkgs.vimPlugins; [
+	  overseer-nvim
+# {
+# plugin =overseer-nvim;
+# config ='' 
+#
+#
+#
+#
+# ''; 
+# }
+ 	  ];
 
           clipboard.providers.wl-copy = {
             enable = true;
