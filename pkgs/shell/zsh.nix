@@ -14,6 +14,7 @@ zsh = {
   shellAliases = {
     ll = "ls -l";
     n = "nvim";
+    ssh="TERM=linux ssh";
     man = "batman";
     fman = "man -H$BROWSER";
     cat = "prettybat";
