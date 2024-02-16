@@ -63,7 +63,29 @@ nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
           inherit userSettings;
         };
       };
+  iso = nixpkgs.lib.nixosSystem {
+    modules = [
+      "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-gnome.nix"
+      "${nixpkgs}/nixos/modules/installer/cd-dvd/channel.nix"
+          inputs.grub-theme.nixosModules.default
+          ./users/chad/configuration.nix
+          inputs.home-manager.nixosModules.default
+	  {
+	  home-manager.extraSpecialArgs = {
+          inherit userSettings;
+	  };
+	  }
+    ];
+        specialArgs = {
+          inherit inputs;
+          inherit userSettings;
+        };
+  };
 
+  framework = nixpkgs.lib.nixosSystem {
+    modules = [./users/chad/configuration.nix];
+    specialArgs = {inherit inputs;};
+  };
    #    exampleIso = nixpkgs.lib.nixosSystem {
    #      system = "x86_64-linux";
    #      modules = [

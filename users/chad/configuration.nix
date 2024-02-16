@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{userSettings, config, pkgs, inputs, ... }:
+{userSettings, config, pkgs, inputs,lib, ... }:
 
 {
   imports =
@@ -104,7 +104,7 @@ users = {
 
 # Enable sound with pipewire.
 sound.enable = true;
-hardware.pulseaudio.enable = false;
+hardware.pulseaudio.enable = lib.mkForce false;
 # security.rtkit.enable = true;
 services.pipewire = {
   enable = true;
@@ -139,7 +139,7 @@ users.users.chad = {
 # Enable automatic login for the user.
 #services.xserver.displayManager.autoLogin.enable = true;
 # services.xserver.displayManager.autoLogin.user = "chad";
-services.getty.autologinUser = "chad";
+services.getty.autologinUser = lib.mkDefault "chad";
 
 
 # Allow unfree packages
