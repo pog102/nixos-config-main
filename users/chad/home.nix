@@ -49,6 +49,7 @@
 		lsd
 		bat
 		neo
+		gdu
 		xdg-desktop-portal-hyprland
 		peaclock
 		duf
