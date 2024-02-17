@@ -104,7 +104,7 @@ users = {
 
 # Enable sound with pipewire.
 sound.enable = true;
-hardware.pulseaudio.enable = lib.mkDefault false;
+hardware.pulseaudio.enable = lib.mkForce false;
 # security.rtkit.enable = true;
 services.pipewire = {
   enable = true;
