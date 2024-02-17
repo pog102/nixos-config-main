@@ -37,6 +37,7 @@
 			# ../../pkgs/ayurs/ags.nix
 			# ../../pkgs/transg.nix
 			../../pkgs/firefox/firefox.nix
+			# ../../pkgs/kanshi.nix
 			../../pkgs/wallpaper/wallpaper.nix
 		] ;
 # The home.packages option allows you to install Nix packages into your

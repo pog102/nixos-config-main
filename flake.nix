@@ -5,6 +5,7 @@
   #  nixpkgsops-nix.url = "github:Mic92/sops-nix";s.url = "github:nixos/nixpkgs/nixos-23.11";
 sops-nix.url = "github:Mic92/sops-nix";
 nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+# transg-tui.url = "github:PanAeon/transg-tui";
 # nixos.url = "nixpkgs/23.11-beta";
   home-manager = {
     url = "github:nix-community/home-manager";
@@ -44,13 +45,23 @@ nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     };
   in
   {
+	  # inputs.transg-tui.apps.${system}.default = { type = "app"; program = "github:PanAeon/transg-tui";};
+	  # packages."${system}"."transg-tui"= derivation;
     nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
+
         modules = [ 
           inputs.grub-theme.nixosModules.default
           ./users/chad/configuration.nix
           inputs.home-manager.nixosModules.default
-	  # inputs.transg-tui
+	   
+		# {
+	 #= {
+	# type = "app";
+  	# program = "${self.packages.${system}.transg-tui}/bin/transg";
+
+	   # };
+	   # }
 	  # ./pkgs/transg.nix
 	  {
 	  home-manager.extraSpecialArgs = {
