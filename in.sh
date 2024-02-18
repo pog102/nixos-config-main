@@ -8,9 +8,9 @@
 #
 if [ "$1" == "c" ]
 then
-nix-store --gc
-nix-collect-garbage -d
-nix-env --delete-generations old
+sudo nix-env --delete-generations old
+sudo nix-collect-garbage -d
+sudo nix-store --gc
 elif [ "$1" == "b" ]
 then
 sudo nix build .#nixosConfigurations.iso.config.system.build.isoImage

@@ -22,6 +22,12 @@
 # boot.loader.grub.enable = true;
 # boot.loader.grub.device = "nodev";
 # boot.loader.efi.efiSysMountPoint = "/boot";
+
+swapDevices = [ {
+    device = "/var/lib/swapfile";
+    size = 5*1024;
+  } ];
+
 boot.tmp.cleanOnBoot = true;
 boot.loader = {
 grub2-theme={
@@ -172,7 +178,7 @@ environment.systemPackages = with pkgs; [
 # networking.firewall.allowedUDPPorts = [ ... ];
 # Or disable the firewall altogether.
 # networking.firewall.enable = false;
-
+nix.optimise.automatic = true;
   nix.gc = {
   automatic = true;
   dates = "weekly";
