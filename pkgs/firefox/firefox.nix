@@ -1,17 +1,17 @@
-{ inputs, config, lib, pkgs, ... }:let
+{ inputs, config, lib, pkgs, ... }: #let
 
 # with lib;
 # with lib.campground;
 # let
 #   cfg = config.campground.apps.firefox;
 # in
-  SilentFox = pkgs.fetchFromGitHub {
-    owner = "linuxmobile";
-    repo = "SilentFox";
-    rev = "45ad3cb7c26c79831786a11387e21788edd84fe6";
-    sha256 = "sha256-9Bj0M0CAch4CenM9TFXUkGa6nHwC6y24azCXcUFtU6M=";
-  };
-in
+#   SilentFox = pkgs.fetchFromGitHub {
+#     owner = "linuxmobile";
+#     repo = "SilentFox";
+#     rev = "45ad3cb7c26c79831786a11387e21788edd84fe6";
+#     sha256 = "sha256-9Bj0M0CAch4CenM9TFXUkGa6nHwC6y24azCXcUFtU6M=";
+#   };
+# in
 {
   # options.campground.apps.firefox = with types; {
   #   enable = mkBoolOpt false "Whether or not to enable Firefox.";
@@ -273,9 +273,9 @@ in
 
         "intl.accept_languages" = "es-AR, es, en-US, en";
       };
-      userChrome = builtins.concatStringsSep "\n" (builtins.map builtins.readFile [
-        "${SilentFox}/userChrome.css"
-      ]);
+      # userChrome = builtins.concatStringsSep "\n" (builtins.map builtins.readFile [
+      #   "${SilentFox}/userChrome.css"
+      # ]);
     };
   };
 

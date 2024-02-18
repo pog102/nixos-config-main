@@ -11,6 +11,7 @@
     ../../pkgs/nvidia/nvidia.nix
     ../../pkgs/transmission.nix
     ../../pkgs/cpu.nix
+    ../../pkgs/systemd.nix
     # ../../pkgs/trans/default.nix
     # ../../pkgs/udev.nix
     # ../../pkgs/plymouth.nix
