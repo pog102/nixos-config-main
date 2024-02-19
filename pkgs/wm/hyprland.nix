@@ -3,7 +3,8 @@
 let 
 
   # wallp = import ../../pkgs/pywal/wallp.nix;
-  wallp = (if userSettings.theme == "wal" then import ../../pkgs/pywal/wallp.nix else import ../../pkgs/calp.nix);
+  wallp = import (if userSettings.theme == "wal" then ../../pkgs/pywal/wallp.nix else ../../pkgs/calp.nix) {inherit pkgs;};
+  # wallp = import ../../pkgs/calp.nix {inherit pkgs;};
 
 # wallp = pkgs.pkgs.writeShellScript "wallp" ''
 # #!/bin/sh
