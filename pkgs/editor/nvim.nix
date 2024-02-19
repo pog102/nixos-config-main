@@ -149,7 +149,20 @@ paths = "/home/chad/.config/nvim/snippets";
                 # nix.enable = true;
                 # auto-session.enable = true;
                 surround.enable = true;
+# todo-comments = {
+# enable=true;
+# colors={
+#   error = [ "DiagnosticError" "ErrorMsg" "#DC2626" ];
+#   warning = [ "DiagnosticWarn" "WarningMsg" "#FBBF24" ];
+#   info = [ "DiagnosticInfo" "#2563EB" ];
+#   hint = [ "DiagnosticHint" "#10B981" ];
+#   default = [ "Identifier" "#7C3AED" ];
+#   test = [ "Identifier" "#FF00FF" ];
+# };
+#
+# };
 
+#
 		# lsp-format.enable = true;
 		lspkind.enable = true;
 		lspsaga = {
