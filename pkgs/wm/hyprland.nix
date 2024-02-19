@@ -1,34 +1,38 @@
 { config, userSettings, lib, pkgs, ... }:
 
 let 
-wallp = pkgs.pkgs.writeShellScript "wallp" ''
-#!/bin/sh
 
-wp_dir="$HOME/Pictures"
-# wp_dir="$HOME/new"
+  # wallp = import ../../pkgs/pywal/wallp.nix;
+  wallp = (if userSettings.theme == "wal" then import ../../pkgs/pywal/wallp.nix else import ../../pkgs/calp.nix);
 
-list_wps() {
-  find "$wp_dir" -regex '.*\(jpg\|jpeg\|png\)' -printf "%P\n" |shuf |
-    while read wp; do
-      echo -en "$wp\x00icon\x1f$wp_dir/$wp\n";
-    done
-}
-
-rofi_dmenu() {
-  # handwriting fonts: caveat #1 swankyandmoomoo #2 longcang #3
-  rofi -dmenu -show-icons \
-    -theme-str '#entry { placeholder: "Wallpaper to apply.."; }' \
-    -theme wall
-}
-
-wp=$( list_wps | rofi_dmenu )
-
-[ ! -z $wp ] && swww img "$wp_dir/$wp" 
-# [ ! -z $wp ] && wal -n -q -i "$wp_dir/$wp" && swww img "$wp_dir/$wp" && pkill dunst
-# themer=(if userSettings.theme == wal then "wal -n -q -i \"$wp_dir/$wp\"" && pkill dunst else "" )
-# [ ! -z $wp ] && $themer && swww img "$wp_dir/$wp"
-
-'';
+# wallp = pkgs.pkgs.writeShellScript "wallp" ''
+# #!/bin/sh
+#
+# wp_dir="$HOME/Pictures"
+# # wp_dir="$HOME/new"
+#
+# list_wps() {
+#   find "$wp_dir" -regex '.*\(jpg\|jpeg\|png\)' -printf "%P\n" |shuf |
+#     while read wp; do
+#       echo -en "$wp\x00icon\x1f$wp_dir/$wp\n";
+#     done
+# }
+#
+# rofi_dmenu() {
+#   # handwriting fonts: caveat #1 swankyandmoomoo #2 longcang #3
+#   rofi -dmenu -show-icons \
+#     -theme-str '#entry { placeholder: "Wallpaper to apply.."; }' \
+#     -theme wall
+# }
+#
+# wp=$( list_wps | rofi_dmenu )
+#
+# [ ! -z $wp ] && swww img "$wp_dir/$wp" 
+# # [ ! -z $wp ] && wal -n -q -i "$wp_dir/$wp" && swww img "$wp_dir/$wp" && pkill dunst
+# # themer=(if userSettings.theme == wal then "wal -n -q -i \"$wp_dir/$wp\"" && pkill dunst else "" )
+# # [ ! -z $wp ] && $themer && swww img "$wp_dir/$wp"
+#
+# '';
 
 bright = pkgs.pkgs.writeShellScript "bright" ''
 
@@ -97,6 +101,7 @@ notify-send -a "mediakeys" -u low -r 51 -h int:value:"$volume" -i "volume$1"  "$
 '';
 in
 {
+
  wayland.windowManager.hyprland = {
     enable = true;
 settings = {
