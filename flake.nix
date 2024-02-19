@@ -2,9 +2,9 @@
   description = "Nixos config flake";
 
   inputs = {
-  #  nixpkgsops-nix.url = "github:Mic92/sops-nix";s.url = "github:nixos/nixpkgs/nixos-23.11";
-sops-nix.url = "github:Mic92/sops-nix";
-nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgsops.url = "github:nixos/nixpkgs/nixos-23.11";
+#sops-nix.url = "github:Mic92/sops-nix";
+#nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 # transg-tui.url = "github:PanAeon/transg-tui";
 # nixos.url = "nixpkgs/23.11-beta";
   home-manager = {

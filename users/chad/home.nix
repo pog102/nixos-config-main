@@ -21,7 +21,7 @@
 		../../pkgs/color.nix
 		)
 			../../pkgs/wm/hyprland.nix
-			../../pkgs/editor/nvim.nix
+			 ../../pkgs/editor/nvim.nix
 			../../pkgs/shell/zsh.nix
 			../../pkgs/git.nix
 			../../pkgs/imv.nix

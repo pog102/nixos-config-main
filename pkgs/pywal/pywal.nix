@@ -17,16 +17,11 @@ colorscheme pywal
 '';
 	  extraPlugins = with pkgs.vimPlugins; [
 pywal-nvim
-# comment-nvim
-# {
-# plugin =skel-nvim;
-# # config = 
-# }
 	  ];
-
-
-
 };
+
+
+
                       # nixvim.path = "/home/chad/.cache/wal/nixvim.lua";
        #               nixvim.extraConfigVim = ''
 #	 luafile /home/chad/.cache/wal/nixvim.lua

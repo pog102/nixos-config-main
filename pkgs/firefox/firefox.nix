@@ -39,9 +39,7 @@
       name = "dev-edition-default";
       extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
         ublock-origin
-        bitwarden
         sponsorblock
-        sidebery
       ];
       search.force = true;
       search.engines = {
@@ -161,7 +159,7 @@
         # HTTPS-FIRST POLICY
         "dom.security.https_first" = true;
         # PASSWORDS
-        "signon.rememberSignons" = false;
+        "signon.rememberSignons" = true;
         "signon.formlessCapture.enabled" = false;
         "signon.privateBrowsingCapture.enabled" = false;
         "network.auth.subresource-http-auth-allow" = 1;
@@ -185,6 +183,7 @@
         # SAFE BROWSING
         "browser.safebrowsing.downloads.remote.enabled" = false;
         # MOZILLA
+	        "browser.startup.homepage" = "https://start.duckduckgo.com";
         "permissions.default.desktop-notification" = 2;
         "permissions.default.geo" = 2;
         "geo.provider.network.url" = "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%";
@@ -271,7 +270,7 @@
         "findbar.highlightAll" = true;
         "layout.word_select.eat_space_to_next_word" = false;
 
-        "intl.accept_languages" = "es-AR, es, en-US, en";
+        "intl.accept_languages" = "en-US, en";
       };
       # userChrome = builtins.concatStringsSep "\n" (builtins.map builtins.readFile [
       #   "${SilentFox}/userChrome.css"
