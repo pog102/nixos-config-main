@@ -173,7 +173,7 @@ mkdnflow = {
 
 enable =true;
 links.conceal =true;
-# toDo.symbols= [" " "⧖" "✓"];
+toDo.symbols= [" " "⧖" "✓"];
 };
 #
 		# lsp-format.enable = true;

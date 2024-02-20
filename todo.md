@@ -2,7 +2,7 @@
 - [ ] [transg-tui](https://github.com/PanAeon/transg-tui)
 - [ ] [caligula](https://github.com/ifd3f/caligula)
 - [ ] [wait for ags]()
-- [-] [lf](https://github.com/gokcehan/lf)
+- [⧖] [lf](https://github.com/gokcehan/lf)
 
 # Reconfigure somethings
 - [ ] [btop with color.nix and pywal.nix](~/nixos-config-main/pkgs/btop.nix)
