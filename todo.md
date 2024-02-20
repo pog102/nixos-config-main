@@ -4,3 +4,4 @@
 - [ ] [wait for ags]()
 - [⧖] [lf](https://github.com/gokcehan/lf)
 - [ ] [btop with color.nix and pywal.nix](~/nixos-config-main/pkgs/btop.nix)
+- [ ] [update lualine for nixvim](~/nixos-config-main/pkgs/editor/nvim.nix)
