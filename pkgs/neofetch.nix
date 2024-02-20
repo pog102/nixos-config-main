@@ -5,7 +5,10 @@
 	home.packages = [pkgs.neofetch];
 
 	
-
+	home.file.".config/neofetch/chad.txt" = {
+		recursive = true;
+		source = ../chad2.txt;
+	};
 	home.file.".config/neofetch/config.conf".text = 
 		''
 		print_info() {
@@ -86,6 +89,7 @@ battery_display="off"
 disk_display="off"
 image_backend="chafa"
 # image_source="$HOME/.local/share/icons/arch.png"
+image_source="$HOME/.config/neofetch/chad.txt"
 ascii_distro="auto"
 ascii_colors=(distro)
 ascii_bold="on"
