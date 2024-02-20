@@ -33,7 +33,7 @@ mkdir $DIR
 
       ee = "editor-open";
       V = ''$${pkgs.bat}/bin/bat --paging=always --theme=gruvbox "$f"'';
-
+	r=":rename; cmd-delete-home"	;
       # ...
       extraConfig = 
     let 
@@ -42,8 +42,9 @@ mkdir $DIR
 
 case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
   	*.bmp|*.jpg|*.jpeg|*.png|*.xpm|*.webp|*.tiff|*.gif|*.jfif|*.ico)
-	geometry="$(($2-2))x$3"
-	chafa "$1" -f sixel -s "$geometry" --animate false
+	# geometry="$(($2-2))x$3"
+	chafa "$1" -f sixel -s "$((''${2}-0))x''${3}" --animate false 
+	# ${pkgs.chafa}/bin/chafa "$1" -f sixel --animate false 
 	;;
 	*)
 				bat --color=always --style=plain --pager=never "$1"
