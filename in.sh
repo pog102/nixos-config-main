@@ -4,6 +4,8 @@
 #nix-shell '<home-manager>' -A install
 #}
 #sudo nixos-rebuild switch --show-trace --flake .#default 
+# NOTE 
+# u can also sudo nixos-rebuild switch --flake github:pog102/nixos-config-main#default
 #
 #
 if [ "$1" == "c" ]
