@@ -60,6 +60,7 @@
 		bat-extras.prettybat
 		pamixer
 		chafa
+		libsixel
 		ripgrep
 		sassc
 		fzf
