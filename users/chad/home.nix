@@ -29,6 +29,7 @@
 			 # ../../pkgs/mako.nix
 			  ../../pkgs/neofetch.nix
 			../../pkgs/term/foot.nix
+			../../pkgs/lf.nix
 			../../pkgs/wlsunset.nix
 			../../pkgs/mpv/mpv.nix
 			../../pkgs/rofi/rofi.nix
