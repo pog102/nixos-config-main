@@ -21,6 +21,14 @@
   ];
 	  keymaps = [
 	  
+# { 
+#     action = "!xdg-open <cfile><CR>";
+#     key = "gx";
+# mode = "n";
+#     options = {
+#       silent = true;
+#     };
+#   }
 { 
     action = "function() require('dap').toggle_breakpoint()";
     key = "<F1>";
@@ -161,7 +169,12 @@ paths = "/home/chad/.config/nvim/snippets";
 # };
 #
 # };
+mkdnflow = {
 
+enable =true;
+links.conceal =true;
+toDo.symbols= [" " "⧖" "✓"];
+};
 #
 		# lsp-format.enable = true;
 		lspkind.enable = true;
