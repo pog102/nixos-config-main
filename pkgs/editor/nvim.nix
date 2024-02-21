@@ -212,8 +212,58 @@ toDo.symbols= [" " "⧖" "✓"];
                         comment-nvim.enable = true;
                         lualine = {
 			enable = true;
-# 			sectionSeparators.left = "";
-# 			sectionSeparators.right = "";
+			sectionSeparators.left = "";
+			sectionSeparators.right = "";
+			componentSeparators.left ="";
+			componentSeparators.right ="";
+
+			sections = {
+			lualine_a = [
+		{
+
+
+
+		}	
+			];
+
+			lualine_b = [
+		{
+
+
+		}	
+			];
+
+			lualine_y = [
+			# "filetype"
+			# "progress"
+			# separator.right = "";
+			# padding.left=2;
+			];
+			lualine_z = [
+			{
+			# separator.right = "";
+			# padding.left=2;
+			}
+			];
+			};
+			inactiveSections = {
+			lualine_a = [
+			
+			];
+
+			lualine_y = [
+			# "filetype"
+			# "progress"
+			# separator.right = "";
+			# padding.left=2;
+			];
+			lualine_z = [
+			{
+			# separator.right = "";
+			# padding.left=2;
+			}
+			];
+			};
 # 	sections.lualine_a.mode = {
 # separator.left =  "";
 #
