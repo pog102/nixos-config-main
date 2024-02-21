@@ -34,14 +34,23 @@ pywal-nvim
 		source = /home/chad/.cache/wal/hyprland
 	'';
 
-programs.rofi = {
-theme=lib.mkForce "~/.cache/wal/colors.rasi";
-};
-services.dunst = {
-enable=true;
-configFile="/home/chad/.cache/wal/dunstrc";
-};
+# programs.rofi = {
+# theme=lib.mkForce "~/.cache/wal/colors.rasi";
+# };
+# services.dunst = {
+# enable=true;
+# configFile="/home/chad/.cache/wal/dunstrc";
+# };
 
+	home.file.".config/rofi/config.rasi".text = ''
+configuration {
+location: 0;
+terminal: "foot";
+xoffset: 0;
+yoffset: 0;
+}
+@theme "~/.cache/wal/colors.rasi"
+	'';
 
 	home.file.".config/wal/templates" = {
 		recursive = true;

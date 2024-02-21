@@ -53,9 +53,18 @@
             useTruecolor = true;
                       };
 
-programs.rofi = {
-theme= "~/.config/rofi/color.rasi";
-};
+	home.file.".config/rofi/config.rasi".text = ''
+configuration {
+location: 0;
+terminal: "foot";
+xoffset: 0;
+yoffset: 0;
+}
+@theme "~/.config/rofi/color.rasi"
+	'';
+# programs.rofi = {
+# theme= "~/.config/rofi/color.rasi";
+# };
 	home.file.".config/rofi/color.rasi".text = ''
 * {
  //  color0:	#${config.colorScheme.palette.base00}5C;
