@@ -3,6 +3,7 @@
 - [ ] [caligula](https://github.com/ifd3f/caligula)
 - [ ] [wait for ags]()
 - [⧖] [lf](https://github.com/gokcehan/lf)
+- [ ] [nixvim add lsp icons](./pkgs/editor/nvim.nix)
 
 # Reconfigure somethings
 - [ ] [btop with color.nix and pywal.nix](./pkgs/btop.nix)
