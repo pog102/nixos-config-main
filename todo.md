@@ -10,3 +10,4 @@
 - [ ] [make systemd sleep-hyrbitd work](./pkgs/systemd.nix)
 - [ ] one external monitor display
 - [ ] [add good icons for dunst](./pkgs/dunst.nix) 
+- [ ] [make rofi power menu with transparency](./pkgs/rofi/rofi.nix)
