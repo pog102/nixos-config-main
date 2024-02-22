@@ -37,10 +37,11 @@ pywal-nvim
 # programs.rofi = {
 # theme=lib.mkForce "~/.cache/wal/colors.rasi";
 # };
-# services.dunst = {
-# enable=true;
-# configFile="/home/chad/.cache/wal/dunstrc";
-# };
+
+services.dunst = {
+enable=true;
+configFile="/home/chad/.cache/wal/dunstrc";
+};
 
 	home.file.".config/rofi/config.rasi".text = ''
 configuration {

@@ -1,5 +1,12 @@
 { userSettings, inputs, config, pkgs, ... }:
-
+# let
+# src=pkgs.fetchFromGitHub {
+#   owner = "PanAeon";
+#   repo = "transg-tui";
+#   rev = "07014c38c7da193ea12cb695b4800f0a768eb389";
+#   hash = "sha256-hq3uDajewxf9avtGR0iuJeliyv+r4Et/GAjnBlHpb4c=";
+# };
+# in
 {
 # Home Manager needs a bit of information about you and the paths it should
 # manage.
@@ -48,6 +55,12 @@
 
 	home.packages = with pkgs; [
 #      zsh-history-substring-search
+
+# (import (fetchTarball {
+#   url = "https://github.com/PanAeon/transg-tui/archive/master.tar.gz";
+#   sha256 = "11vgx58hdrq831zlpq5bzz565s95mr44fipvdbyighyym06yxbc6";
+# }))
+
 		lsd
 		xdg-utils
 		bat
