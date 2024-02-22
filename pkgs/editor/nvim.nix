@@ -175,6 +175,8 @@ enable =true;
 links.conceal =true;
 toDo.symbols= [" " "⧖" "✓"];
 };
+cmp-git.enable=true;
+fugitive.enable=true;
 #
 		# lsp-format.enable = true;
 		lspkind.enable = true;
