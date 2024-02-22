@@ -179,7 +179,7 @@ papirus-icon-theme
       # XDG_VM_DIR = "${config.home.homeDirectory}/Machines";
       # XDG_ORG_DIR = "${config.home.homeDirectory}/Org";
       # XDG_PODCAST_DIR = "${config.home.homeDirectory}/Media/Podcasts";
-      XDG_NOTES_DIR = "${config.home.homeDirectory}/Notes";
+      # XDG_NOTES_DIR = "${config.home.homeDirectory}/Notes";
     };
   };
 xdg.desktopEntries = 

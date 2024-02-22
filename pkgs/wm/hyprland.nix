@@ -175,6 +175,7 @@ animations = {
 };
 
 bind = [
+	"$mod, C, movetoworkspace, special"
        "$mod, Return, exec, foot"
        "$mod, W, exec, ${wallp}"
 	"$mod, D, exec, rofi -show drun -theme gloss &"
