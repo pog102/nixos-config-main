@@ -175,7 +175,10 @@ animations = {
 };
 
 bind = [
-	"$mod, C, movetoworkspace, special"
+
+
+	"$mod, TAB, movetoworkspace, special"
+	"$mod,S,togglespecialworkspace"
        "$mod, Return, exec, foot"
        "$mod, W, exec, ${wallp}"
 	"$mod, D, exec, rofi -show drun -theme gloss &"
@@ -215,8 +218,22 @@ bind = [
 "$mod, up, movefocus, u  "
 "$mod, down, movefocus, d"
 
+
+"$mod, mouse_down, workspace, e+1"
+"$mod, mouse_up, workspace, e-1"
+
+];
+bindm = [
+"$mod, mouse:272, movewindow"
+"$mod, mouse:273, resizewindow"
+
+
 ];
 binde = [
+"$mod CTRL, left, resizeactive, -20 0"
+"$mod CTRL, right, resizeactive, 20 0"
+"$mod CTRL, up, resizeactive, 0 -20"
+"$mod CTRL, down, resizeactive, 0 20"
 "CONTROL, right, exec, ${bright} A"
  "CONTROL, left, exec, ${bright} U"
 "CONTROL, up, exec, ${volume} i"
