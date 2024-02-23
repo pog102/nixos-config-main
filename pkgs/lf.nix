@@ -14,19 +14,28 @@ mkdir $DIR
 }}
 '';
 
+create = ''
+''${{
+printf "file: "
+read file && lf -remote "$open $file"
+}}
+'';
 };
  keybindings = {
 
       "\\\"" = "";
       o = "";
-      c = "mkdir";
+      m = "mkdir";
+      c = "create";
+      e = "read";
       "." = "set hidden!";
       "`" = "mark-load";
       "\\'" = "mark-load";
       "<enter>" = "open";
       
       do = "dragon-out";
-      
+      D="delete";
+
       "g~" = "cd";
       gh = "cd";
       "g/" = "/";
@@ -39,18 +48,17 @@ mkdir $DIR
     let 
       previewer = 
         pkgs.writeShellScriptBin "pv.sh" ''
-
-case "$(printf "%s\n" "$(readlink -f "$1")" | awk '{print tolower($0)}')" in
-  	*.bmp|*.jpg|*.jpeg|*.png|*.xpm|*.webp|*.tiff|*.gif|*.jfif|*.ico)
-	# geometry="$(($2-2))x$3"
-	chafa "$1" -f sixel -s "$((''${2}-0))x''${3}" --animate false 
-	# ${pkgs.chafa}/bin/chafa "$1" -f sixel --animate false 
-	;;
+case "$(file -Lb --mime-type -- "$1")" in
+    image/*)
+        chafa -f sixel -s "$2x$3" --animate off --polite on "$1"
+	# notify-send "$1"
+        # chafa -f sixel --animate off --polite on "$1"
+        exit 1
+        ;;
 	*)
 				bat --color=always --style=plain --pager=never "$1"
 		;;
 	esac
-exit 0
 
       '';
       cleaner = pkgs.writeShellScriptBin "clean.sh" ''
@@ -66,6 +74,7 @@ exit 0
       preview = true;
       hidden = true;
       drawbox = true;
+      sixel=true;
       icons = true;
       ignorecase = true;
     };
