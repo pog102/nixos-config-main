@@ -25,11 +25,14 @@ open = ''
 '';
 create = ''
 ''${{
+clear
   printf "File Name: "
   read ans
-  # touch $ans
-  $EDITOR $ans
+  touch $ans
+  # $EDITOR $ans
   # $OPENER $ans
+  lf -remote "send $id select $ans"
+  lf -remote "send $id open"
 }}
 '';
 };
