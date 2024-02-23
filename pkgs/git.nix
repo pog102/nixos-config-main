@@ -5,7 +5,7 @@
 programs.git = {
   enable = true;
    aliases = {
-      a = "!git add -A && git commit -m 'the usual' && git push";
+      a = "!git add -A && git commit -m 'Added some stuff' && git push";
       co = "checkout";
       s = "status";
     };
