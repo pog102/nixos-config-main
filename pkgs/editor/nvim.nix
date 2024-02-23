@@ -90,6 +90,7 @@ mode = "n";
 ];
  	  extraPlugins = with pkgs.vimPlugins; [
 	  # gkeep-nvim
+	  lf-vim
  	  ];
 
           clipboard.providers.wl-copy = {

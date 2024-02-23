@@ -58,6 +58,27 @@
           icon = "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
           definedAliases = ["@hm"];
         };
+	"NixVim" = {
+          urls = [
+            {
+              template = "https://nix-community.github.io/nixvim/?search=lf";
+              params = [
+
+                # {
+                #   name = "type";
+                #   value = "packages";
+                # }
+                {
+                  name = "search";
+                  value = "{searchTerms}";
+                }
+              ];
+            }
+          ];
+          icon = "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+          definedAliases = ["@nv"];
+        };
+
         "Nix Packages" = {
           urls = [
             {
@@ -94,7 +115,7 @@
         # GFX
         "gfx.canvas.accelerated.cache-items" = 4096;
         "gfx.canvas.accelerated.cache-size" = 512;
-        "gfx.content.skia-font-cache-size" = 20;
+        # "gfx.content.skia-font-cache-size" = 20;
         # DISK CACHE
         "browser.cache.jsbc_compression_level" = 3;
         # MEDIA CACHE
@@ -109,6 +130,11 @@
         "network.http.max-connections" = 1800;
         "network.http.max-persistent-connections-per-server" = 10;
         "network.http.max-urgent-start-excessive-connections-per-host" = 5;
+        "gfx.content.skia-font-cache-size" = 20;
+        # DISK CACHE
+        # MEDIA CACHE
+        # IMAGE CACHE
+        # NETWORK
         "network.http.pacing.requests.enabled" = false;
         "network.dnsCacheExpiration" = 3600;
         "network.dns.max_high_priority_threads" = 8;
@@ -244,21 +270,6 @@
         "cookiebanners.service.mode" = 1;
         "cookiebanners.service.mode.privateBrowsing" = 1;
         "cookiebanners.service.enableGlobalRules" = true;
-        # FULLSCREEN NOTICE
-        "full-screen-api.transition-duration.enter" = "0 0";
-        "full-screen-api.transition-duration.leave" = "0 0";
-        "full-screen-api.warning.delay" = -1;
-        "full-screen-api.warning.timeout" = 0;
-        # URL BAR
-        "browser.urlbar.suggest.calculator" = true;
-        "browser.urlbar.unitConversion.enabled" = true;
-        "browser.urlbar.trending.featureGate" = false;
-        # NEW TAB PAGE
-        "browser.newtabpage.activity-stream.feeds.topsites" = false;
-        "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
-        # POCKET
-        "extensions.pocket.enabled" = false;
-        # DOWNLOADS
         "browser.download.useDownloadDir" = false;
         "browser.download.always_ask_before_handling_new_types" = true;
         "browser.download.manager.addToRecentDocs" = false;
