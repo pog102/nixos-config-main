@@ -202,12 +202,20 @@ exec = "foot --server";
 };
 	 xdg.mime.enable = true;
   xdg.mimeApps.enable = true;
+    xdg.mimeApps.defaultApplications = {
+		"text/plain"="nvim.desktop";
+		"inode/x-empty"="nvim.desktop";
+		"application/json"="nvim.desktop";
+  };
+
     xdg.mimeApps.associations.added = {
   "application/x.bittorrent" ="torrent.desktop";
 "x-scheme-handler/magnet"="torrent.desktop";
+		"text/plain"="nvim.desktop";
+		
+
 
   };
-
 # Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
 }

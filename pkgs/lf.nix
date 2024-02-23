@@ -13,11 +13,23 @@ mkdir $DIR
 
 }}
 '';
+open = ''
+''${{
+    case $(file --mime-type -Lb $f) in
+        text/*|inode/*) lf -remote "send $id \$$EDITOR \$fx";;
+        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
 
+
+'';
 create = ''
 ''${{
-printf "file: "
-read file && lf -remote "$open $file"
+  printf "File Name: "
+  read ans
+  # touch $ans
+  $EDITOR $ans
+  # $OPENER $ans
 }}
 '';
 };

@@ -12,4 +12,4 @@
 - [ ] one external monitor display
 - [ ] [add good icons for dunst](./pkgs/dunst.nix) 
 - [ ] [make rofi power menu with transparency](./pkgs/rofi/rofi.nix)
-- [ ] [lf create a file and open nvim]
+- [ ] [lf create a file and open nvim]()
