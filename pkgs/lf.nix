@@ -50,7 +50,8 @@ read file && lf -remote "$open $file"
         pkgs.writeShellScriptBin "pv.sh" ''
 case "$(file -Lb --mime-type -- "$1")" in
     image/*)
-        chafa -f sixel -s "$2x$3" --animate off --polite on "$1"
+        # chafa -f sixel -s "$2x$3" --animate off --polite on "$1"
+        chafa -s "$2x$3" --animate off --polite on "$1"
 	# notify-send "$1"
         # chafa -f sixel --animate off --polite on "$1"
         exit 1
