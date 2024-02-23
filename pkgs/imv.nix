@@ -9,7 +9,7 @@ exec /nix/store/mbn8520af7wsj7dydih90cbj6lpa8gwq-user-environment/bin/notify-sen
 in
 {
 programs.imv = {
-enable =true;
+enable =false;
 settings ={
 
   aliases = {
