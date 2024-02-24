@@ -9,6 +9,11 @@
 	home.packages = [
 	pkgs.rofi-wayland
 	];
+
+	home.file.".local/share/custom_apps" = {
+		recursive = false;
+		source = ../desktops;
+	};
 	home.file.".config/rofi/themes" = {
 
 		recursive = true;

@@ -96,6 +96,7 @@ papirus-icon-theme
        #!/bin/sh
        transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
     '')
+
 			   (pkgs.makeDesktopItem {
       name = "torrent";
       desktopName = "Torrent";
@@ -107,6 +108,20 @@ papirus-icon-theme
 		"x-scheme-handler/magnet"
       ];
     })
+
+
+
+	# 		   (pkgs.makeDesktopItem {
+ #      name = "shutdown";
+ #      desktopName = "Shutdown";
+	# comment="convenience app for rofi menu to shutdown the system";
+ #      exec = "systemctl poweroff";
+ #      terminal = true;
+	# # noDisplay = true;
+ #      type = "Application";
+	# icon ="xfsm-shutdown";
+	# categories= ["System"];
+ #    })
 #  firefox
 # # Adds the 'hello' command to your environment. It prints a friendly
 # # "Hello, world!" when run.
@@ -171,6 +186,7 @@ papirus-icon-theme
     # templates = "${config.home.homeDirectory}/Templates";
     download = "${config.home.homeDirectory}/Downloads";
     documents = "${config.home.homeDirectory}/Documents";
+    secret_apps = "${config.home.homeDirectory}/.local/share/custom_apps";
     desktop = null;
     publicShare = null;
     extraConfig = {
