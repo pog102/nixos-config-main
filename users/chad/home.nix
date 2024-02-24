@@ -186,7 +186,7 @@ papirus-icon-theme
     # templates = "${config.home.homeDirectory}/Templates";
     download = "${config.home.homeDirectory}/Downloads";
     documents = "${config.home.homeDirectory}/Documents";
-    secret_apps = "${config.home.homeDirectory}/.local/share/custom_apps";
+    # secret_apps = "${config.home.homeDirectory}/.local/share/custom_apps";
     desktop = null;
     publicShare = null;
     extraConfig = {

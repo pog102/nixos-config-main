@@ -10,9 +10,9 @@
 	pkgs.rofi-wayland
 	];
 
-	home.file.".local/share/custom_apps" = {
-		recursive = false;
-		source = ../desktops;
+	home.file.".local/share/fonts" = {
+		recursive = true;
+		source = ../fonts;
 	};
 	home.file.".config/rofi/themes" = {
 
