@@ -2,7 +2,7 @@
 - [ ] [transg-tui](https://github.com/PanAeon/transg-tui)
 - [ ] [caligula](https://github.com/ifd3f/caligula)
 - [ ] [wait for ags]()
-- [⧖] [lf](https://github.com/gokcehan/lf)
+- [✓] [lf](https://github.com/gokcehan/lf)
 - [ ] [nixvim add lsp icons](./pkgs/editor/nvim.nix)
 
 # Reconfigure somethings
@@ -12,5 +12,5 @@
 - [ ] one external monitor display
 - [ ] [add good icons for dunst](./pkgs/dunst.nix) 
 - [ ] [make rofi power menu with transparency](./pkgs/rofi/rofi.nix)
-- [ ] [lf create a file and open nvim]()
-- [ ] [add skels to my lf create shell](~/.bin/skels)
+- [✓] [lf create a file and open nvim]()
+- [✓] [add skels to my lf create shell](~/.bin/skels)

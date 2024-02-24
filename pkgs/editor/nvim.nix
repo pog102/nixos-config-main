@@ -370,10 +370,19 @@ fugitive.enable=true;
                         };
                       };
 		      options = {
+		      incsearch = true; # Select items found in search
+      hlsearch = true; # Highlight searches by default
+      ignorecase = true; # Ignore case when searching
+      smartcase = true; # Unless you type a capital
 number = true;
 relativenumber = false;
 showmode = false;
 undofile = true;
+ breakindent = true; # Keep indentation for wrapped lines
+      autoindent = true; # Enable auto-indentation
+      smartindent = true; # Enable smart-indentation
+            softtabstop = 0; # Use hard tabs alwaysShowBufferline
+	          swapfile = false; # Enable swap files
 clipboard="unnamedplus";
 
 
