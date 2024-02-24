@@ -1,7 +1,6 @@
 { config, userSettings, lib, pkgs, ... }:
 
 let 
-
   # wallp = import ../../pkgs/pywal/wallp.nix;
   wallp = import (if userSettings.theme == "wal" then ../../pkgs/pywal/wallp.nix else ../../pkgs/calp.nix) {inherit pkgs;};
   # wallp = import ../../pkgs/calp.nix {inherit pkgs;};
@@ -54,7 +53,7 @@ fi
 	notify-send -a "mediakeys" -u low -r 50 -h int:value:"$brightness" -i "$icon" "$brightness%" -t 1100
 '';
 
-powermenu = pkgs.pkgs.writeShellScript "powermenu" ''
+powermenu = pkgs.writeShellScript "powermenu" ''
 #!/bin/env bash
  
 # Options for powermenu
@@ -103,6 +102,26 @@ notify-send -a "mediakeys" -u low -r 51 -h int:value:"$volume" -i "volume$1"  "$
 in
 {
 
+	home.packages = [
+(pkgs.writeScriptBin  "power" ''
+#!/bin/sh
+case $1 in
+low)
+    hyprctl --batch "\
+        keyword animations:enabled 0;\
+        keyword decoration:drop_shadow 0;\
+        keyword decoration:blur:enabled 0"
+  ;;
+*)
+    hyprctl --batch "\
+        keyword animations:enabled 1;\
+        keyword decoration:drop_shadow 1;\
+        keyword decoration:blur:enabled 1"
+  ;;
+esac
+
+'')
+	];
  wayland.windowManager.hyprland = {
     enable = true;
 settings = {
