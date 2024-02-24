@@ -12,6 +12,8 @@
     ../../pkgs/transmission.nix
     ../../pkgs/cpu.nix
     ../../pkgs/systemd.nix
+
+    ../../pkgs/steam.nix
     # ../../pkgs/trans/default.nix
     # ../../pkgs/udev.nix
     # ../../pkgs/plymouth.nix
