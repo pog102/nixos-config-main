@@ -16,7 +16,7 @@ mkdir $DIR
 open = ''
 ''${{
     case $(file --mime-type -Lb $f) in
-        text/*|inode/*) lf -remote "send $id \$$EDITOR \$fx";;
+        text*|inode*) lf -remote "send $id \$$EDITOR \$fx";;
         *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
@@ -28,9 +28,18 @@ create = ''
 clear
   printf "File Name: "
   read ans
-  touch $ans
-  # $EDITOR $ans
-  # $OPENER $ans
+  case $ans in
+   *nix)
+	cp ~/.config/nvim/templates/skel.nix $ans
+      ;;
+   *sh)
+	cp ~/.config/nvim/templates/skeleton.sh $ans
+      ;;
+   *)
+  	touch $ans
+     ;;
+esac
+
   lf -remote "send $id select $ans"
   lf -remote "send $id open"
 }}
