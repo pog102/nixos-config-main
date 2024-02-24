@@ -21,6 +21,7 @@ zsh = {
     less = "prettybat";
     ls = "lsd";
     neo = "neo -D";
+    mom="ssh chad@192.168.1.87";
     up = "sudo nixos-rebuild switch --flake .#default";
   };
    initExtraFirst = ''

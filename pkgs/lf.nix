@@ -41,7 +41,7 @@ clear
 esac
 
   lf -remote "send $id select $ans"
-  lf -remote "send $id open"
+  # lf -remote "send $id open"
 }}
 '';
 };
@@ -51,7 +51,6 @@ esac
       o = "";
       m = "mkdir";
       c = "create";
-      e = "read";
       "." = "set hidden!";
       "`" = "mark-load";
       "\\'" = "mark-load";

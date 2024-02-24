@@ -38,6 +38,14 @@ mode = "n";
     };
   }
 { 
+    action = "<cmd>Lf<CR>";
+    key = "tt";
+mode = "n";
+    options = {
+      silent = true;
+    };
+  }
+{ 
     action = "function() require('dap').continue()";
     key = "<F5>";
 mode = "n";
