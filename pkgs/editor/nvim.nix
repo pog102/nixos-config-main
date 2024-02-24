@@ -297,6 +297,18 @@ fugitive.enable=true;
 			enable = true;
 			backgroundColour = "#000000";
 			};
+# 			trouble = {
+# 				enable = true;
+# 				signs={
+# error="er";
+# information="in";
+# hint="hn";
+# warning="wa";
+#
+#
+#
+# 				};
+# 				};
                         lsp = {
                           enable = true;
                           servers = {
