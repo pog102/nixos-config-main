@@ -110,13 +110,15 @@ low)
     hyprctl --batch "\
         keyword animations:enabled 0;\
         keyword decoration:drop_shadow 0;\
-        keyword decoration:blur:enabled 0"
+        keyword decoration:blur:enabled 0;\
+	hyprctl keyword misc:vfr 0"
   ;;
 *)
     hyprctl --batch "\
         keyword animations:enabled 1;\
         keyword decoration:drop_shadow 1;\
-        keyword decoration:blur:enabled 1"
+        keyword decoration:blur:enabled 1;\
+	hyprctl keyword misc:vfr 1"
   ;;
 esac
 
