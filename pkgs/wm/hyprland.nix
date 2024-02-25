@@ -34,6 +34,32 @@ let
 #
 # '';
 
+rofi-pow = pkgs.pkgs.writeShellScript "rofi-pow" ''
+
+#!/bin/sh
+selected="$(echo -e "$options" |
+            rofi -theme ''${script_abs_dir_path}/me.rasi \
+                 -font "WeblySleek UI Light, 60" \
+                 -p "See you later, ''${USER^}!" -dmenu -selected-row ''${preselection})"
+
+case $selected in
+    "''${poweroff}")
+        systemctl poweroff
+        ;;
+    "''${reboot}")
+        systemctl reboot
+        ;;
+    "''${sleep}")
+        systemctl suspend
+        ;;
+    "''${logout}")
+        cinnamon-session-quit --logout --no-prompt || ( xfce4-session-logout --logout || mate-session-save --logout )
+        ;;
+    "''${lock}")
+        cinnamon-screensaver-command --lock || ( xflock4 || mate-screensaver-command -l )
+        ;;
+esac
+'';
 bright = pkgs.pkgs.writeShellScript "bright" ''
 
 #!/bin/sh
@@ -202,10 +228,10 @@ bind = [
 	"$mod,S,togglespecialworkspace"
        "$mod, Return, exec, foot"
        "$mod, W, exec, ${wallp}"
+       "$mod, M, exec, ${rofi-pow}"
 	"$mod, D, exec, rofi -show drun -theme gloss &"
        "$mod, Q, killactive"
        "$mod, F, fullscreen"
-       "$mod, M, exec, ${powermenu}"
        "$mod, Space, togglefloating"
 
 "$mod, 1, workspace, 1  "
