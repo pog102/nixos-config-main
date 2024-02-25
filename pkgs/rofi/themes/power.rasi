@@ -96,7 +96,8 @@ listview {
     enabled:                     true;
     columns:                     5;
     lines:                       1;
-    flow:		vertical;
+//    flow:		vertical;
+    flow:		horizontal;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
