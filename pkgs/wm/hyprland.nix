@@ -43,10 +43,11 @@ sleep=$(echo -ne "\uE9BD");
 logout=$(echo -ne "\uE9AB");
 lock=$(echo -ne "\uE9A9");
 options="$poweroff\n$reboot\n$sleep\n$logout\n$lock"
+# options="$poweroff\n$reboot\n$sleep"
 selected="$(echo -e "$options" |
             rofi -theme power \
                  -font "WeblySleek UI Light, 60" \
-                 -p "See you later, ''${USER^}!" -dmenu -selected-row 4)"
+                 -p "See you later, ''${USER^}!" -dmenu -selected-row 0)"
 
 case $selected in
     "''${poweroff}")
@@ -59,10 +60,10 @@ case $selected in
         systemctl suspend
         ;;
     "''${logout}")
-        cinnamon-session-quit --logout --no-prompt || ( xfce4-session-logout --logout || mate-session-save --logout )
+        # cinnamon-session-quit --logout --no-prompt || ( xfce4-session-logout --logout || mate-session-save --logout )
         ;;
     "''${lock}")
-        cinnamon-screensaver-command --lock || ( xflock4 || mate-screensaver-command -l )
+        # cinnamon-screensaver-command --lock || ( xflock4 || mate-screensaver-command -l )
         ;;
     *)
         ;;
