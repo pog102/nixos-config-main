@@ -75,16 +75,16 @@ bright = pkgs.pkgs.writeShellScript "bright" ''
 brillo -q -$1 1
 
 brightness=$(printf "%.0f\n" $(brillo -G))
-icon="xfpm-brightness-lcd"
-if [ "$brightness" -gt 70 ]; then
-	icon="sun"
-elif [ "$brightness" -gt 45 ]; then
-	icon="sun_half"
-#elif [  "$brightness" -gt 25  ]; then
-#	icon="sun_low"
-else
-	icon="sun_emp"
-fi
+icon="sun"
+# if [ "$brightness" -gt 70 ]; then
+# 	icon="sun"
+# elif [ "$brightness" -gt 45 ]; then
+# 	icon="sun_half"
+# #elif [  "$brightness" -gt 25  ]; then
+# #	icon="sun_low"
+# else
+# 	icon="sun_emp"
+# fi
 	notify-send -a "mediakeys" -u low -r 50 -h int:value:"$brightness" -i "$icon" "$brightness%" -t 1100
 '';
 
