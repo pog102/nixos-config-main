@@ -88,51 +88,21 @@ fi
 	notify-send -a "mediakeys" -u low -r 50 -h int:value:"$brightness" -i "$icon" "$brightness%" -t 1100
 '';
 
-powermenu = pkgs.writeShellScript "powermenu" ''
-#!/bin/env bash
- 
-# Options for powermenu
-reboot="󰦛"
-sleep=""
-shutdown=""
-# Get answer from user via rofi
-selected_option=$(echo "$shutdown
-$reboot
-$sleep" | rofi -dmenu\
-                  -i\
-                  -p "Power"\
-		  -theme power2)
-# Do something based on selected option
-if [ "$selected_option" == "$shutdown" ]
-then
-    systemctl poweroff
-elif [ "$selected_option" == "$reboot" ]
-then
-    systemctl reboot
-elif [ "$selected_option" == "$sleep" ]
-then
-    systemctl suspend
-else
-    echo "No match"
-fi
-
-
-'';
 
 volume = pkgs.pkgs.writeShellScript "volume" ''
 #!/bin/sh
 pamixer -$1 2
 volume=$(pamixer --get-volume)
-# noti () {
+noti () {
 notify-send -a "mediakeys" -u low -r 51 -h int:value:"$volume" -i "volume$1"  "$volume%" -t 1100
-# }
-# if [ $volume -lt 30 ]; then
-# 	noti low
-# elif [ $volume -lt 60 ];then
-# 	noti medium
-# else
-# 	noti high
-# fi
+}
+if [ $volume -lt 30 ]; then
+	noti low
+elif [ $volume -lt 60 ];then
+	noti mid
+else
+	noti max
+fi
 '';
 in
 {
