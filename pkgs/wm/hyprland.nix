@@ -37,10 +37,16 @@ let
 rofi-pow = pkgs.pkgs.writeShellScript "rofi-pow" ''
 
 #!/bin/sh
+poweroff=$(echo -ne "\uE9DA");
+reboot=$(echo -ne "\uE9DE");
+sleep=$(echo -ne "\uE9BD");
+logout=$(echo -ne "\uE9AB");
+lock=$(echo -ne "\uE9A9");
+options="$poweroff\n$reboot\n$sleep\n$logout\n$lock"
 selected="$(echo -e "$options" |
-            rofi -theme ''${script_abs_dir_path}/me.rasi \
+            rofi -theme power \
                  -font "WeblySleek UI Light, 60" \
-                 -p "See you later, ''${USER^}!" -dmenu -selected-row ''${preselection})"
+                 -p "See you later, ''${USER^}!" -dmenu -selected-row 4)"
 
 case $selected in
     "''${poweroff}")
@@ -57,6 +63,8 @@ case $selected in
         ;;
     "''${lock}")
         cinnamon-screensaver-command --lock || ( xflock4 || mate-screensaver-command -l )
+        ;;
+    *)
         ;;
 esac
 '';
