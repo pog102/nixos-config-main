@@ -222,6 +222,7 @@ exec = "foot --server";
 		"text/plain"="nvim.desktop";
 		"inode/x-empty"="nvim.desktop";
 		"application/json"="nvim.desktop";
+		"inode/directory"="lf.desktop";
   };
 
     xdg.mimeApps.associations.added = {
@@ -229,6 +230,7 @@ exec = "foot --server";
 "x-scheme-handler/magnet"="torrent.desktop";
 		"text/plain"="nvim.desktop";
 		
+		"inode/directory"="lf.desktop";
 
 
   };
