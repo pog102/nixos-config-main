@@ -189,7 +189,7 @@
         links.conceal = true;
         toDo.symbols = [ " " "⧖" "✓" ];
       };
-      cmp-git.enable = true;
+      # cmp-git.enable = true;
       fugitive.enable = true;
       #
       # lsp-format.enable = true;
@@ -236,6 +236,10 @@
       # gitblame.enable = true;
       bufferline = {
         enable = true;
+        diagnostics = true;
+        # separatorStyle = "padded_slant";
+        hover.enabled = true;
+        highlights.indicatorSelected.underline = true;
         alwaysShowBufferline = false;
       };
       indent-blankline.enable = true;
