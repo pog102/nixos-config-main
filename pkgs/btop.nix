@@ -2,22 +2,22 @@
 
 {
 
-	programs.btop = {
-		enable = true;
+  programs.btop = {
+    enable = true;
 
-		settings = {
+    settings = {
 
-			color_theme = "nix";
+      color_theme = "nix";
 
-#* If the theme set background should be shown, set to False if you want terminal background transparency.
-			theme_background = true;
+      #* If the theme set background should be shown, set to False if you want terminal background transparency.
+      theme_background = true;
 
 
-		};
-	};
+    };
+  };
 
-	home.file.".config/btop/themes/nix.theme".text = 
-		''
+  home.file.".config/btop/themes/nix.theme".text =
+    ''
 
 theme[main_bg]=""
 
