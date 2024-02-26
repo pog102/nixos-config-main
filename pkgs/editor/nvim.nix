@@ -155,7 +155,15 @@
       };
       noice.enable = true;
       gitsigns.enable = true;
-      lint.enable = true;
+      lint = {
+        enable = true;
+        lintersByFt = {
+          nix = [ "nix" ];
+          bash = [ "shellcheck" ];
+
+
+        };
+      };
       luasnip = {
         enable = true;
         fromLua = [
