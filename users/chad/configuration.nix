@@ -11,7 +11,7 @@
     ../../pkgs/nvidia/nvidia.nix
     ../../pkgs/transmission.nix
     ../../pkgs/cpu.nix
-    ../../pkgs/systemd.nix
+    # ../../pkgs/systemd.nix
 
     ../../pkgs/steam.nix
     # ../../pkgs/trans/default.nix
