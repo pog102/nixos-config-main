@@ -7,6 +7,7 @@ commands = {
 editor-open = ''$$EDITOR $f'';
 mkdir = ''
 ''${{
+	clear
 printf "mkdir: "
 read DIR
 mkdir $DIR
