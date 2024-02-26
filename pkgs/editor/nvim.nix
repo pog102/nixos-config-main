@@ -220,7 +220,7 @@
       };
       lspkind.enable = true;
       lspsaga = {
-        enable = true;
+        enable = false;
         ui = {
           # 	kind = {
           # # error_sign = "ss";
@@ -423,6 +423,13 @@
 
     };
     enableMan = true;
+    extraConfigLua = ''
+      local signs = { Error = "", Warn = "", Hint = "", Info = " " }
+      for type, icon in pairs(signs) do
+        local hl = "DiagnosticSign" .. type
+        vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+      end
+    '';
     extraConfigVim = ''
 
 
