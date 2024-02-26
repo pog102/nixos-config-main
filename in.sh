@@ -17,7 +17,7 @@ elif [ "$1" == "b" ]
 then
 sudo nix build .#nixosConfigurations.iso.config.system.build.isoImage
 else
-if ! $(cmp --silent ./users/chad/hardware-configuration.nix /etc/nixos/hardware-configuration.nix);then
+if ! cmp --silent ./users/chad/hardware-configuration.nix /etc/nixos/hardware-configuration.nix ;then
 	sudo cp /etc/nixos/hardware-configuration.nix ./users/chad/hardware-configuration.nix
 fi
 sudo nixos-rebuild switch --flake .#default
