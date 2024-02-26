@@ -10,7 +10,7 @@ mkdir = ''
 printf "mkdir: "
 read DIR
 mkdir $DIR
-
+  lf -remote "send $id select $DIR"
 }}
 '';
 open = ''
