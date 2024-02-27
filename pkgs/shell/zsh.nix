@@ -19,7 +19,7 @@
         fman = "man -H$BROWSER";
         cat = "prettybat";
         less = "prettybat";
-        gc = "git add -A && git commit -m \"$(date +\'%m-%d %H:%M\')\"";
+        gc = "git add -A && git commit -m \"$(date +\'%m-%d %H:%M\')\" && git push";
         ls = "lsd";
         neo = "neo -D";
         mom = "ssh chad@192.168.1.87";
