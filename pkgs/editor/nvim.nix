@@ -431,6 +431,9 @@
       softtabstop = 0; # Use hard tabs alwaysShowBufferline
       swapfile = false; # Enable swap files
       clipboard = "unnamedplus";
+      fillchars = {
+        eob = " ";
+      };
 
 
     };
