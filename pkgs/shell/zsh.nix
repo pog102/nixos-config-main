@@ -79,16 +79,16 @@
         # };
         # }
 
-        {
-          # will source zsh-autosuggestions.plugin.zsh
-          name = "auto-notify";
-          src = pkgs.fetchFromGitHub {
-            owner = "MichaelAquilina";
-            repo = "zsh-auto-notify";
-            rev = "0.8.1";
-            sha256 = "sha256-4PH7g7OY5hASgq4xdswYaCDnys4pz/wyIVkGgaPcgBI=";
-          };
-        }
+        # {
+        #   # will source zsh-autosuggestions.plugin.zsh
+        #   name = "auto-notify";
+        #   src = pkgs.fetchFromGitHub {
+        #     owner = "MichaelAquilina";
+        #     repo = "zsh-auto-notify";
+        #     rev = "0.8.1";
+        #     sha256 = "sha256-4PH7g7OY5hASgq4xdswYaCDnys4pz/wyIVkGgaPcgBI=";
+        #   };
+        # }
       ];
 
 
