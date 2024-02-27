@@ -4,7 +4,7 @@
 # Setups
 format="$directory$git_branch$character"
 right_format = """$git_status$cmd_duration"""
-add_newline = false 
+add_newline = false
 # "$schema" = '/home/chad/.cache/wal/colors.json'
 # Other languages configurations:
 c.disabled = true
@@ -23,7 +23,7 @@ golang.disabled = true
 [conda]
 format = ' [$symbol$environment](dimmed green) '
 
-# Prompt symbols 
+# Prompt symbols
 [character]
 success_symbol = "[](#a6e3a1 bold)"
 error_symbol = "[](#f38ba8)"
@@ -35,12 +35,12 @@ truncation_length = 3
 truncate_to_repo=false
 
 style = "bg:none fg:{color0}"
-	[directory.substitutions] 
-	"~/Pictures" = "  Pictures"
-	"~/.config" = " config"
-	"~/Downloads" = " Downloads"
-	 "~" = " ~"
- 
+	[directory.substitutions]
+	"󱄅 ~/Pictures" = "  Pictures"
+	"󱄅 ~/.config" = " config"
+	"󱄅 ~/Downloads" = " Downloads"
+	 "~" = "󱄅 ~"
+
 [git_branch]
 format = "[]($style)[[ ](bg:{color0} fg:#A2DD9D bold)$branch](bg:{color0} fg:{color2})[ ]($style)"
 style = "bg:none fg:{color0}"
@@ -63,7 +63,7 @@ deleted = "[](bg:none fg:{color0})[ $count](bg:{color0} fg:#DE3163)[ ](
 
 [cmd_duration]
 min_time = 1
-# duration & style 
+# duration & style
 format = "[]($style)[[ ](bg:{color0} fg:#eba0ac bold)$duration](bg:{color0} fg:{color14})[ ]($style)"
 disabled = false
 style = "bg:none fg:{color0}"
