@@ -21,7 +21,11 @@
                 *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
             esac
         }}
-
+      '';
+      ssh = ''
+                ''${{
+        	scp $f e5507@193.219.36.233:/home/e5507
+                }}
 
       '';
       create = ''
@@ -51,12 +55,14 @@
       "\\\"" = "";
       o = "";
       m = "mkdir";
+      f = "filter";
       c = "create";
       "." = "set hidden!";
       "`" = "mark-load";
       "\\'" = "mark-load";
       "<enter>" = "open";
-      f = "filter";
+      "<esc>" = "clear";
+
       do = "dragon-out";
       D = "delete";
 
@@ -81,17 +87,13 @@
                       exit 1
                       ;;
               	*)
-              				bat --color=always --style=plain --pager=never "$1"
+              		bat --color=always --style=plain --pager=never "$1"
               		;;
               	esac
 
             '';
-          cleaner = pkgs.writeShellScriptBin "clean.sh" ''
-            ${pkgs.chafa}/bin/chafa --clear  < /dev/null > /dev/tty
-          '';
         in
         ''
-          # set cleaner ${cleaner}/bin/clean.sh
           set previewer ${previewer}/bin/pv.sh
         '';
     };
@@ -102,7 +104,6 @@
       sixel = true;
       icons = true;
       ignorecase = true;
-      incfilter = true;
       promptfmt = ''
         \033[48;2;35;38;39;38;2;28;220;156m 󱄅
         \033[38;2;35;38;39;48;2;202;31;31m
