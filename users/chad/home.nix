@@ -33,7 +33,6 @@
     ../../pkgs/git.nix
     ../../pkgs/imv.nix
     # ../../pkgs/dunst.nix
-    # ../../pkgs/mako.nix
     ../../pkgs/neofetch.nix
     ../../pkgs/term/foot.nix
     ../../pkgs/lf.nix
@@ -61,7 +60,7 @@
     #   sha256 = "11vgx58hdrq831zlpq5bzz565s95mr44fipvdbyighyym06yxbc6";
     # }))
 
-    nixpkgs-fmt
+    # nixpkgs-fmt
     lsd
     xdg-utils
     bat
@@ -70,19 +69,18 @@
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
     shellcheck
-    peaclock
+    # peaclock
     duf
     bat-extras.batman
     bat-extras.prettybat
     pamixer
     chafa
-    libsixel
+    # libsixel
     ripgrep
     sassc
     fzf
     zip
     unzip
-    # papirus-icon-theme
     libnotify
     swww
     tree

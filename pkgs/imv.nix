@@ -9,7 +9,7 @@ let
 in
 {
   programs.imv = {
-    enable = false;
+    enable = true;
     settings = {
 
       aliases = {
