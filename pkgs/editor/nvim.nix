@@ -35,6 +35,14 @@
       #     };
       #   }
       {
+        action = ":IncRename ";
+        key = "q";
+        mode = "n";
+        options = {
+          # silent = true;
+        };
+      }
+      {
         action = "<cmd>lua require('luasnip').jump(1)<CR>";
         key = "<C-L>";
         mode = "i";
@@ -124,6 +132,10 @@
       markdown-preview = {
         enable = false;
         browser = "firefox";
+      };
+      inc-rename = {
+	      enable=true;
+	      # inputBufferType = "dressing";
       };
       dap = {
         enable = false;
