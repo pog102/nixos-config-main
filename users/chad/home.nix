@@ -31,7 +31,7 @@
     ../../pkgs/editor/nvim.nix
     ../../pkgs/shell/zsh.nix
     ../../pkgs/git.nix
-    ../../pkgs/imv.nix
+    # ../../pkgs/imv.nix
     # ../../pkgs/dunst.nix
     ../../pkgs/neofetch.nix
     ../../pkgs/term/foot.nix

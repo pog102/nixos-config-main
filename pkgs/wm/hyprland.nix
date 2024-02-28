@@ -96,7 +96,7 @@ volume=$(pamixer --get-volume)
 noti () {
 notify-send -a "mediakeys" -u low -r 51 -h int:value:"$volume" -i "volume$1"  "$volume%" -t 1100
 }
-if [ $volume -lt 5 ]; then
+if [ $volume -lt 1 ]; then
 	noti mute
 elif [ $volume -lt 30 ];then
 	noti low
