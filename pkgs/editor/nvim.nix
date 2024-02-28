@@ -35,6 +35,14 @@
       #     };
       #   }
       {
+        action = "<cmd>lua require('luasnip').jump(1)<CR>";
+        key = "<C-L>";
+        mode = "i";
+        options = {
+          silent = true;
+        };
+      }
+      {
         action = "function() require('dap').toggle_breakpoint()";
         key = "<F1>";
         mode = "n";
@@ -166,6 +174,7 @@
       };
       luasnip = {
         enable = true;
+        extraConfig = { };
         fromLua = [
 
           {
