@@ -88,7 +88,7 @@
     wl-clipboard
     papirus-icon-theme
 
-    nerdfonts
+    # nerdfonts
     dejavu_fonts
     liberation_ttf
     fira-code
