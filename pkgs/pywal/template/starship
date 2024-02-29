@@ -42,7 +42,7 @@ style = "bg:none fg:{color0}"
 	 "~" = "󱄅 ~"
 
 [git_branch]
-format = "[]($style)[[ ](bg:{color0} fg:#A2DD9D bold)$branch](bg:{color0} fg:{color2})[ ]($style)"
+format = "[]($style)[[ ](bg:{color0} fg:#A2DD9D bold)$branch](bg:{color0} fg:{color2})[ ]($style)"
 style = "bg:none fg:{color0}"
 
 [git_status]
@@ -61,11 +61,11 @@ staged = "[](bg:none fg:{color0})[ $count](bg:{color0} fg:#228B22)[ ](b
 renamed = "[](bg:none fg:{color0})»${{count}}[ ](bg:{color0} fg:{color0})"
 deleted = "[](bg:none fg:{color0})[ $count](bg:{color0} fg:#DE3163)[ ](bg:none fg:{color0})"
 
-[cmd_duration]
-min_time = 1
-# duration & style
-format = "[]($style)[[ ](bg:{color0} fg:#eba0ac bold)$duration](bg:{color0} fg:{color14})[ ]($style)"
-disabled = false
-style = "bg:none fg:{color0}"
+# [cmd_duration]
+# min_time = 1
+# # duration & style
+# format = "[]($style)[[ ](bg:{color0} fg:#eba0ac bold)$duration](bg:{color0} fg:{color14})[ ]($style)"
+# disabled = false
+# style = "bg:none fg:{color0}"
 
 
