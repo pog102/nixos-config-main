@@ -76,6 +76,7 @@
     pamixer
     chafa
     # libsixel
+    lazygit
     ripgrep
     sassc
     fzf
