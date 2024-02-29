@@ -4,6 +4,7 @@
 # Setups
 format="$directory$git_branch$character"
 # right_format = """$git_status$cmd_duration"""
+right_format = """$git_status"""
 add_newline = false
 # "$schema" = '/home/chad/.cache/wal/colors.json'
 # Other languages configurations:
