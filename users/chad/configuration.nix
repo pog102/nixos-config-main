@@ -25,10 +25,10 @@
 # boot.loader.grub.device = "nodev";
 # boot.loader.efi.efiSysMountPoint = "/boot";
 
-swapDevices = [ {
-    device = "/var/lib/swapfile";
-    size = 5*1024;
-  } ];
+# swapDevices = [ {
+#     device = "/var/lib/swapfile";
+#     size = 5*1024;
+#   } ];
 
 boot.tmp.cleanOnBoot = true;
 boot.loader = {

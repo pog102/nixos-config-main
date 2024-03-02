@@ -184,6 +184,7 @@
 
         };
       };
+      vimtex.enable = true;
       luasnip = {
         enable = true;
         extraConfig = { };

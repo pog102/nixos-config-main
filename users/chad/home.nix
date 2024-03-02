@@ -78,7 +78,7 @@ nixpkgs = {
     duf
     bat-extras.batman
     bat-extras.prettybat
-    nvtop-nvidia
+    # nvtop-nvidia
     pamixer
     chafa
     # libsixel
@@ -93,8 +93,12 @@ nixpkgs = {
     tree
     wl-clipboard
     papirus-icon-theme
-
     nerdfonts
+
+    # pandoc
+    # texliveTeTeX
+    texliveFull
+      # font-awesome
     dejavu_fonts
     liberation_ttf
     fira-code
