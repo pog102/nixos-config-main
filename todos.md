@@ -3,7 +3,7 @@
 - [ ] [caligula](https://github.com/ifd3f/caligula)
 - [ ] [wait for ags]()
 - [✓] [lf](https://github.com/gokcehan/lf)
-- [ ] [nixvim add lsp icons](./pkgs/editor/nvim.nix)
+- [✓] [nixvim add lsp icons](./pkgs/editor/nvim.nix)
 - [ ] [rofi games as a flake package](https://github.com/Rolv-Apneseth/rofi-games)
 - [ ] make a script for syncing my game saves to github
 - [ ] create a fetch.nix for fetcing my wallpapers based on the theme
@@ -14,6 +14,6 @@
 - [ ] [make systemd sleep-hyrbitd work](./pkgs/systemd.nix)
 - [ ] one external monitor display
 - [✓] [add good icons for dunst](./pkgs/dunst.nix)
-- [ ] [make rofi power menu with transparency](./pkgs/rofi/rofi.nix)
+- [✓] [make rofi power menu with transparency](./pkgs/rofi/rofi.nix)
 - [✓] [lf create a file and open nvim]()
 - [✓] [add skels to my lf create shell](~/.bin/skels)

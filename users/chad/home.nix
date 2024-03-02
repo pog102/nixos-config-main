@@ -49,7 +49,12 @@
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
-
+nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
+  };
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
@@ -73,6 +78,7 @@
     duf
     bat-extras.batman
     bat-extras.prettybat
+    nvtop-nvidia
     pamixer
     chafa
     # libsixel
