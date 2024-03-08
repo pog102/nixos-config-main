@@ -90,6 +90,8 @@ nixpkgs = {
     unzip
     libnotify
     swww
+    grimblast
+    file
     tree
     wl-clipboard
     papirus-icon-theme
@@ -97,7 +99,7 @@ nixpkgs = {
 
     # pandoc
     # texliveTeTeX
-    texliveFull
+    #texliveFull
       # font-awesome
     dejavu_fonts
     liberation_ttf

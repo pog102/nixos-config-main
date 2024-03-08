@@ -184,7 +184,7 @@
 
         };
       };
-      vimtex.enable = true;
+      vimtex.enable = false;
       luasnip = {
         enable = true;
         extraConfig = { };
@@ -382,12 +382,18 @@
       };
       cmp_luasnip.enable = true;
       cmp-nvim-lsp.enable = true;
-      nvim-cmp = {
-        snippet.expand = "luasnip";
+      cmp = {
+        # snippet.expand = "luasnip";
 
         enable = true;
         autoEnableSources = true;
         extraOptions = {
+        sources = [
+          { name = "nvim_lsp"; }
+          { name = "luasnip"; } #For luasnip users.
+          { name = "path"; }
+          { name = "buffer"; }
+        ];
           window = {
             completion = {
               winhighlight =
@@ -408,34 +414,26 @@
           };
           #
         };
-        sources = [
-          { name = "nvim_lsp"; }
-          { name = "luasnip"; } #For luasnip users.
-          { name = "path"; }
-          { name = "buffer"; }
-        ];
+	settings = {
         mapping = {
           "<C-Space>" = "cmp.mapping.complete()";
           "<C-d>" = "cmp.mapping.scroll_docs(-4)";
           "<C-e>" = "cmp.mapping.close()";
           "<C-f>" = "cmp.mapping.scroll_docs(4)";
           "<CR>" = "cmp.mapping.confirm({ select = true })";
-          "<S-Tab>" = {
-            action = "cmp.mapping.select_prev_item()";
-            modes = [
-              "i"
-              "s"
-            ];
-          };
-          "<Tab>" = {
-            action = "cmp.mapping.select_next_item()";
-            modes = [
-              "i"
-              "s"
-            ];
-          };
+          # "<S-Tab>" = {
+          #   action = "cmp.mapping.select_prev_item()";
+          #   modes = [
+          #     "i"
+          #     "s"
+          #   ];
+          # };
+	   "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+  	 "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+	  
 
         };
+	};
       };
     };
     options = {
