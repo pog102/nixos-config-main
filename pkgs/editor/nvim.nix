@@ -55,7 +55,7 @@
         key = "<C-f>";
         mode = "n";
         options = {
-          silent = true;
+          silent = false;
         };
       }
       {
@@ -139,7 +139,7 @@
       # toggleterm.enable=true;
       markdown-preview = {
         enable = false;
-        browser = "firefox";
+        # browser = "firefox";
       };
       inc-rename = {
 	      enable=true;
@@ -396,7 +396,7 @@
 
         enable = true;
         autoEnableSources = true;
-        extraOptions = {
+        settings = {
         sources = [
           { name = "nvim_lsp"; }
           { name = "luasnip"; } #For luasnip users.

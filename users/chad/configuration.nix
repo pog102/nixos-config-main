@@ -93,8 +93,8 @@ programs.zsh.enable = true;
 # Configure keymap in X11
 services.xserver = 
 {
-  layout = "us";
-  xkbVariant = "";
+  xkb.layout = "us";
+  xkb.variant = "";
 };
 
 # boot.kernelPackages = pkgs.linuxPackages_latest;
