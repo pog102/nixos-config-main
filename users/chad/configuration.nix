@@ -9,15 +9,12 @@
     [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../../pkgs/nvidia/nvidia.nix
-    ../../pkgs/transmission.nix
+    # ../../pkgs/transmission.nix
     ../../pkgs/cpu.nix
     # ../../pkgs/systemd.nix
 
     ../../pkgs/steam.nix
-    # ../../pkgs/trans/default.nix
-    # ../../pkgs/udev.nix
     # ../../pkgs/plymouth.nix
-# inputs.home-manager.nixosModules.default
                 ];
 
 # Bootloader.
@@ -157,9 +154,6 @@ nixpkgs.config.allowUnfree = true;
 # List packages installed in system profile. To search, run:
 # $ nix search wget
 environment.systemPackages = with pkgs; [
-#wayland
-#  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-#  wget
         ];
 
 # Some programs need SUID wrappers, can be configured further or are
