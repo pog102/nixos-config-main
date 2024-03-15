@@ -350,6 +350,7 @@
 
 
       };
+      transparent.enable=false;
       notify = {
         enable = true;
         backgroundColour = "#000000";
