@@ -92,7 +92,7 @@ nixpkgs = {
     swww
     grimblast
     file
-    discord
+    # discord
     # android-studio
     wl-clipboard
     papirus-icon-theme
