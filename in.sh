@@ -12,6 +12,7 @@ if [ "$1" == "c" ]
 then
 sudo nix-env --delete-generations old
 sudo nix-collect-garbage -d
+nix-collect-garbage -d
 sudo nix-store --gc
 elif [ "$1" == "b" ]
 then

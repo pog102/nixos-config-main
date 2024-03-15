@@ -94,7 +94,6 @@ nixpkgs = {
     file
     discord
     # android-studio
-    tree
     wl-clipboard
     papirus-icon-theme
     nerdfonts

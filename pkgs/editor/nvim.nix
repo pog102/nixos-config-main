@@ -50,6 +50,14 @@
           silent = true;
         };
       }
+      # {
+      #   action = "function() require('dap').toggle_breakpoint()";
+      #   key = "";
+      #   mode = "n";
+      #   options = {
+      #     silent = true;
+      #   };
+      # }
       {
         action = "function() require('dap').toggle_breakpoint()";
         key = "<F1>";
@@ -372,7 +380,7 @@
         servers = {
           # tailwindcss.enable = true;
           tsserver.enable = true;
-          nixd.enable = true;
+          # nixd.enable = true;
           html.enable = true;
           bashls.enable = true;
           cssls.enable = true;
