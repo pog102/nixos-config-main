@@ -28,7 +28,7 @@
       ../../pkgs/color.nix
     )
     ../../pkgs/wm/hyprland.nix
-    ../../pkgs/nyaa.nix
+    # ../../pkgs/nyaa.nix
     ../../pkgs/editor/nvim.nix
     ../../pkgs/shell/zsh.nix
     ../../pkgs/git.nix
@@ -67,6 +67,27 @@ nixpkgs = {
     # }))
 
     # nixpkgs-fmt
+    makeRustPlatform.buildRustPackage rec {
+  pname = "nyaa";
+  version = "v0.6.3";
+
+  src = fetchFromGitHub {
+    owner = "Beastwick18";
+    repo = pname;
+    rev = version;
+    hash =lib.fakeHash;
+  };
+
+    cargoHash = lib.fakeHash;
+
+  meta = {
+    description = "A fast line-oriented regex search tool, similar to ag and ack";
+    homepage = "https://github.com/Beastwick18/nyaa";
+    license = lib.licenses.unlicense;
+    maintainers = [];
+  };
+}
+
     lsd
     xdg-utils
     bat
