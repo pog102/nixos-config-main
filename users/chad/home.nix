@@ -28,6 +28,7 @@
       ../../pkgs/color.nix
     )
     ../../pkgs/wm/hyprland.nix
+    ../../pkgs/nyaa.nix
     ../../pkgs/editor/nvim.nix
     ../../pkgs/shell/zsh.nix
     ../../pkgs/git.nix
@@ -97,7 +98,8 @@ nixpkgs = {
     wl-clipboard
     papirus-icon-theme
     nerdfonts
-
+ rustc
+  cargo
     # pandoc
     # texliveTeTeX
     #texliveFull
