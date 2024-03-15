@@ -50,14 +50,14 @@
           silent = true;
         };
       }
-      # {
-      #   action = "function() require('dap').toggle_breakpoint()";
-      #   key = "";
-      #   mode = "n";
-      #   options = {
-      #     silent = true;
-      #   };
-      # }
+      {
+        action = "/";
+        key = "<C-f>";
+        mode = "n";
+        options = {
+          silent = true;
+        };
+      }
       {
         action = "function() require('dap').toggle_breakpoint()";
         key = "<F1>";
