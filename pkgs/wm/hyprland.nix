@@ -46,7 +46,7 @@ options="$poweroff\n$reboot\n$sleep\n$logout\n$lock"
 # options="$poweroff\n$reboot\n$sleep"
 selected="$(echo -e "$options" |
             rofi -theme power \
-                 -font "WeblySleek UI Light, 60" \
+                 -font "WeblySleek UI Light, 59" \
                  -p "See you later, ''${USER^}!" -dmenu -selected-row 0)"
 
 case $selected in
