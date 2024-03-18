@@ -5,8 +5,9 @@
 - [✓] [lf](https://github.com/gokcehan/lf)
 - [✓] [nixvim add lsp icons](./pkgs/editor/nvim.nix)
 - [ ] [rofi games as a flake package](https://github.com/Rolv-Apneseth/rofi-games)
-- [ ] make a script for syncing my game saves to github
+- [ ] make a script for syncing my game saves to github (like saves and settings)
 - [ ] create a fetch.nix for fetcing my wallpapers based on the theme
+- [ ] a kde applet for syncing to github?
 
 # Reconfigure somethings
 - [ ] [btop with color.nix and pywal.nix](./pkgs/btop.nix)
