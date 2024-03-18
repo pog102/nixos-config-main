@@ -214,7 +214,7 @@ bind = [
 	"$mod, D, exec, rofi -show drun -theme gloss &"
        "$mod, Q, killactive"
        "$mod, F, fullscreen"
-       "$mod, V, togglefloating"
+       "$mod, Space, togglefloating"
 
 "$mod, 1, workspace, 1  "
 "$mod, 2, workspace, 2  "
