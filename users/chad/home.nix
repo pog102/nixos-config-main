@@ -27,8 +27,8 @@
     else
       ../../pkgs/color.nix
     )
-    # ../../pkgs/wm/hyprland.nix
-    ../../pkgs/kde.nix
+     ../../pkgs/wm/hyprland.nix
+    #../../pkgs/kde.nix
     # ../../pkgs/nyaa.nix
     ../../pkgs/editor/nvim.nix
     ../../pkgs/shell/zsh.nix
