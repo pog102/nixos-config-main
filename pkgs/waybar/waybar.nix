@@ -1,52 +1,52 @@
 { config, pkgs, ... }:
 {
 
-  xdg.configFile."waybar/style.css".source = style.css;
+  xdg.configFile."waybar/style.css".source = ./style.css;
 programs.waybar = {
 	enable =true;
 	settings = {
-
+mainBar = {
 layer = "top";
     modules-left = ["hyprland/workspaces" "disk" "custom/torrent"];
-    modules-center= ["clock"],
-    modules-right= ["custom/weather"; "custom/updates";  "backlight"; "pulseaudio"; "network"; "battery"],
+    modules-center= ["clock"];
+    modules-right= ["custom/weather" "custom/updates"  "backlight" "pulseaudio" "network" "battery"];
     "hyprland/workspaces" = {
       format= "{icon}";
       on-click= "activate";
       on-scroll-up= "hyprctl dispatch workspace e+1";
      on-scroll-down= "hyprctl dispatch workspace e-1";
 format-icons= {
-1="-"; 
-2="二";
-3="三";
-4="四";
-5="五";
-6="六";
-7="七";
-8="八";
-9="九";
-10="十"
+"1"="-"; 
+"2"="二";
+"3"="三";
+"4"="四";
+"5"="五";
+"6"="六";
+"7"="七";
+"8"="八";
+"9"="九";
+"10"="十";
         };
     };
-#     "clock= {
-#       "format= " {:%H:%M}";
-#       "format-alt= "{:%Y-%m-%d}  ";
-# 	"tooltip-format= "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>";
-#         "calendar= {
-#                     "mode"          : "year";
-#                     "mode-mon-col"  : 3,
-#                     "weeks-pos"     : "right";
-#                     "on-scroll"     : 1,
-#                     "on-click-right= "mode";
-#                     "format= {
-#                               "months=     "<span color='#ffead3'><b>{}</b></span>";
-#                               "days=       "<span color='#ecc6d9'><b>{}</b></span>";
-#                               "weeks=      "<span color='#99ffdd'><b>W{}</b></span>";
-#                               "weekdays=   "<span color='#ffcc66'><b>{}</b></span>";
-#                               "today=      "<span color='#ff6699'><b><u>{}</u></b></span>"
-#                               }
-#                     }
-#     },
+    clock= {
+      format= " {:%H:%M}";
+      format-alt= "{:%Y-%m-%d}  ";
+	tooltip-format= "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>";
+        calendar= {
+                    "mode"          = "year";
+                    "mode-mon-col"  = 3;
+                    "weeks-pos"     = "right";
+                    "on-scroll"     = 1;
+                    "on-click-right" = "mode";
+                    format= {
+                              months=     "<span color='#ffead3'><b>{}</b></span>";
+                              days=       "<span color='#ecc6d9'><b>{}</b></span>";
+                              weeks=      "<span color='#99ffdd'><b>W{}</b></span>";
+                              weekdays=   "<span color='#ffcc66'><b>{}</b></span>";
+                              today=      "<span color='#ff6699'><b><u>{}</u></b></span>";
+                              };
+                    };
+    };
 #     "backlight= {
 #       "device= "intel_backlight";
 #       "format= "{icon} {percent}%";
@@ -218,5 +218,6 @@ format-icons= {
 # 	};
 	};
 
+};
+};
 }
-

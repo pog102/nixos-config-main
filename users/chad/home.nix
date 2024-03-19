@@ -34,7 +34,7 @@
     ../../pkgs/batsignal.nix
             # ../../pkgs/nyaa.nix
     ../../pkgs/shell/zsh.nix
-    ../../pkgs/waybar/waybar.nix
+    # ../../pkgs/waybar/waybar.nix
     ../../pkgs/git.nix
     # ../../pkgs/imv.nix
     # ../../pkgs/dunst.nix
