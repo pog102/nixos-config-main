@@ -46,7 +46,7 @@
     ../../pkgs/rofi/rofi.nix
     # ../../pkgs/btop.nix
     ../../pkgs/cursor.nix
-    # ../../pkgs/ayurs/ags.nix
+    ../../pkgs/ayurs/ags.nix
     # ../../pkgs/transg.nix
     ../../pkgs/firefox/firefox.nix
     # ../../pkgs/kanshi.nix
