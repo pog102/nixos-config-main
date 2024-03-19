@@ -1,5 +1,6 @@
-{ config, pkgs,lib, fetchFromGitHub, rustPlatform, ... }:
-rustPlatform.buildRustPackage rec {
+{ pkgs,lib, fetchFromGitHub, rustPlatform, ... }:
+{
+pkgs.rustPlatform.buildRustPackage rec {
   pname = "nyaa";
   version = "v0.6.3";
 
@@ -18,4 +19,5 @@ rustPlatform.buildRustPackage rec {
     license = lib.licenses.unlicense;
     maintainers = [];
   };
+};
 }

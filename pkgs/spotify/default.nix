@@ -1,9 +1,4 @@
-{ lib
-, rustPlatform
-, fetchFromGitHub
-, pkg-config
-, openssl
-, cmake
+{config, lib, rustPlatform, fetchFromGitHub, pkg-config, openssl, cmake
 # deps for audio backends
 , alsa-lib
 , libpulseaudio

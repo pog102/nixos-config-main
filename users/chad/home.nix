@@ -32,6 +32,7 @@
     # ../../pkgs/nyaa.nix
     ../../pkgs/editor/nvim.nix
     ../../pkgs/batsignal.nix
+            # ../../pkgs/nyaa.nix
     ../../pkgs/shell/zsh.nix
     ../../pkgs/git.nix
     # ../../pkgs/imv.nix
