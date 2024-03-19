@@ -46,7 +46,7 @@
     ../../pkgs/rofi/rofi.nix
     # ../../pkgs/btop.nix
     ../../pkgs/cursor.nix
-    ../../pkgs/ayurs/ags.nix
+    # ../../pkgs/ayurs/ags.nix
     # ../../pkgs/transg.nix
     ../../pkgs/firefox/firefox.nix
     # ../../pkgs/kanshi.nix
@@ -67,6 +67,7 @@ nixpkgs = {
     lsd
     xdg-utils
     bat
+    bun
     neo
     gdu
     xdg-desktop-portal-hyprland
@@ -78,6 +79,7 @@ nixpkgs = {
     bat-extras.prettybat
     # nvtop-nvidia
     pamixer
+    # brightnessctl
     chafa
     # libsixel
     lazygit
@@ -237,6 +239,7 @@ nixpkgs = {
     "text/plain" = "nvim.desktop";
     "inode/x-empty" = "nvim.desktop";
     "application/json" = "nvim.desktop";
+    "inode/directory" = "lf.desktop";
   };
 
   xdg.mimeApps.associations.added = {
@@ -244,6 +247,7 @@ nixpkgs = {
     "x-scheme-handler/magnet" = "torrent.desktop";
     "text/plain" = "nvim.desktop";
 
+    "inode/directory" = "lf.desktop";
 
 
   };
