@@ -33,6 +33,7 @@
     ../../pkgs/editor/nvim.nix
     ../../pkgs/batsignal.nix
     ../../pkgs/nyaa/nyaa.nix
+    ../../pkgs/trangs-tui/transg.nix
             # ../../pkgs/nyaa.nix
     ../../pkgs/shell/zsh.nix
     # ../../pkgs/waybar/waybar.nix
@@ -116,7 +117,7 @@ nixpkgs = {
     '')
 # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
 # (pkgs.callPackage ../../pkgs/rofi-games/default.nix { })
-(pkgs.callPackage ../../pkgs/trangs-tui/default.nix { })
+# (pkgs.callPackage ../../pkgs/trangs-tui/default.nix { })
 
     (pkgs.makeDesktopItem {
       name = "torrent";
