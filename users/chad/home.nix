@@ -113,6 +113,7 @@ nixpkgs = {
       #!/bin/sh
       transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
     '')
+(pkgs.callPackage ../../pkgs/caligula/default.nix { })
 (pkgs.callPackage ../../pkgs/nyaa/default.nix { })
 (pkgs.callPackage ../../pkgs/trangs-tui/default.nix { })
 
