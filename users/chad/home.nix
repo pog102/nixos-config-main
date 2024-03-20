@@ -39,7 +39,6 @@
     # ../../pkgs/imv.nix
     # ../../pkgs/dunst.nix
     ../../pkgs/neofetch.nix
-    ../../pkgs/nyaa/default.nix
     ../../pkgs/term/foot.nix
     ../../pkgs/lf.nix
     ../../pkgs/wlsunset.nix
@@ -113,7 +112,7 @@ nixpkgs = {
       #!/bin/sh
       transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
     '')
-
+(pkgs.callPackage ../../pkgs/nyaa/default.nix { })
     (pkgs.makeDesktopItem {
       name = "torrent";
       desktopName = "Torrent";
