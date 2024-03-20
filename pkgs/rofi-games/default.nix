@@ -2,15 +2,17 @@
 pkgs.rustPlatform.buildRustPackage rec {
   pname = "rofi-games";
   version = "main";
-
+cargoLock = {
+    lockFile = ./Cargo.lock;
+  };
   src = fetchFromGitHub {
-    owner = "Apneseth";
+    owner = "Rolv-Apneseth";
     repo = pname;
     rev = version;
-    hash = "" ;
+    hash = "sha256-4+QcQATBNfYqwqTIkwlfC7aVcsNuTeD3ApIJpN/q/4s=" ;
   };
 
-    cargoHash = "";
+    # cargoHash = "";
 
   meta = {
     description = "A fast line-oriented regex search tool, similar to ag and ack";
