@@ -4,7 +4,7 @@
 home.packages = with pkgs; [(pkgs.callPackage ./default.nix { })];
 
   home.file.".config/transg/transg-tui.toml".text = ''
-  refresh_interval = 1200
+refresh_interval = 1200
 # one of: "upload" "donwload" "none"
 traffic-monitor = "upload"
 # true/false show file icons, nerdfont is required
@@ -12,10 +12,10 @@ show-icons = true
 
 
 [[connections]]
-name = "NAS"
+name = "localhost"
 username = ""
 password = ""
-url = "http://192.168.1.18:9091/transmission/rpc"
+url = "http://127.0.0.1:9091/transmission/rpc"
 #
 # optional. explicitly sets transmission's download directory
 # download-dir = "/var/lib/transmission/downloads"
@@ -28,8 +28,8 @@ local-download-dir = "/run/mount/transmission"
 [[actions]]
 description = "open in nautilus"
 shortcut = "o"
-cmd = "notify-send"
-args = ["exec", "--", "lf", "\"{location}\""]
+cmd = "mpv"
+args = ["--fs", "--no-terminal", "{download_dir}/{name}", "&>/dev/null" ]
 
 [[actions]]
 description = "terminal"
@@ -41,8 +41,8 @@ args = ["exec", "--", "foot", "--working-directory", "\"{location}\""]
 [[file-actions]]
 description = "open"
 shortcut = "o"
-cmd = "swaymsg"
-args = ["exec", "--", "handlr", "open", "\"{location}\""]
+cmd = "notify-send"
+args = ["\"{location}/{name}\""]
 [[file-actions]]
 description = "copy path to clipboard"
 shortcut = "c"
