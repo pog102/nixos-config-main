@@ -8,6 +8,7 @@
 - [ ] make a script for syncing my game saves to github (like saves and settings)
 - [ ] create a fetch.nix for fetcing my wallpapers based on the theme
 - [ ] a kde applet for syncing to github?
+- [ ] try headlines.nvim ?
 
 # Reconfigure somethings
 - [ ] [btop with color.nix and pywal.nix](./pkgs/btop.nix)
