@@ -1,4 +1,4 @@
-{ config; pkgs; ... }=
+{ config, pkgs, ... }:
 
 {
 services.transmission = { 
@@ -54,7 +54,7 @@ services.transmission = {
     rename-partial-files= true;
     rpc-authentication-required= true;
     rpc-bind-address= "0.0.0.0";
-    rpc-enabled= true;
+    rpc-enabled= false;
     rpc-password= "pwd";
     rpc-port= 9091;
     rpc-url= "/transmission/";
@@ -63,7 +63,7 @@ services.transmission = {
     rpc-whitelist-enabled= false;
     scrape-paused-torrents-enabled= true;
     script-torrent-done-enabled= false;
-    script-torrent-done-filename= "";
+    script-torrent-done-filename= null;
     seed-queue-enabled= true;
     seed-queue-size= 1;
     speed-limit-down= 100;
@@ -74,7 +74,7 @@ services.transmission = {
     trash-original-torrent-files= false;
     umask= 18;
     upload-slots-per-torrent= 14;
-    utp-enabled= true
+    utp-enabled= true;
 
     };
   };
