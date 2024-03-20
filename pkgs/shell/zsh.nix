@@ -14,6 +14,7 @@
       shellAliases = {
         ll = "ls -l";
         n = "nvim";
+        trans = "transgression-tui";
         ssh = "TERM=linux ssh";
         man = "batman";
         fman = "man -H$BROWSER";

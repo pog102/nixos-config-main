@@ -99,6 +99,7 @@ nixpkgs = {
     nerdfonts
  rustc
   cargo
+  pkg-config
     # pandoc
     # texliveTeTeX
     #texliveFull
