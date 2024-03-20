@@ -1,5 +1,5 @@
 {
-  description = "Foo Bar";
+  description = "Nyaa build";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };

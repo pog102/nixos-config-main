@@ -39,6 +39,7 @@
     # ../../pkgs/imv.nix
     # ../../pkgs/dunst.nix
     ../../pkgs/neofetch.nix
+    ../../pkgs/nyaa/default.nix
     ../../pkgs/term/foot.nix
     ../../pkgs/lf.nix
     ../../pkgs/wlsunset.nix
