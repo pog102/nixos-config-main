@@ -9,6 +9,7 @@
 - [ ] create a fetch.nix for fetcing my wallpapers based on the theme
 - [ ] a kde applet for syncing to github?
 - [ ] try headlines.nvim ?
+- [ ] if u gonna do waybar then add a script for showing and notifying battery status
 
 # Reconfigure somethings
 - [ ] [btop with color.nix and pywal.nix](./pkgs/btop.nix)
