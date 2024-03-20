@@ -1,4 +1,4 @@
-[package]
+[[package]]
 name = "rofi-games"
-version = "main"
+version = "v1.6.7"
 
