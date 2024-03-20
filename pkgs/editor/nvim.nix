@@ -127,6 +127,7 @@
     ];
     extraPlugins = with pkgs.vimPlugins; [
       # gkeep-nvim
+      # headlines-nvim
       lf-vim
     ];
 
