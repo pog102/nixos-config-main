@@ -1,0 +1,21 @@
+set $wallpaper /home/chad/Pictures/sea.png
+
+set $background #10181e
+set $foreground #d0dce4
+
+set $color0 #10181e
+set $color1 #3B6A85
+set $color2 #48758D
+set $color3 #677B8B
+set $color4 #5F8EA6
+set $color5 #7DA8C1
+set $color6 #92B3C7
+set $color7 #d0dce4
+set $color8 #919a9f
+set $color9 #3B6A85
+set $color10 #48758D
+set $color11 #677B8B
+set $color12 #5F8EA6
+set $color13 #7DA8C1
+set $color14 #92B3C7
+set $color15 #d0dce4

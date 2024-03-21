@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/chad/Pictures/desert.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0A1522",
+        "foreground": "#d8caca",
+        "cursor": "#d8caca"
+    },
+    "colors": {
+        "color0": "#0A1522",
+        "color1": "#EF495A",
+        "color2": "#7E89A2",
+        "color3": "#B0909F",
+        "color4": "#BCAAB2",
+        "color5": "#C79795",
+        "color6": "#C4A19F",
+        "color7": "#d8caca",
+        "color8": "#978d8d",
+        "color9": "#EF495A",
+        "color10": "#7E89A2",
+        "color11": "#B0909F",
+        "color12": "#BCAAB2",
+        "color13": "#C79795",
+        "color14": "#C4A19F",
+        "color15": "#d8caca"
+    }
+}

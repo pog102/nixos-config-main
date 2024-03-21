@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/chad/Pictures/dark_mac.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0A070D",
+        "foreground": "#c3b8cf",
+        "cursor": "#c3b8cf"
+    },
+    "colors": {
+        "color0": "#0A070D",
+        "color1": "#D81714",
+        "color2": "#C2485D",
+        "color3": "#404D86",
+        "color4": "#65589C",
+        "color5": "#9460A9",
+        "color6": "#B373B3",
+        "color7": "#c3b8cf",
+        "color8": "#888090",
+        "color9": "#D81714",
+        "color10": "#C2485D",
+        "color11": "#404D86",
+        "color12": "#65589C",
+        "color13": "#9460A9",
+        "color14": "#B373B3",
+        "color15": "#c3b8cf"
+    }
+}

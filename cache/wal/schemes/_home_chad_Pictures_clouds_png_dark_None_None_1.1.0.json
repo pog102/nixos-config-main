@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/chad/Pictures/clouds.png",
+    "alpha": "100",
+    "special": {
+        "background": "#122037",
+        "foreground": "#cbddf0",
+        "cursor": "#cbddf0"
+    },
+    "colors": {
+        "color0": "#122037",
+        "color1": "#3D83C7",
+        "color2": "#4F90D1",
+        "color3": "#68A2DB",
+        "color4": "#75ACE3",
+        "color5": "#8EA7BE",
+        "color6": "#88B8E8",
+        "color7": "#cbddf0",
+        "color8": "#8e9aa8",
+        "color9": "#3D83C7",
+        "color10": "#4F90D1",
+        "color11": "#68A2DB",
+        "color12": "#75ACE3",
+        "color13": "#8EA7BE",
+        "color14": "#88B8E8",
+        "color15": "#cbddf0"
+    }
+}

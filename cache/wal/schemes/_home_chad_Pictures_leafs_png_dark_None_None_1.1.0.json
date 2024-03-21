@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/chad/Pictures/leafs.png",
+    "alpha": "100",
+    "special": {
+        "background": "#030B09",
+        "foreground": "#9dadaa",
+        "cursor": "#9dadaa"
+    },
+    "colors": {
+        "color0": "#030B09",
+        "color1": "#3A625C",
+        "color2": "#3E6761",
+        "color3": "#445A52",
+        "color4": "#445B54",
+        "color5": "#4B6258",
+        "color6": "#4C635A",
+        "color7": "#9dadaa",
+        "color8": "#6d7976",
+        "color9": "#3A625C",
+        "color10": "#3E6761",
+        "color11": "#445A52",
+        "color12": "#445B54",
+        "color13": "#4B6258",
+        "color14": "#4C635A",
+        "color15": "#9dadaa"
+    }
+}

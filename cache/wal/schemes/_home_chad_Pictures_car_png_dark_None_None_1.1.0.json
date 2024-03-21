@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/chad/Pictures/car.png",
+    "alpha": "100",
+    "special": {
+        "background": "#0a0f0f",
+        "foreground": "#e6cdbf",
+        "cursor": "#e6cdbf"
+    },
+    "colors": {
+        "color0": "#0a0f0f",
+        "color1": "#CE9871",
+        "color2": "#2C5C84",
+        "color3": "#306A98",
+        "color4": "#316A98",
+        "color5": "#477196",
+        "color6": "#A79A93",
+        "color7": "#e6cdbf",
+        "color8": "#a18f85",
+        "color9": "#CE9871",
+        "color10": "#2C5C84",
+        "color11": "#306A98",
+        "color12": "#316A98",
+        "color13": "#477196",
+        "color14": "#A79A93",
+        "color15": "#e6cdbf"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/chad/Pictures/forest.png",
+    "alpha": "100",
+    "special": {
+        "background": "#060D07",
+        "foreground": "#c6c8c1",
+        "cursor": "#c6c8c1"
+    },
+    "colors": {
+        "color0": "#060D07",
+        "color1": "#4E4F31",
+        "color2": "#616956",
+        "color3": "#8B702F",
+        "color4": "#7B8375",
+        "color5": "#BA8C2F",
+        "color6": "#8E8B6F",
+        "color7": "#c6c8c1",
+        "color8": "#8a8c87",
+        "color9": "#4E4F31",
+        "color10": "#616956",
+        "color11": "#8B702F",
+        "color12": "#7B8375",
+        "color13": "#BA8C2F",
+        "color14": "#8E8B6F",
+        "color15": "#c6c8c1"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/chad/Pictures/egle.png",
+    "alpha": "100",
+    "special": {
+        "background": "#121212",
+        "foreground": "#bfaba5",
+        "cursor": "#bfaba5"
+    },
+    "colors": {
+        "color0": "#121212",
+        "color1": "#333C43",
+        "color2": "#513D45",
+        "color3": "#314F49",
+        "color4": "#36695A",
+        "color5": "#4A524A",
+        "color6": "#59675C",
+        "color7": "#bfaba5",
+        "color8": "#857773",
+        "color9": "#333C43",
+        "color10": "#513D45",
+        "color11": "#314F49",
+        "color12": "#36695A",
+        "color13": "#4A524A",
+        "color14": "#59675C",
+        "color15": "#bfaba5"
+    }
+}

@@ -1,0 +1,72 @@
+## ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█
+## ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀
+## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
+# Setups
+format="$directory$git_branch$character"
+# right_format = """$git_status$cmd_duration"""
+right_format = """$git_status"""
+add_newline = false
+# "$schema" = '/home/chad/.cache/wal/colors.json'
+# Other languages configurations:
+c.disabled = true
+cmake.disabled = true
+haskell.disabled = true
+python.disabled = true
+ruby.disabled = true
+rust.disabled = true
+perl.disabled = true
+package.disabled = true
+lua.disabled = true
+nodejs.disabled = true
+java.disabled = true
+golang.disabled = true
+
+[conda]
+format = ' [$symbol$environment](dimmed green) '
+
+# Prompt symbols
+[character]
+success_symbol = "[](#a6e3a1 bold)"
+error_symbol = "[](#f38ba8)"
+vicmd_symbol = "[](#f9e2af)"
+
+[directory]
+format = "[]($style)(bg:#10181e fg:#d0dce4)[$path](bg:#10181e fg:#92B3C7 bold)[ ]($style)"
+truncation_length = 3
+truncate_to_repo=false
+
+style = "bg:none fg:#10181e"
+	[directory.substitutions]
+	"󱄅 ~/Pictures" = "  Pictures"
+	"󱄅 ~/.config" = " config"
+	"󱄅 ~/Downloads" = " Downloads"
+	 "~" = "󱄅 ~"
+
+[git_branch]
+format = "[]($style)[[ ](bg:#10181e fg:#A2DD9D bold)$branch](bg:#10181e fg:#48758D)[ ]($style)"
+style = "bg:none fg:#10181e"
+
+[git_status]
+# $all status$ahead_behind
+format = "[$all_status$ahead_behind](bg:#10181e fg:#b4befe)"
+style = "bg:none fg:#10181e"
+conflicted = "="
+ahead =	"⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = ""
+untracked = "?${count}"
+stashed = "stash"
+modified = "[](bg:none fg:#10181e)[󰏬 $count](bg:#10181e fg:#FFD700)[ ](bg:none fg:#10181e)"
+staged = "[](bg:none fg:#10181e)[ $count](bg:#10181e fg:#228B22)[ ](bg:none fg:#10181e)"
+renamed = "[](bg:none fg:#10181e)»${count}[ ](bg:#10181e fg:#10181e)"
+deleted = "[](bg:none fg:#10181e)[ $count](bg:#10181e fg:#DE3163)[ ](bg:none fg:#10181e)"
+
+[cmd_duration]
+min_time = 1
+# duration & style
+format = "[]($style)[[ ](bg:#10181e fg:#eba0ac bold)$duration](bg:#10181e fg:#92B3C7)[ ]($style)"
+disabled = false
+style = "bg:none fg:#10181e"
+
+
