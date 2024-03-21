@@ -10,6 +10,7 @@
 - [ ] a kde applet for syncing to github?
 - [ ] try headlines.nvim ?
 - [ ] if u gonna do waybar then add a script for showing and notifying battery status
+- [ ] add wine for windows applications like nvidia app, ps5 controlle
 
 # Reconfigure somethings
 - [ ] [btop with color.nix and pywal.nix](./pkgs/btop.nix)

@@ -26,11 +26,16 @@
 #     device = "/var/lib/swapfile";
 #     size = 5*1024;
 #   } ];
+
 # system.activationScripts.script.text = ''
 #     #!/bin/sh
-#     cp -r ~/nixos-config-main/cache ~/.cache
+# if [ ! -d /home/chad/.cache/wal ]
+# then
+#     cp -r /home/chad/nixos-config-main/cache/* /home/chad/.cache
+#     fi
 #     
 # '';
+
 boot.tmp.cleanOnBoot = true;
 # boot.loader = {
 # grub2-theme={
