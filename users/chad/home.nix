@@ -72,8 +72,6 @@ nixpkgs = {
     bun
     neo
     gdu
-    xdg-desktop-portal-hyprland
-    xdg-desktop-portal-gtk
     shellcheck
     # peaclock
     duf
@@ -240,6 +238,17 @@ nixpkgs = {
         exec = "foot --server";
       };
     };
+	xdg.portal ={
+	    # wlr.enable = true;
+
+		enable=true;
+		extraPortals= with pkgs; [ 
+    	xdg-desktop-portal-gtk
+	];
+		configPackages= with pkgs; [ 
+    	xdg-desktop-portal-gtk
+	];
+	};
   xdg.mime.enable = true;
   xdg.mimeApps.enable = true;
   xdg.mimeApps.defaultApplications = {
