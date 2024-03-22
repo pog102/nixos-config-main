@@ -79,6 +79,10 @@ nixpkgs = {
     bat-extras.prettybat
     # nvtop-nvidia
     pamixer
+    # # winePackages.wayland
+    # # wineWowPackages.wayland
+    # wineWowPackages.stable
+    # winetricks
     # brightnessctl
     chafa
     # libsixel
