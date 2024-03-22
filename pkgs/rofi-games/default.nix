@@ -13,6 +13,10 @@ pkgs.rustPlatform.buildRustPackage rec {
   };
 
     cargoHash = "";
+  #    cargoLock = {
+  #   lockFile = "${src}/Cargo.lock";
+  # };
+
 
   meta = {
     description = "A fast line-oriented regex search tool, similar to ag and ack";

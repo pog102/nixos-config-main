@@ -29,12 +29,10 @@
     )
      ../../pkgs/wm/hyprland.nix
     #../../pkgs/kde.nix
-    # ../../pkgs/nyaa.nix
     ../../pkgs/editor/nvim.nix
     ../../pkgs/batsignal.nix
     ../../pkgs/nyaa/nyaa.nix
     ../../pkgs/trangs-tui/transg.nix
-            # ../../pkgs/nyaa.nix
     ../../pkgs/shell/zsh.nix
     # ../../pkgs/waybar/waybar.nix
     ../../pkgs/git.nix
