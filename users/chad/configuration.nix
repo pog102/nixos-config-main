@@ -11,6 +11,7 @@
     ../../pkgs/nvidia/nvidia.nix
     ../../pkgs/transmission.nix
     ../../pkgs/cpu.nix
+    ../../pkgs/ssdm.nix
     # ../../pkgs/systemd.nix
 
     ../../pkgs/steam.nix
@@ -151,10 +152,8 @@ users.users.chad = {
                 ];
               };
 
-# Enable automatic login for the user.
-#services.xserver.displayManager.autoLogin.enable = true;
-# services.xserver.displayManager.autoLogin.user = "chad";
-services.getty.autologinUser = lib.mkDefault "chad";
+
+# services.getty.autologinUser = lib.mkDefault "chad";
 
 
 # Allow unfree packages
