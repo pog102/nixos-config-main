@@ -54,7 +54,7 @@ tooltip {
   color: @foreground;
 }
 
-#clock, #custom-updates, #custom-torrent, #custom-bb, #disk, #custom-pacman, #custom-weather,#custom-wf,  #bluetooth, #backlight, #pulseaudio, #network, #battery{
+#clock, #custom-wf,  #bluetooth, #backlight, #wireplumber, #network, #battery{
   border-radius: 13px;
   background-color: @color0;
   color: @foreground;
@@ -80,7 +80,7 @@ tooltip {
  #backlight{
   color: @color4;
 }
- #pulseaudio{
+ #wireplumber{
   color: @color5;
 }
  #network{
