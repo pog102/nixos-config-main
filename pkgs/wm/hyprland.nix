@@ -137,10 +137,14 @@ settings = {
 env = [
 # "LIBVA_DRIVER_NAME,nvidia"
 # "XDG_SESSION_TYPE,wayland"
-"WLR_NO_HARDWARE_CURSORS,1"
+
+# "WLR_NO_HARDWARE_CURSORS,1"
+"HYPRCURSOR_THEME,Bibata-Modern-Classic"
+"HYPRCURSOR_SIZE,24"
 ];
 # exec-once= ''${start}'';
-exec-once="swww init &";
+exec-once=["swww init &"
+ "waybar" ];
 decoration = {
 ##shadow_offset = "0.5";
 rounding  = 18;

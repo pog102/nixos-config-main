@@ -23,9 +23,9 @@ sub-shadow-offset = 2;
   };
 
 };
-	home.file.".config/mpv/scripts/modern.lua" = {
-		recursive = false;
-		source = ./modern.lua;
+	home.file.".config/mpv/scripts" = {
+		recursive = true;
+		source = ./scripts;
 	};
 
 	home.file.".config/mpv/fonts/modernx-osc-icon.ttf" = {

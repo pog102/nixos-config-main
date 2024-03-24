@@ -7,9 +7,9 @@ programs.waybar = {
 	settings = {
 mainBar = {
 layer = "top";
-    modules-left = ["hyprland/workspaces" "disk" "custom/torrent"];
+    modules-left = ["hyprland/workspaces"];
     modules-center= ["clock"];
-    modules-right= ["custom/weather" "custom/updates"  "backlight" "pulseaudio" "network" "battery"];
+    modules-right= ["backlight" "wireplumber" "network" "battery"];
     "hyprland/workspaces" = {
       format= "{icon}";
       on-click= "activate";
@@ -32,21 +32,27 @@ format-icons= {
       format= " {:%H:%M}";
       format-alt= "{:%Y-%m-%d}  ";
 	tooltip-format= "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>";
-        calendar= {
-                    "mode"          = "year";
-                    "mode-mon-col"  = 3;
-                    "weeks-pos"     = "right";
-                    "on-scroll"     = 1;
-                    "on-click-right" = "mode";
-                    format= {
-                              months=     "<span color='#ffead3'><b>{}</b></span>";
-                              days=       "<span color='#ecc6d9'><b>{}</b></span>";
-                              weeks=      "<span color='#99ffdd'><b>W{}</b></span>";
-                              weekdays=   "<span color='#ffcc66'><b>{}</b></span>";
-                              today=      "<span color='#ff6699'><b><u>{}</u></b></span>";
-                              };
-                    };
+        # calendar= {
+        #             "mode"          = "year";
+        #             "mode-mon-col"  = 3;
+        #             "weeks-pos"     = "right";
+        #             "on-scroll"     = 1;
+        #             "on-click-right" = "mode";
+        #             format= {
+        #                       months=     "<span color='#ffead3'><b>{}</b></span>";
+        #                       days=       "<span color='#ecc6d9'><b>{}</b></span>";
+        #                       weeks=      "<span color='#99ffdd'><b>W{}</b></span>";
+        #                       weekdays=   "<span color='#ffcc66'><b>{}</b></span>";
+        #                       today=      "<span color='#ff6699'><b><u>{}</u></b></span>";
+        #                       };
+        #             };
     };
+    wireplumber = {
+    format= "{volume}% {icon}";
+    format-muted = "";
+    on-click= "helvum";
+    format-icons = ["" "" ""];
+};
 #     "backlight= {
 #       "device= "intel_backlight";
 #       "format= "{icon} {percent}%";
