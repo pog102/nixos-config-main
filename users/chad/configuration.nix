@@ -11,7 +11,7 @@
     ../../pkgs/nvidia/nvidia.nix
     ../../pkgs/transmission.nix
     ../../pkgs/cpu.nix
-    ../../pkgs/lightdm.nix
+    # ../../pkgs/lightdm.nix
     # ../../pkgs/systemd.nix
 
     ../../pkgs/steam.nix
@@ -153,7 +153,7 @@ users.users.chad = {
               };
 
 
-# services.getty.autologinUser = lib.mkDefault "chad";
+services.getty.autologinUser = lib.mkDefault "chad";
 
 
 # Allow unfree packages
