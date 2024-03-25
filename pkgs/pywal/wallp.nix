@@ -22,6 +22,6 @@ rofi_dmenu() {
 
 wp=$( list_wps | rofi_dmenu )
 
-[ ! -z $wp ] && wal -n -q -i "$wp_dir/$wp" && swww img "$wp_dir/$wp" && pkill dunst && pkill -SIGUSR2 waybar
+[ ! -z $wp ] && wal -n -q -i "$wp_dir/$wp" && swww img "$wp_dir/$wp" && $(pkill dunst; pkill -SIGUSR2 waybar)
 
 ''
