@@ -5,7 +5,7 @@
   xdg.configFile."waybar/config".source = ./config;
 programs.waybar = {
 	enable =true;
-# 	settings = {
+ 	# settings = {
 # mainBar = {
 # layer = "top";
 #     modules-left = ["hyprland/workspaces"];
@@ -223,8 +223,8 @@ programs.waybar = {
 # #
 # #
 # # 	};
-# 	};
+ 	# };
 
-};
+# };
 };
 }

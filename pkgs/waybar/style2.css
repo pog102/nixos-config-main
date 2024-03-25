@@ -1,4 +1,4 @@
-@import "/home/redneko/.cache/wal/colors-waybar.css";
+@import "/home/chad/.cache/wal/colors-waybar.css";
 
 * {
     font-family: FiraCode;
@@ -9,16 +9,18 @@
 #cpu,
 #backlight,
 #pulseaudio,
+#wireplumber
 #tray,
 #language,
 #workspaces,
 #network,
+#wireplumber,
 #custom-sep,
 #custom-playerctl {
     background: @background;
     color: @foreground;
-    border-radius: 10px;
-    border: 4px solid @foreground;
+    border-radius: 13px;
+    border: 1px solid @foreground;
     margin-top: 12px;
     margin-bottom: 5px;
 }
@@ -31,7 +33,7 @@
 }
 
 #battery {
-    border-radius: 10px 0 0 10px;
+    border-radius: 13px 0 0 13px;
     border-right: 0;
     padding-left: 10px;
     padding-right: 5px;
@@ -40,7 +42,7 @@
 #language,
 #cpu,
 #backlight,
-#pulseaudio,
+#wireplumber,
 #custom-sep {
     border-radius: 0;
     border-left: 0;
@@ -52,7 +54,7 @@
 #network {
     margin-right: 12px;
     padding-right: 10px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 13px 13px 0;
     border-left: 0;
     color: @color5;
 }
@@ -128,12 +130,13 @@ window#waybar {
     color: #A8E5E6;
 }
 
-#pulseaudio {
+#wireplumber {
     color: #7ab0df;
     font-weight: bolder;
 }
 
-#pulseaudio.muted {
+
+#wireplumber.muted {
     color: #E97193;
 }
 

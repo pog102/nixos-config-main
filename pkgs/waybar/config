@@ -3,9 +3,9 @@
     "position": "top",
     // "width"': 1280, // Waybar width
     "modules-left": ["clock", "custom/playerctl", "tray"],
-    "modules-center": ["wlr/workspaces"],
-    "modules-right": ["battery", "custom/sep", "pulseaudio", "custom/sep", "cpu", "custom/sep", "hyprland/language","backlight", "network"],
-     "wlr/workspaces": {
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["battery", "custom/sep", "wireplumber", "custom/sep", "cpu", "custom/sep", "hyprland/language","backlight", "network"],
+     "hyprland/workspaces": {
          "format": "{icon}",
          "format-icons": {
              "default": "",
@@ -35,6 +35,13 @@
       "Paused": "<span foreground='#f38ba8'></span>"
     }
   },
+       "wireplumber": {
+    "format": "{volume}% {icon}",
+     "format-muted": "",
+     // "on-click": "helvum",
+     "format-icons": ["", "", ""]
+ },
+
     "tray": {
         "icon-size": 21,
         "spacing": 10
@@ -67,7 +74,8 @@
         "format-charging": " {capacity}",
         // "format-good": " {capacity}", // An empty format will hide the module
         "format-full": "🚨",
-        "format-icons": ["", "", "", "", ""]
+       //  "format-icons": ["", "", "", "", ""]
+       "format-icons": ["", "", "", "", "", "", "", "", "", ""]
     },
     "battery#bat2": {
         "bat": "BAT2"
