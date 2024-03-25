@@ -167,7 +167,18 @@ enabled=true;
       shadow_range = 16;
       shadow_render_power = 2;
   };
-
+input = {
+    kb_layout = "us,lt";
+    kb_variant = "intl";
+    kb_model = "pc105";
+    #kb_options =
+    #kb_rules =
+    follow_mouse = 1;
+    touchpad = {
+        natural_scroll = false;
+    };
+    sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
+};
 misc = {
   animate_manual_resizes = true;
   animate_mouse_windowdragging = true;

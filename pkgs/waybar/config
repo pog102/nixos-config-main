@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     // "width"': 1280, // Waybar width
-    "modules-left": ["clock", "custom/playerctl", "tray"],
+    "modules-left": ["clock"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["battery", "custom/sep", "wireplumber", "custom/sep", "cpu", "custom/sep", "hyprland/language","backlight", "network"],
      "hyprland/workspaces": {
@@ -16,8 +16,9 @@
      },
     "hyprland/language": {
         "format": "{}",
-        "format-en": "🇺🇸",
-        "format-ru": "🇷🇺",
+        "format-en": "E N",
+        "format-lt": "L T",
+	"on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
     },
    //  "bluetooth": {
    //   "on-click": "blueman-manager"
@@ -59,8 +60,8 @@
         "tooltip": false
     },
     "backlight": {
-        "on-scroll-up": "light -A 12",
-        "on-scroll-down": "light -U 12",
+        "on-scroll-up": "brillo -q -A 2",
+        "on-scroll-down": "brillo -q -U 2",
         "format": "{icon}",
         "format-icons": [" ", " ", " ", " "]
     },
