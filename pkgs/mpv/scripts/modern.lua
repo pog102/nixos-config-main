@@ -74,7 +74,8 @@ local user_opts = {
                                         -- in the window controls bar
     blur_intensity = 150,               -- adjust the strength of the OSC blur
     osc_color = "000000",               -- accent of the OSC and the title bar
-    seekbarfg_color = "E39C42",         -- color of the seekbar progress and handle
+    -- seekbarfg_color = "E39C42",         -- color of the seekbar progress and handle
+    seekbarfg_color = "FFFF00",         -- color of the seekbar progress and handle
     seekbarbg_color = "FFFFFF",         -- color of the remaining seekbar
 }
 
