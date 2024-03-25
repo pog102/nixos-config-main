@@ -11,8 +11,10 @@ pkgs.rustPlatform.buildRustPackage rec {
     rev = version;
     hash = "sha256-4+QcQATBNfYqwqTIkwlfC7aVcsNuTeD3ApIJpN/q/4s=" ;
   };
-
-    cargoHash = "";
+ cargoLock = {
+    lockFile = ./Cargo.lock;
+  };
+    # cargoHash = "";
   #    cargoLock = {
   #   lockFile = "${src}/Cargo.lock";
   # };
