@@ -227,7 +227,6 @@ bind = [
        "$mod, W, exec, ${wallp}"
        "$mod, M, exec, ${rofi-pow}"
 	"$mod, D, exec, rofi -show drun -theme gloss &"
-       "$mod, Q, killactive"
        "$mod, F, fullscreen"
        "$mod, Space, togglefloating"
 
@@ -274,6 +273,7 @@ bindm = [
 
 ];
 binde = [
+       "$mod, Q, killactive"
 "$mod CTRL, left, resizeactive, -20 0"
 "$mod CTRL, right, resizeactive, 20 0"
 "$mod CTRL, up, resizeactive, 0 -20"
