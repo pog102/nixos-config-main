@@ -188,7 +188,7 @@ misc = {
     enable_swallow = true;
 swallow_regex = "^(foot)$";
 };
-
+layerrule = "blur,rofi";
 
 "$mod" = "SUPER";
 # source = (if (userSettings.wal) then "~/.config/hypr/myColors.conf" else "~/" );
