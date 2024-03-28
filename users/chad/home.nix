@@ -119,6 +119,7 @@ nixpkgs = {
 # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
 # (pkgs.callPackage ../../pkgs/rofi-games/default.nix { })
 # (pkgs.callPackage ../../pkgs/trangs-tui/default.nix { })
+(pkgs.callPackage ../../pkgs/temp/default.nix { })
 
     (pkgs.makeDesktopItem {
       name = "torrent";
