@@ -491,10 +491,10 @@
 
   #environment.variables.EDITOR = "nvim";
 
-  home.file.".config/nvim/queries" = {
-    recursive = true;
-    source = ./queries;
-  };
+  # home.file.".config/nvim/queries" = {
+  #   recursive = true;
+  #   source = ./queries;
+  # };
   home.file.".config/nvim/lua" = {
     recursive = true;
     source = ./lua;
