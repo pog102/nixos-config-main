@@ -283,7 +283,10 @@
       };
       indent-blankline.enable = true;
       nvim-colorizer.enable = true;
-      treesitter.enable = true;
+      treesitter= {
+	      enable = true;
+            nixvimInjections=true;
+};
       # surround.enable = true;
       nvim-autopairs.enable = true;
       telescope = {
@@ -381,7 +384,7 @@
         servers = {
           # tailwindcss.enable = true;
           tsserver.enable = true;
-          # nixd.enable = true;
+          nixd.enable = true;
           html.enable = true;
           bashls.enable = true;
           cssls.enable = true;
@@ -488,6 +491,10 @@
 
   #environment.variables.EDITOR = "nvim";
 
+  home.file.".config/nvim/queries" = {
+    recursive = true;
+    source = ./queries;
+  };
   home.file.".config/nvim/lua" = {
     recursive = true;
     source = ./lua;

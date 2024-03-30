@@ -84,11 +84,13 @@ nixpkgs = {
     # brightnessctl
     chafa
     # libsixel
+    nixd
     lazygit
     ripgrep
     sassc
     fzf
     zip
+    # rnix-lsp
     unzip
     libnotify
     swww
