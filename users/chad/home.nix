@@ -27,7 +27,7 @@
     else
       ../../pkgs/color.nix
     )
-     ../../pkgs/wm/hyprland.nix
+    ../../pkgs/wm/hyprland.nix
     #../../pkgs/kde.nix
     ../../pkgs/editor/nvim.nix
     ../../pkgs/batsignal.nix
@@ -54,7 +54,7 @@
   ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
-nixpkgs = {
+  nixpkgs = {
     config = {
       allowUnfree = true;
       allowUnfreePredicate = (_: true);
@@ -85,6 +85,7 @@ nixpkgs = {
     chafa
     # libsixel
     nixd
+    nixpkgs-fmt
     lazygit
     ripgrep
     sassc
@@ -101,13 +102,13 @@ nixpkgs = {
     wl-clipboard
     papirus-icon-theme
     nerdfonts
- rustc
-  cargo
-  pkg-config
+    rustc
+    cargo
+    pkg-config
     # pandoc
     # texliveTeTeX
     #texliveFull
-      # font-awesome
+    # font-awesome
     dejavu_fonts
     liberation_ttf
     fira-code
@@ -118,10 +119,10 @@ nixpkgs = {
       # transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
       transmission-remote -U --add "$@" && notify-send "Transmission" "Torrent added."
     '')
-# (pkgs.callPackage ../../pkgs/caligula/default.nix { })
-# (pkgs.callPackage ../../pkgs/rofi-games/default.nix { })
-# (pkgs.callPackage ../../pkgs/trangs-tui/default.nix { })
-# (pkgs.callPackage ../../pkgs/temp/default.nix { })
+    # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
+    # (pkgs.callPackage ../../pkgs/rofi-games/default.nix { })
+    # (pkgs.callPackage ../../pkgs/trangs-tui/default.nix { })
+    # (pkgs.callPackage ../../pkgs/temp/default.nix { })
 
     (pkgs.makeDesktopItem {
       name = "torrent";
@@ -243,17 +244,17 @@ nixpkgs = {
         exec = "foot --server";
       };
     };
-	xdg.portal ={
-	    # wlr.enable = true;
+  xdg.portal = {
+    # wlr.enable = true;
 
-		enable=true;
-		extraPortals= with pkgs; [ 
-    	xdg-desktop-portal-gtk
-	];
-		configPackages= with pkgs; [ 
-    	xdg-desktop-portal-gtk
-	];
-	};
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+    configPackages = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+  };
   xdg.mime.enable = true;
   xdg.mimeApps.enable = true;
   xdg.mimeApps.defaultApplications = {

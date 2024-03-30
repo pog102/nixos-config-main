@@ -27,7 +27,7 @@
         up = "sudo nixos-rebuild switch --flake .#default";
       };
       initExtraFirst = ''
-           export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop" "man" "bat")
+        export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop" "man" "bat")
         export AUTO_NOTIFY_TITLE=" : %command"
         export AUTO_NOTIFY_BODY="󱎫 : %elapsed s"
 
