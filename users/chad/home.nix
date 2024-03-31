@@ -1,33 +1,31 @@
 { userSettings, inputs, config, pkgs, ... }:
-# let
-# src=pkgs.fetchFromGitHub {
-#   owner = "PanAeon";
-#   repo = "transg-tui";
-#   rev = "07014c38c7da193ea12cb695b4800f0a768eb389";
-#   hash = "sha256-hq3uDajewxf9avtGR0iuJeliyv+r4Et/GAjnBlHpb4c=";
-# };
-# in
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "chad";
   home.homeDirectory = "/home/chad";
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
   imports = [
     ../../bundles/apps.nix
   ];
-  # waybar.enable = false;
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
-  # firefox.enable = false;
+
+  pywal.enable = true;
+  hyprland.enable = true;
+  nvim.enable = true;
+  nyaa.enable = true;
+  transg.enable = true;
+  zsh.enable = true;
+  waybar.enable = true;
+  git.enable = true;
+  dunst.enable = true;
+  neofetch.enable = true;
+  foot.enable = true;
+  lf.enable = true;
+  wlsunset.enable = true;
+  mpv.enable = true;
+  rofi.enable = true;
+  cursor.enable = true;
+  firefox.enable = true;
+  wallpaper.enable = true;
+
   nixpkgs = {
     config = {
       allowUnfree = true;
@@ -37,7 +35,6 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-
     lsd
     xdg-utils
     bat
@@ -94,8 +91,6 @@
       transmission-remote -U --add "$@" && notify-send "Transmission" "Torrent added."
     '')
     # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
-    # (pkgs.callPackage ../../pkgs/rofi-games/default.nix { })
-    # (pkgs.callPackage ../../pkgs/trangs-tui/default.nix { })
     # (pkgs.callPackage ../../pkgs/temp/default.nix { })
 
     (pkgs.makeDesktopItem {
