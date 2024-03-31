@@ -22,36 +22,38 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
   imports = [
-    (if userSettings.theme == "wal" then
-      ../../pkgs/pywal/pywal.nix
-    else
-      ../../pkgs/color.nix
-    )
-    ../../pkgs/wm/hyprland.nix
-    #../../pkgs/kde.nix
-    ../../pkgs/editor/nvim.nix
-    ../../pkgs/batsignal.nix
-    ../../pkgs/nyaa/nyaa.nix
-    ../../pkgs/trangs-tui/transg.nix
-    ../../pkgs/shell/zsh.nix
-    ../../pkgs/waybar/waybar.nix
-    ../../pkgs/git.nix
-    # ../../pkgs/imv.nix
-    # ../../pkgs/dunst.nix
-    ../../pkgs/neofetch.nix
-    ../../pkgs/term/foot.nix
-    ../../pkgs/lf.nix
-    ../../pkgs/wlsunset.nix
-    ../../pkgs/mpv/mpv.nix
-    ../../pkgs/rofi/rofi.nix
-    # ../../pkgs/btop.nix
-    ../../pkgs/cursor.nix
-    # ../../pkgs/ayurs/ags.nix
-    # ../../pkgs/transg.nix
-    ../../pkgs/firefox/firefox.nix
-    # ../../pkgs/kanshi.nix
-    ../../pkgs/wallpaper/wallpaper.nix
+    # (if userSettings.theme == "wal" then
+    #   ../../pkgs/pywal/pywal.nix
+    # else
+    #   ../../pkgs/color.nix
+    # )
+    # ../../pkgs/wm/hyprland.nix
+    # #../../pkgs/kde.nix
+    # ../../pkgs/editor/nvim.nix
+    # ../../pkgs/batsignal.nix
+    # ../../pkgs/nyaa/nyaa.nix
+    # ../../pkgs/trangs-tui/transg.nix
+    # ../../pkgs/shell/zsh.nix
+    # ../../pkgs/waybar/waybar.nix
+    # ../../pkgs/git.nix
+    # # ../../pkgs/imv.nix
+    # # ../../pkgs/dunst.nix
+    # ../../pkgs/neofetch.nix
+    # ../../pkgs/term/foot.nix
+    # ../../pkgs/lf.nix
+    # ../../pkgs/wlsunset.nix
+    # ../../pkgs/mpv/mpv.nix
+    # ../../pkgs/rofi/rofi.nix
+    # # ../../pkgs/btop.nix
+    # ../../pkgs/cursor.nix
+    # # ../../pkgs/ayurs/ags.nix
+    # # ../../pkgs/transg.nix
+    # ../../pkgs/firefox/firefox.nix
+    # # ../../pkgs/kanshi.nix
+    # ../../pkgs/wallpaper/wallpaper.nix
+    ../../bundles/apps.nix
   ];
+  waybar.enable = false;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   nixpkgs = {
