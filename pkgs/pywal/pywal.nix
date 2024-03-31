@@ -42,7 +42,7 @@
     # };
 
     services.dunst = {
-      enable = true;
+      # enable = true;
       # enable=false;
       configFile = "/home/chad/.cache/wal/dunstrc";
     };

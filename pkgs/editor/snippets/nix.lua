@@ -1,18 +1,25 @@
-local ls = require('luasnip')
-
--- Define the snippet function
-local function print_filename()
-    local filename = vim.fn.expand('%:t')
-    return ls.insert_text(1, filename)
+-- Define the function to print the filename
+local function printFilename()
+        -- local filename = vim.fn.expand('%:p')
+	 -- local fullpath = vim.fn.expand('%:p')
+  --   local filename = vim.fn.fnamemodify(fullpath, ':t')
+        local filename = vim.fn.expand('%:t:r')
+    -- print("Current file name:", filename)
+    return filename
 end
 
--- Create the LuaSnip snippet
-local print_filename_snippet = ls.snippet({
-    trig = "opt",
-    name = "Print Filename",
-    dscr = "Prints the current file's name",
-    wordTrig = true,
-}, print_filename)
+-- Call the function to print the filename
 return {
-	print_filename_snippet
+s("opt", {
+t("options = { "),
+t({ "", "" }),
+f(printFilename),
+t(".enable = lib.mkEnableOption \"enable "),
+f(printFilename),
+t(" file\";"),
+t({ "","};" }),
+t({"","config = lib.mkIf config."}),
+f(printFilename),
+t(".enable { "),
+  })
 }
