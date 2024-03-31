@@ -9,15 +9,12 @@
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../pkgs/nvidia/nvidia.nix
-      ../../pkgs/transmission.nix
-      ../../pkgs/cpu.nix
-      # ../../pkgs/lightdm.nix
-      # ../../pkgs/systemd.nix
-
-      ../../pkgs/steam.nix
-      # ../../pkgs/plymouth.nix
+      ../../bundles/wideapps.nix
     ];
+  nvidia.enable = true;
+  transmission.enable = true;
+  cpu.enable = true;
+  steam.enable = true;
 
   # Bootloader.
   # boot.loader.grub.enable = true;
