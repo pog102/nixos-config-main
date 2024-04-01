@@ -38,8 +38,8 @@
     lsd
     xdg-utils
     bat
-    bun
-    neo
+    # bun
+    # neo
     gdu
     shellcheck
     # peaclock
@@ -184,10 +184,10 @@
     download = "${config.home.homeDirectory}/Downloads";
     documents = "${config.home.homeDirectory}/Documents";
     # secret_apps = "${config.home.homeDirectory}/.local/share/custom_apps";
-    desktop = null;
+    desktop = "${config.home.homeDirectory}/Desktop";
     publicShare = null;
     extraConfig = {
-      XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
+      # XDG_DOTFILES_DIR = "${config.home.homeDirectory}/.dotfiles";
       # XDG_ARCHIVE_DIR = "${config.home.homeDirectory}/Archive";
       # XDG_VM_DIR = "${config.home.homeDirectory}/Machines";
       # XDG_ORG_DIR = "${config.home.homeDirectory}/Org";

@@ -145,8 +145,8 @@ in
         ];
         # exec-once= ''${start}'';
         exec-once = [
-          "swww-daemon &"
-          # "swww init &"
+          # "swww-daemon &"
+          "sleep 0.1 && swww init &"
           "waybar"
         ];
         decoration = {
