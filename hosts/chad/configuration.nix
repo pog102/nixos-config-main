@@ -10,13 +10,13 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../nixosModules
-      ./settings.nix
+      # ./settings.nix
     ];
-  # nvidia.enable = true;
-  # transmission.enable = true;
-  # cpu.enable = true;
-  # steam.enable = true;
-  # jellyfin.enable = true;
+  nvidia.enable = true;
+  transmission.enable = true;
+  cpu.enable = true;
+  steam.enable = true;
+  jellyfin.enable = true;
 
   # Bootloader.
   # boot.loader.grub.enable = true;
