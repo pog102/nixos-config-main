@@ -1,0 +1,266 @@
+[Script Info]
+Title: English (US)
+Original Translation: 
+Original Editing: 
+Original Timing: 
+Synch Point: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.3,0,2,20,20,23,0
+Style: DefaultItalics,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,-1,0,0,100,100,0,0,1,1.3,0,2,20,20,23,0
+Style: DefaultTop,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.3,0,8,20,20,23,0
+Style: DefaultItalicsTop,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,-1,0,0,100,100,0,0,1,1.3,0,8,20,20,23,0
+Style: Flashback,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.3,0,2,20,20,23,1
+Style: FlashbackItalics,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,-1,0,0,100,100,0,0,1,1.3,0,2,20,20,23,1
+Style: FlashbackTop,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.3,0,8,20,20,23,0
+Style: FlashbackItalicsTop,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,-1,0,0,100,100,0,0,1,1.3,0,8,20,20,23,0
+Style: Narration,Roboto Medium,26,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,-1,0,0,100,100,0,0,1,1.3,0,2,20,20,23,1
+Style: Signs,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,0,0,8,30,30,10,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:12.51,0:00:14.66,DefaultItalics,Sung Jinwoo,0,0,0,,I lost track of the instant \Nteleportation stone!
+Dialogue: 0,0:00:15.03,0:00:16.87,DefaultItalics,Sung Jinwoo,0,0,0,,And I don't have time to look for it!
+Dialogue: 0,0:00:16.87,0:00:21.38,DefaultItalics,Sung Jinwoo,0,0,0,,The only way I can survive \Nis by beating them all!
+Dialogue: 0,0:00:26.80,0:00:28.50,DefaultItalics,Sung Jinwoo,0,0,0,,Stamina's at its limit!
+Dialogue: 0,0:00:28.50,0:00:30.18,DefaultItalics,Sung Jinwoo,0,0,0,,I can't use Stealth or Murderous Intent!
+Dialogue: 0,0:00:32.82,0:00:34.18,DefaultItalics,Sung Jinwoo,0,0,0,,But that doesn't mean...
+Dialogue: 0,0:00:34.49,0:00:35.93,DefaultItalics,Sung Jinwoo,0,0,0,,that I'm giving up!
+Dialogue: 0,0:00:37.96,0:00:38.93,DefaultItalics,Sung Jinwoo,0,0,0,,I am going...
+Dialogue: 0,0:00:39.24,0:00:40.94,DefaultItalics,Sung Jinwoo,0,0,0,,to survive!
+Dialogue: 0,0:00:48.35,0:00:52.74,DefaultItalics,Sung Jinwoo,0,0,0,,I was always at the bottom. \NI know what it's like better than anyone.
+Dialogue: 0,0:00:53.13,0:00:56.20,DefaultItalics,Sung Jinwoo,0,0,0,,But I could never give up \Non striving for more!
+Dialogue: 0,0:01:08.71,0:01:13.14,FlashbackItalics,Kim Sangshik,0,0,0,,His nickname is "The Weakest \NHunter of All Mankind."
+Dialogue: 0,0:01:15.56,0:01:17.85,FlashbackItalics,Park Beom-shik,0,0,0,,Weakest? Not strongest?
+Dialogue: 0,0:01:19.54,0:01:20.66,FlashbackItalics,Kim Sangshik,0,0,0,,Nope.
+Dialogue: 0,0:01:20.66,0:01:23.87,FlashbackItalics,Kim Sangshik,0,0,0,,Like, a trip through an E-Rank gate \Nlanded him in the hospital.
+Dialogue: 0,0:01:24.23,0:01:26.69,FlashbackItalics,Kim Sangshik,0,0,0,,He might be the weakest hunter there is.
+Dialogue: 0,0:01:28.82,0:01:32.70,Default,Song Chiyul,0,0,0,,Sung, that's enough. You don't need \Nto keep forcing yourself.
+Dialogue: 0,0:01:33.01,0:01:37.21,Default,Lee Joohee,0,0,0,,He's right, Jinwoo. \NYou'd be better off if you stopped.
+Dialogue: 0,0:01:41.08,0:01:42.96,Default,Shadow Jinwoo,0,0,0,,You're getting what you deserve.
+Dialogue: 0,0:01:46.30,0:01:49.59,Default,Shadow Jinwoo,0,0,0,,Why insist on something so dangerous?
+Dialogue: 0,0:01:50.23,0:01:53.09,Default,Shadow Jinwoo,0,0,0,,You were an E-Rank, \Nbut look how far you've come.
+Dialogue: 0,0:01:53.64,0:01:57.05,Default,Shadow Jinwoo,0,0,0,,That should be more than enough. \NShouldn't it...
+Dialogue: 0,0:01:58.39,0:01:59.47,Default,Shadow Jinwoo,0,0,0,,Jinwoo?
+Dialogue: 0,0:03:32.57,0:03:35.26,Default,Go Gunhee,0,0,0,,The third Jeju Island raid...
+Dialogue: 0,0:03:35.66,0:03:41.55,Default,Go Gunhee,0,0,0,,My body was no longer fit for combat \Nby then, so I wasn't there.
+Dialogue: 0,0:03:42.29,0:03:44.45,Default,Go Gunhee,0,0,0,,How about you?
+Dialogue: 0,0:03:44.89,0:03:48.35,Default,Woo Jinchul,0,0,0,,I was. I was on perimeter security, \Nacting as a point of contact, sir.
+Dialogue: 0,0:03:48.90,0:03:52.14,Default,Go Gunhee,0,0,0,,So many lost their lives.
+Dialogue: 0,0:03:52.14,0:03:56.01,Default,Go Gunhee,0,0,0,,And those who survived still bear \Nthe mental scars...
+Dialogue: 0,0:03:57.34,0:04:01.47,Default,Go Gunhee,0,0,0,,The kind of scars that all hunters have.
+Dialogue: 0,0:04:02.22,0:04:04.90,Default,Go Gunhee,0,0,0,,And they must overcome that pain,
+Dialogue: 0,0:04:04.90,0:04:08.18,Default,Go Gunhee,0,0,0,,or destruction will be all that awaits.
+Dialogue: 0,0:04:09.64,0:04:14.15,Default,Shadow Jinwoo,0,0,0,,I gotta ask, is this really me? \NI can hardly recognize myself.
+Dialogue: 0,0:04:14.58,0:04:16.73,Default,Shadow Jinwoo,0,0,0,,Taller, and in much better shape.
+Dialogue: 0,0:04:16.73,0:04:18.19,Default,Shadow Jinwoo,0,0,0,,Looking pretty strong!
+Dialogue: 0,0:04:19.41,0:04:23.99,Default,Woo Jinchul,0,0,0,,But the differences are only skin deep. \NOn the inside, I'm still weak.
+Dialogue: 0,0:04:24.37,0:04:26.12,Default,Shadow Jinwoo,0,0,0,,And it looks like I'm about to die again.
+Dialogue: 0,0:04:31.21,0:04:35.85,Default,Shadow Jinwoo,0,0,0,,Sung Jinwoo, E-Rank hunter. \NThat's all you'll ever be.
+Dialogue: 0,0:04:36.64,0:04:38.80,Default,Shadow Jinwoo,0,0,0,,A dreamer who never learned \Nhis place in the world.
+Dialogue: 0,0:04:39.35,0:04:40.42,Default,Sung Jinwoo,0,0,0,,Shut up.
+Dialogue: 0,0:04:54.16,0:04:55.90,Default,Shadow Jinwoo,0,0,0,,Still not good enough.
+Dialogue: 0,0:04:55.90,0:04:59.95,Default,Shadow Jinwoo,0,0,0,,This is what you get for patting yourself \Non the back about how "ready" you are.
+Dialogue: 0,0:05:00.34,0:05:03.41,Default,Shadow Jinwoo,0,0,0,,You're gonna get yourself killed.
+Dialogue: 0,0:05:05.21,0:05:07.66,DefaultItalics,Sung Jinwoo,0,0,0,,Is it all the same...
+Dialogue: 0,0:05:08.58,0:05:10.06,DefaultItalics,Sung Jinwoo,0,0,0,,as back then...?
+Dialogue: 0,0:05:12.53,0:05:15.48,DefaultItalics,Sung Jinwoo,0,0,0,,What happened after that...?
+Dialogue: 0,0:05:20.46,0:05:23.18,DefaultItalics,Sung Jinwoo,0,0,0,,The quest is ending?
+Dialogue: 0,0:05:23.52,0:05:25.83,Default,Shadow Jinwoo,0,0,0,,I guess luck is a factor in skill after all.
+Dialogue: 0,0:05:27.33,0:05:30.48,Default,Shadow Jinwoo,0,0,0,,It seems they don't want you to die just yet.
+Dialogue: 0,0:05:31.14,0:05:32.22,Default,Shadow Jinwoo,0,0,0,,Until next time, then.
+Dialogue: 0,0:05:44.82,0:05:48.47,Default,Sung Jinwoo,0,0,0,,This is... the penalty zone?
+Dialogue: 0,0:05:50.77,0:05:55.28,Default,Sung Jinwoo,0,0,0,,Oh, yeah... I never did \Nthe daily quest for today.
+Dialogue: 0,0:05:57.15,0:05:59.18,Default,Sung Jinwoo,0,0,0,,Well, either way...
+Dialogue: 0,0:06:01.78,0:06:05.55,Default,Sung Jinwoo,0,0,0,,Nice timing. That "penalty" saved my life.
+Dialogue: 0,0:06:05.95,0:06:08.26,DefaultItalics,Sung Jinwoo,0,0,0,,"Good luck," huh?
+Dialogue: 0,0:06:09.05,0:06:12.04,DefaultItalics,Sung Jinwoo,0,0,0,,Because the quest was just that hard?
+Dialogue: 0,0:06:12.04,0:06:15.88,DefaultItalics,Sung Jinwoo,0,0,0,,Or because the system wants me to survive \Nenough that it's cheering me on?
+Dialogue: 0,0:06:16.42,0:06:17.50,DefaultItalics,Sung Jinwoo,0,0,0,,Well, whatever.
+Dialogue: 0,0:06:17.50,0:06:18.82,Default,Sung Jinwoo,0,0,0,,Store.
+Dialogue: 0,0:06:20.29,0:06:23.19,DefaultItalics,Sung Jinwoo,0,0,0,,I've never seen my exhaustion \Nexceed 90 before.
+Dialogue: 0,0:06:32.40,0:06:36.97,DefaultItalics,Sung Jinwoo,0,0,0,,So if you're seriously injured, \Npotions can't restore your HP anymore?
+Dialogue: 0,0:06:37.55,0:06:42.48,DefaultItalics,Sung Jinwoo,0,0,0,,I can either wait to heal naturally \Nor try and get restored by leveling up...
+Dialogue: 0,0:06:43.80,0:06:46.51,Default,Sung Jinwoo,0,0,0,,Looks like I was worried for nothing.
+Dialogue: 0,0:06:51.92,0:06:53.16,DefaultItalics,Sung Jinwoo,0,0,0,,"Until next time"?
+Dialogue: 0,0:06:54.48,0:06:58.32,DefaultItalics,Sung Jinwoo,0,0,0,,Right. If I manage to survive, \NI'll see him again.
+Dialogue: 0,0:06:58.32,0:07:02.77,DefaultItalics,Sung Jinwoo,0,0,0,,And as long as it doesn't kill me, \Nany pain I go through
+Dialogue: 0,0:07:02.77,0:07:05.03,DefaultItalics,Sung Jinwoo,0,0,0,,is only going to make me stronger!
+Dialogue: 0,0:07:20.91,0:07:23.07,Default,Sung Jinah,0,0,0,,That was a weird dream.
+Dialogue: 0,0:07:25.55,0:07:28.05,Default,Sung Jinah,0,0,0,,And Jinwoo still isn't home yet?
+Dialogue: 0,0:07:28.76,0:07:32.14,Default,Sung Jinah,0,0,0,,He can't be working this late, can he?
+Dialogue: 0,0:07:33.07,0:07:35.91,Default,Sung Jinah,0,0,0,,Could he have gotten a girlfriend...?
+Dialogue: 0,0:07:35.91,0:07:37.74,Default,Sung Jinah,0,0,0,,Nah, no way.
+Dialogue: 0,0:07:38.41,0:07:41.44,Default,Sung Jinah,0,0,0,,And I told him there's \Na guardian-teacher meeting today...
+Dialogue: 0,0:07:41.90,0:07:44.08,Default,Sung Jinah,0,0,0,,Will he be able to make it?
+Dialogue: 0,0:07:49.86,0:07:52.82,Default,Sung Jinwoo,0,0,0,,Being able to recover by leveling up \Nreally is convenient.
+Dialogue: 0,0:07:54.26,0:08:00.04,Default,Sung Jinwoo,0,0,0,,I've got over ten minutes left. \NI should sort out my gear in that time.
+Dialogue: 0,0:08:03.47,0:08:04.44,Default,Sung Jinwoo,0,0,0,,Buy.
+Dialogue: 0,0:08:09.92,0:08:14.73,Default,Sung Jinwoo,0,0,0,,"Knight Killer." Deals 25% more damage \Nto armor-type beasts.
+Dialogue: 0,0:08:14.73,0:08:16.64,Default,Sung Jinwoo,0,0,0,,A little pricey, but that's not half bad.
+Dialogue: 0,0:08:17.23,0:08:19.10,Default,Sung Jinwoo,0,0,0,,Okay, that just leaves this:
+Dialogue: 0,0:08:19.62,0:08:21.97,Default,Sung Jinwoo,0,0,0,,the rune stone I got in my fight with Igris.
+Dialogue: 0,0:08:22.50,0:08:24.84,Default,Sung Jinwoo,0,0,0,,I'm sure the skill will come in handy.
+Dialogue: 0,0:08:37.18,0:08:39.03,Default,Sung Jinwoo,0,0,0,,Ruler's Hand...
+Dialogue: 0,0:08:39.03,0:08:42.12,Default,Sung Jinwoo,0,0,0,,A skill that doesn't require mana? \NShould be easy to manage, then.
+Dialogue: 0,0:08:42.63,0:08:45.66,Default,Sung Jinwoo,0,0,0,,The ability to affect objects \Nwithout directly touching them, huh...
+Dialogue: 0,0:08:46.96,0:08:48.61,Default,Sung Jinwoo,0,0,0,,Is that what he did?
+Dialogue: 0,0:08:54.75,0:08:57.56,Default,Sung Jinwoo,0,0,0,,I guess I can't move anything large yet.
+Dialogue: 0,0:08:59.54,0:09:02.02,Default,Sung Jinwoo,0,0,0,,That's all the preparations \NI can manage for now.
+Dialogue: 0,0:09:05.26,0:09:07.19,Default,Sung Jinwoo,0,0,0,,The rest will come down to luck.
+Dialogue: 0,0:09:15.20,0:09:18.66,Default,Sung Jinwoo,0,0,0,,It's only been a few hours, but you guys \Nsure have grown in number.
+Dialogue: 0,0:09:25.14,0:09:28.61,Default,Pilot,0,0,0,,We'll be arriving in the airspace over \NJeju Island's security perimeter shortly.
+Dialogue: 0,0:09:28.61,0:09:29.90,Default,Choi Jong-in,0,0,0,,Understood.
+Dialogue: 0,0:09:30.39,0:09:34.47,Default,Choi Jong-in,0,0,0,,I'm sorry. I know this \Nmust be painful for you.
+Dialogue: 0,0:09:34.47,0:09:36.94,Default,Cha Hae-in,0,0,0,,No. It's not a problem.
+Dialogue: 0,0:09:36.94,0:09:41.64,Default,Cha Hae-in,0,0,0,,I wasn't a hunter during the third raid,
+Dialogue: 0,0:09:41.99,0:09:44.78,Default,Cha Hae-in,0,0,0,,but I understand how \Nyou must feel, Guildmaster.
+Dialogue: 0,0:09:44.78,0:09:47.16,Default,Choi Jong-in,0,0,0,,It's a relief to hear that.
+Dialogue: 0,0:09:47.16,0:09:48.26,Default,Pilot,0,0,0,,Guildmaster Choi!
+Dialogue: 0,0:09:48.26,0:09:50.40,Default,Pilot,0,0,0,,I'm detecting multiple sources \Nof mana from the water!
+Dialogue: 0,0:09:50.40,0:09:51.79,Default,Pilot,0,0,0,,Bringing up the feed!
+Dialogue: 0,0:09:55.68,0:09:56.97,Default,Choi Jong-in,0,0,0,,What the...?
+Dialogue: 0,0:10:02.13,0:10:04.25,DefaultItalics,Sung Jinwoo,0,0,0,,The Knight Killer is coming in handy!
+Dialogue: 0,0:10:04.25,0:10:06.13,DefaultItalics,Sung Jinwoo,0,0,0,,This is way better \Nthan fighting bare-handed!
+Dialogue: 0,0:10:06.74,0:10:07.59,DefaultItalics,Sung Jinwoo,0,0,0,,But...
+Dialogue: 0,0:10:07.59,0:10:09.69,DefaultItalics,Sung Jinwoo,0,0,0,,What's this weird sensation?
+Dialogue: 0,0:10:09.69,0:10:11.55,DefaultItalics,Sung Jinwoo,0,0,0,,I keep killing them, \Nbut it doesn't feel like it.
+Dialogue: 0,0:10:11.55,0:10:13.76,DefaultItalics,Sung Jinwoo,0,0,0,,Plus, there's no sign of me leveling up.
+Dialogue: 0,0:10:14.39,0:10:17.98,DefaultItalics,Sung Jinwoo,0,0,0,,And what are their mages doing?
+Dialogue: 0,0:10:17.98,0:10:20.89,DefaultItalics,Sung Jinwoo,0,0,0,,They've been casting spells, \Nbut no attacks are incoming.
+Dialogue: 0,0:10:20.89,0:10:22.69,DefaultItalics,Sung Jinwoo,0,0,0,,Only the knights have been attacking.
+Dialogue: 0,0:10:22.69,0:10:24.52,DefaultItalics,Sung Jinwoo,0,0,0,,So what have they been doing?
+Dialogue: 0,0:10:25.91,0:10:27.86,DefaultItalics,Sung Jinwoo,0,0,0,,Gates! It's summoning magic!
+Dialogue: 0,0:10:28.20,0:10:31.36,DefaultItalics,Sung Jinwoo,0,0,0,,The knights are just weapons \Nthat they've been summoning!
+Dialogue: 0,0:10:31.99,0:10:34.35,DefaultItalics,Sung Jinwoo,0,0,0,,I can beat them, but it won't \Ngive me any experience!
+Dialogue: 0,0:10:34.95,0:10:36.16,DefaultItalics,Sung Jinwoo,0,0,0,,Which means I should target...
+Dialogue: 0,0:10:36.16,0:10:38.89,DefaultItalics,Sung Jinwoo,0,0,0,,you mages!
+Dialogue: 0,0:10:45.75,0:10:48.88,Default,Sung Jinwoo,0,0,0,,I was right. I need to go after the mages.
+Dialogue: 0,0:10:49.80,0:10:50.97,Default,Sung Jinwoo,0,0,0,,Now that I know that...
+Dialogue: 0,0:10:52.80,0:10:53.64,DefaultItalics,Sung Jinwoo,0,0,0,,Five more to go!
+Dialogue: 0,0:10:58.06,0:10:59.34,DefaultItalics,Sung Jinwoo,0,0,0,,Four more!
+Dialogue: 0,0:11:16.53,0:11:19.08,Default,Sung Jinwoo,0,0,0,,How long are you gonna hide back there?!
+Dialogue: 0,0:11:24.98,0:11:26.42,DefaultItalics,Sung Jinwoo,0,0,0,,Three left!
+Dialogue: 0,0:11:33.34,0:11:34.37,DefaultItalics,Sung Jinwoo,0,0,0,,A golem?!
+Dialogue: 0,0:11:50.65,0:11:53.83,DefaultItalics,Sung Jinwoo,0,0,0,,I bet they think a single, stronger enemy \Nwill fare better than the knights...
+Dialogue: 0,0:11:54.79,0:11:58.07,DefaultItalics,Sung Jinwoo,0,0,0,,but having fewer targets \Njust makes it easier to go after you guys!
+Dialogue: 0,0:12:14.33,0:12:16.64,Default,Sung Jinwoo,0,0,0,,The casters are already gone!
+Dialogue: 0,0:12:17.32,0:12:19.59,Default,Sung Jinwoo,0,0,0,,So why don't you...
+Dialogue: 0,0:12:20.61,0:12:23.85,Default,Sung Jinwoo,0,0,0,,shut the hell down?!
+Dialogue: 0,0:12:49.66,0:12:53.48,Default,Sung Jinwoo,0,0,0,,It's over, right? Now what happens?
+Dialogue: 0,0:12:54.12,0:12:59.87,Default,Sung Jinwoo,0,0,0,,I can switch to a more advanced class \Nwith the points I've earned...
+Dialogue: 0,0:13:00.46,0:13:05.27,Default,Sung Jinwoo,0,0,0,,I'm getting a class based on \Nmy performance during the quest?
+Dialogue: 0,0:13:05.27,0:13:06.48,Default,Sung Jinwoo,0,0,0,,So I don't get to choose?
+Dialogue: 0,0:13:15.64,0:13:17.41,Default,Sung Jinwoo,0,0,0,,Huh? What's that mean?
+Dialogue: 0,0:13:32.60,0:13:35.07,Default,Sung Jinwoo,0,0,0,,The shadow... army?
+Dialogue: 0,0:13:37.39,0:13:39.59,Default,Sung Jinwoo,0,0,0,,Hang on, what the hell is this?!
+Dialogue: 0,0:13:39.59,0:13:42.64,Default,Sung Jinwoo,0,0,0,,This is my new job class...?
+Dialogue: 0,0:13:43.59,0:13:45.06,Default,Sung Jinwoo,0,0,0,,Necromancer?!
+Dialogue: 0,0:13:45.35,0:13:49.19,Default,Sung Jinwoo,0,0,0,,Hang on a second! I haven't put \Nanything into my intellect stat!
+Dialogue: 0,0:13:49.19,0:13:50.64,Default,Sung Jinwoo,0,0,0,,So how did I...?
+Dialogue: 0,0:13:51.66,0:13:57.40,DefaultItalics,Sung Jinwoo,0,0,0,,Necromancers are usually a magic-type class \Nthat summons undead monsters as servants.
+Dialogue: 0,0:13:58.27,0:14:00.20,DefaultItalics,Sung Jinwoo,0,0,0,,But I'm an assassin build,
+Dialogue: 0,0:14:00.20,0:14:02.34,DefaultItalics,Sung Jinwoo,0,0,0,,with a close-range combat style.
+Dialogue: 0,0:14:02.34,0:14:05.87,DefaultItalics,Sung Jinwoo,0,0,0,,My main stat is strength, \Nand my skills fit that style, too!
+Dialogue: 0,0:14:06.18,0:14:10.55,DefaultItalics,Sung Jinwoo,0,0,0,,If I get a back-line class like necromancer, \Nall that will be wasted!
+Dialogue: 0,0:14:11.95,0:14:15.30,Default,Sung Jinwoo,0,0,0,,Yes or no? I can reject it?
+Dialogue: 0,0:14:15.60,0:14:19.82,DefaultItalics,Sung Jinwoo,0,0,0,,Changing my class to necromancer... \NThe benefits are too unclear.
+Dialogue: 0,0:14:19.82,0:14:20.83,Default,Sung Jinwoo,0,0,0,,No.
+Dialogue: 0,0:14:22.26,0:14:24.05,Default,Sung Jinwoo,0,0,0,,A hidden class?!
+Dialogue: 0,0:14:30.76,0:14:33.65,DefaultItalics,Sung Jinwoo,0,0,0,,Does this mean it has \Nsome kind of special power?
+Dialogue: 0,0:14:36.05,0:14:40.11,Default,Sung Jinwoo,0,0,0,,A necromancer... If I had some \Nkind of example to judge by...
+Dialogue: 0,0:14:43.79,0:14:45.24,DefaultItalics,Sung Jinwoo,0,0,0,,Summoning magic!
+Dialogue: 0,0:14:45.62,0:14:48.71,DefaultItalics,Sung Jinwoo,0,0,0,,That's right. Those mages \Nwere using summoning magic.
+Dialogue: 0,0:14:49.08,0:14:53.00,DefaultItalics,Sung Jinwoo,0,0,0,,In terms of commanding others, that's a \Nsimilar power to that of a necromancer.
+Dialogue: 0,0:14:53.00,0:14:54.92,DefaultItalics,Sung Jinwoo,0,0,0,,Not only that, but my previous fights here
+Dialogue: 0,0:14:54.92,0:14:58.01,DefaultItalics,Sung Jinwoo,0,0,0,,all felt like I was revisiting \Nmy past battles...
+Dialogue: 0,0:14:59.00,0:15:04.24,DefaultItalics,Sung Jinwoo,0,0,0,,It was called a job-change quest, \Nbut was this all prearranged?
+Dialogue: 0,0:15:04.24,0:15:06.00,DefaultItalics,Sung Jinwoo,0,0,0,,Is the system doing this?
+Dialogue: 0,0:15:06.83,0:15:08.14,DefaultItalics,Sung Jinwoo,0,0,0,,Still, it's interesting.
+Dialogue: 0,0:15:08.57,0:15:11.54,DefaultItalics,Sung Jinwoo,0,0,0,,These guys weren't very strong on their own.
+Dialogue: 0,0:15:11.54,0:15:13.43,DefaultItalics,Sung Jinwoo,0,0,0,,But I am.
+Dialogue: 0,0:15:13.43,0:15:16.61,DefaultItalics,Sung Jinwoo,0,0,0,,There's no rule that says necromancers \Ncan't fight on the front lines.
+Dialogue: 0,0:15:17.19,0:15:22.86,DefaultItalics,Sung Jinwoo,0,0,0,,If classes work like stats do, \Nthen as I level up, my skills will, too.
+Dialogue: 0,0:15:23.32,0:15:27.08,DefaultItalics,Sung Jinwoo,0,0,0,,It makes sense that this shadow army\Nthing would become stronger as a result.
+Dialogue: 0,0:15:27.48,0:15:28.64,DefaultItalics,Sung Jinwoo,0,0,0,,In other words,
+Dialogue: 0,0:15:29.04,0:15:31.59,DefaultItalics,Sung Jinwoo,0,0,0,,I won't be solo leveling anymore!
+Dialogue: 0,0:15:32.37,0:15:33.77,Default,Sung Jinwoo,0,0,0,,All right, then. Yes.
+Dialogue: 0,0:15:39.88,0:15:41.01,Default,Woo Jinchul,0,0,0,,Here you are.
+Dialogue: 0,0:15:41.01,0:15:42.33,Default,Go Gunhee,0,0,0,,Thank you.
+Dialogue: 0,0:15:46.43,0:15:48.68,Default,Go Gunhee,0,0,0,,It's already dawn.
+Dialogue: 0,0:15:48.68,0:15:52.45,Default,Woo Jinchul,0,0,0,,Hunter Choi and his people should \Nhave arrived at the island by now.
+Dialogue: 0,0:15:52.45,0:15:53.31,Default,Go Gunhee,0,0,0,,Right.
+Dialogue: 0,0:15:53.92,0:15:55.50,Default,Go Gunhee,0,0,0,,Sorry to keep you so late.
+Dialogue: 0,0:15:55.50,0:15:56.65,Default,Woo Jinchul,0,0,0,,It's fine.
+Dialogue: 0,0:15:56.65,0:16:01.81,Default,Go Gunhee,0,0,0,,Since you're here, would you \Nmind humoring me for a bit?
+Dialogue: 0,0:16:59.96,0:17:03.92,DefaultItalics,Sung Jinwoo,0,0,0,,"Shadow monarch"? \NI've already got another class?!
+Dialogue: 0,0:17:03.92,0:17:06.25,DefaultItalics,Sung Jinwoo,0,0,0,,Did I really earn that many points?
+Dialogue: 0,0:17:07.43,0:17:12.88,DefaultItalics,Sung Jinwoo,0,0,0,,Unique class skills and 10 ability points... \NAlong with a new title...
+Dialogue: 0,0:17:12.88,0:17:16.97,DefaultItalics,Sung Jinwoo,0,0,0,,If my rewards are ready, \Nis the quest finally over?
+Dialogue: 0,0:17:17.34,0:17:19.87,DefaultItalics,Sung Jinwoo,0,0,0,,Have I completed the job change?
+Dialogue: 0,0:17:22.41,0:17:28.28,DefaultItalics,Sung Jinwoo,0,0,0,,I can hear something like a moaning... \NIt sounds like people in pain.
+Dialogue: 0,0:17:29.38,0:17:30.57,DefaultItalics,Sung Jinwoo,0,0,0,,Shadow Extraction...
+Dialogue: 0,0:17:32.61,0:17:34.75,Default,Sung Jinwoo,0,0,0,,I have to designate a command word...
+Dialogue: 0,0:17:38.75,0:17:39.88,Default,Sung Jinwoo,0,0,0,,Arise.
+Dialogue: 0,0:17:58.74,0:18:00.32,Default,Sung Jinwoo,0,0,0,,This is awesome!
+Dialogue: 0,0:18:00.95,0:18:05.33,DefaultItalics,Sung Jinwoo,0,0,0,,The unique skills are Shadow Extraction \Nand Shadow Storage.
+Dialogue: 0,0:18:05.80,0:18:08.80,DefaultItalics,Sung Jinwoo,0,0,0,,A skill that lets you drain mana \Nto create shadow soldiers,
+Dialogue: 0,0:18:08.80,0:18:12.16,DefaultItalics,Sung Jinwoo,0,0,0,,and one that lets you hold onto those shadows \Nand summon them whenever you want...
+Dialogue: 0,0:18:12.97,0:18:16.05,DefaultItalics,Sung Jinwoo,0,0,0,,These must be those shadow soldiers.
+Dialogue: 0,0:18:16.64,0:18:19.13,DefaultItalics,Sung Jinwoo,0,0,0,,I'll have to be careful, \Nsince the extraction can fail
+Dialogue: 0,0:18:19.13,0:18:23.30,DefaultItalics,Sung Jinwoo,0,0,0,,depending on the strength of the target \Nand the time since death.
+Dialogue: 0,0:18:23.97,0:18:26.03,DefaultItalics,Sung Jinwoo,0,0,0,,And I've got the mages, \Nas well as the knights.
+Dialogue: 0,0:18:26.03,0:18:28.67,DefaultItalics,Sung Jinwoo,0,0,0,,They come in different ranks, too.
+Dialogue: 0,0:18:30.41,0:18:33.65,DefaultItalics,Sung Jinwoo,0,0,0,,If it's possible to extract \NA or S-Rank shadows,
+Dialogue: 0,0:18:33.65,0:18:37.60,DefaultItalics,Sung Jinwoo,0,0,0,,and their strength reflects \Nhow strong they were in life...
+Dialogue: 0,0:18:47.44,0:18:48.90,Default,Sung Jinwoo,0,0,0,,Good!
+Dialogue: 0,0:18:49.28,0:18:52.37,Default,Sung Jinwoo,0,0,0,,There seems to be an upper limit \Nto extractions and storage.
+Dialogue: 0,0:18:52.84,0:18:54.78,Default,Sung Jinwoo,0,0,0,,I'll release 11 of the infantry.
+Dialogue: 0,0:18:56.64,0:18:58.47,Default,Sung Jinwoo,0,0,0,,Sorry to wake you for nothing.
+Dialogue: 0,0:18:59.67,0:19:00.84,Default,Sung Jinwoo,0,0,0,,Now, then...
+Dialogue: 0,0:19:01.28,0:19:03.56,DefaultItalics,Sung Jinwoo,0,0,0,,Knight Commander Igris the Bloodred.
+Dialogue: 0,0:19:04.05,0:19:06.29,DefaultItalics,Sung Jinwoo,0,0,0,,If I can bring him under my control...
+Dialogue: 0,0:19:07.67,0:19:08.76,Default,Sung Jinwoo,0,0,0,,Arise.
+Dialogue: 0,0:19:17.97,0:19:19.19,DefaultItalics,Sung Jinwoo,0,0,0,,What?!
+Dialogue: 0,0:19:22.15,0:19:24.48,Default,Sung Jinwoo,0,0,0,,This must've been what it \Nwas warning about before.
+Dialogue: 0,0:19:26.22,0:19:27.52,Default,Sung Jinwoo,0,0,0,,Two more tries...
+Dialogue: 0,0:19:31.86,0:19:32.86,Default,Sung Jinwoo,0,0,0,,Arise!
+Dialogue: 0,0:19:38.73,0:19:39.97,Default,Sung Jinwoo,0,0,0,,Damn it!
+Dialogue: 0,0:19:40.34,0:19:45.75,Default,Go Gunhee,0,0,0,,It goes without saying, but unless \Nwe hunters undergo a reawakening,
+Dialogue: 0,0:19:45.75,0:19:49.26,Default,Go Gunhee,0,0,0,,our powers will neither \Ngrow stronger or weaker.
+Dialogue: 0,0:19:49.26,0:19:52.47,Default,Go Gunhee,0,0,0,,Which is why we train our combat \Ntechniques and gather allies.
+Dialogue: 0,0:19:53.72,0:19:55.43,Default,Sung Jinwoo,0,0,0,,Are you waiting for your king's return?
+Dialogue: 0,0:19:56.23,0:19:58.65,Default,Sung Jinwoo,0,0,0,,When you have no idea when that might be?
+Dialogue: 0,0:19:59.60,0:20:01.46,Default,Sung Jinwoo,0,0,0,,Knight Commander Igris...
+Dialogue: 0,0:20:01.46,0:20:03.04,Default,Sung Jinwoo,0,0,0,,You're a warrior.
+Dialogue: 0,0:20:03.50,0:20:06.40,Default,Sung Jinwoo,0,0,0,,Cutting down foes with that sword \Nshould be your purpose in life.
+Dialogue: 0,0:20:07.16,0:20:10.99,Default,Sung Jinwoo,0,0,0,,Do you really intend to let it rust \Nin this dank and decrepit place?
+Dialogue: 0,0:20:12.84,0:20:17.61,Default,Sung Jinwoo,0,0,0,,If you need someone to whom you \Ncan dedicate your sword, serve me.
+Dialogue: 0,0:20:18.28,0:20:21.21,Default,Sung Jinwoo,0,0,0,,Instead of defending the throne \Nof one long gone,
+Dialogue: 0,0:20:21.62,0:20:24.12,Default,Sung Jinwoo,0,0,0,,defend the man who stands before you.
+Dialogue: 0,0:20:24.76,0:20:25.88,Default,Sung Jinwoo,0,0,0,,Arise.
+Dialogue: 0,0:20:38.76,0:20:42.93,Default,Go Gunhee,0,0,0,,Which is why... there's something \NI like to envision occasionally.
+Dialogue: 0,0:20:55.32,0:21:00.74,Default,Go Gunhee,0,0,0,,About how there are new awakenings every day.
+Dialogue: 0,0:21:02.07,0:21:03.54,Default,Sung Jinwoo,0,0,0,,It should be obvious.
+Dialogue: 0,0:21:04.53,0:21:05.79,Default,Sung Jinwoo,0,0,0,,Igris.
+Dialogue: 0,0:21:07.93,0:21:09.67,Default,Sung Jinwoo,0,0,0,,That's your name.
+Dialogue: 0,0:21:11.02,0:21:15.36,Default,Go Gunhee,0,0,0,,Someone who defies all our expectations,
+Dialogue: 0,0:21:15.36,0:21:19.05,Default,Go Gunhee,0,0,0,,strong enough to become a new guiding light,
+Dialogue: 0,0:21:19.49,0:21:22.99,Default,Go Gunhee,0,0,0,,could be born this very moment.
+Dialogue: 0,0:21:38.16,0:21:39.91,Default,Sung Jinwoo,0,0,0,,You're with me now.
+Dialogue: 0,0:23:18.97,0:23:20.54,Default,Cha Hae-in,0,0,0,,Guildmaster Choi...
+Dialogue: 0,0:23:20.54,0:23:22.08,Default,Cha Hae-in,0,0,0,,What in the world is this?
+Dialogue: 0,0:23:22.08,0:23:23.39,Default,Choi Jong-in,0,0,0,,I don't know.
+Dialogue: 0,0:23:23.39,0:23:26.76,Default,Choi Jong-in,0,0,0,,To my knowledge, \Nthis has never happened before.
+Dialogue: 0,0:23:27.05,0:23:29.52,Default,Choi Jong-in,0,0,0,,But now...
+Dialogue: 0,0:23:31.82,0:23:33.49,Default,Choi Jong-in,0,0,0,,They're evolving?
+
