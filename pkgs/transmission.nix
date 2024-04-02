@@ -1,5 +1,12 @@
 { lib, config, pkgs, ... }:
 
+let
+  rofi-pow = pkgs.pkgs.writeShellScript "rofi-pow" ''
+    #!/bin/sh
+      notify-send -i trans "Transmission" "$TR_TORRENT_NAME has completely downloaded" ## && polybar-msg action "#torrents.hook.0"  #&& pkill -SIGRTMIN+2 i3blocks
+    # transmission-remote -l | awk '$2 == "100%"{ system("transmission-remote -t " $1 " --remove") }'
+  '';
+in
 {
   options = {
     transmission.enable = lib.mkEnableOption "enable transmission file";
@@ -29,8 +36,8 @@
         cache-size-mb = 4;
         dht-enabled = true;
 
-        download-dir = "/home/chad/Downloads/";
-        incomplete-dir = "/home/chad/Downloads/";
+        download-dir = "/home/chad/Shows/";
+        incomplete-dir = "/home/chad/Shows/";
         download-queue-enabled = true;
         download-queue-size = 2;
         encryption = 1;
@@ -67,7 +74,7 @@
         rpc-whitelist = "127.0.0.1";
         rpc-whitelist-enabled = false;
         scrape-paused-torrents-enabled = true;
-        script-torrent-done-enabled = false;
+        script-torrent-done-enabled = true;
         script-torrent-done-filename = null;
         seed-queue-enabled = true;
         seed-queue-size = 1;
