@@ -5,7 +5,6 @@
   };
   config = lib.mkIf config.jellyfin.enable {
     services.jellyfin = {
-      dataDir = ./data;
       enable = true;
       openFirewall = true;
       user = "chad";
