@@ -15,6 +15,7 @@
   transmission.enable = true;
   cpu.enable = true;
   steam.enable = true;
+  jellyfin.enable = true;
 
   # Bootloader.
   # boot.loader.grub.enable = true;

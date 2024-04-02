@@ -5,6 +5,7 @@
     ../pkgs/transmission.nix
     ../pkgs/cpu.nix
     ../pkgs/steam.nix
+    ../pkgs/jellyfin/jellyfin.nix
   ];
   # pywal.enable = lib.mkDefault true;
   # hyprland.enable = lib.mkDefault true;
