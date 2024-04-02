@@ -88,7 +88,7 @@
     (pkgs.writeShellScriptBin "transadd" ''
       #!/bin/sh
       # transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
-      transmission-remote -U --add "$@" && notify-send "Transmission" "Torrent added."
+      transmission-remote -U --add "$@" && notify-send -i trans "Transmission" "Torrent added."
     '')
     # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
     # (pkgs.callPackage ../../pkgs/temp/default.nix { })
