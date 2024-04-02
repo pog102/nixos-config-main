@@ -11,7 +11,7 @@
 
     home.file.".config/neofetch/chad.txt" = {
       recursive = true;
-      source = ../chad2.txt;
+      source = ./chad2.txt;
     };
     home.file.".config/neofetch/config.conf".text =
       ''

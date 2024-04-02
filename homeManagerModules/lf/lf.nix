@@ -4,7 +4,7 @@
     lf.enable = lib.mkEnableOption "enable lf file";
   };
   config = lib.mkIf config.lf.enable {
-    xdg.configFile."lf/icons".source = ../icons;
+    xdg.configFile."lf/icons".source = ./icons;
     programs.lf = {
       enable = true;
       commands = {
