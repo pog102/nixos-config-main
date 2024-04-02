@@ -23,9 +23,9 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-          ags = {
-          url = "github:Aylur/ags";
-        inputs.nixpkgs.follows = "nixpkgs";
+    ags = {
+      url = "github:Aylur/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -52,17 +52,9 @@
 
           modules = [
             inputs.grub-theme.nixosModules.default
-            ./users/chad/configuration.nix
+            ./hosts/chad/configuration.nix
             inputs.home-manager.nixosModules.default
 
-            # {
-            #= {
-            # type = "app";
-            # program = "${self.packages.${system}.transg-tui}/bin/transg";
-
-            # };
-            # }
-            # ./pkgs/transg.nix
             {
               home-manager.extraSpecialArgs = {
                 inherit userSettings;
