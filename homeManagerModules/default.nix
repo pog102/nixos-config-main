@@ -4,7 +4,7 @@
 
     ./pywal/pywal.nix
     ./wm/hyprland.nix
-    #pkgs/kde.nix
+    # pkgs/kde.nix
     ./editor/nvim.nix
     #gs/batsignal.nix
     ./nyaa/nyaa.nix
@@ -12,7 +12,7 @@
     ./shell/zsh.nix
     ./waybar/waybar.nix
     ./git.nix
-    #/pkgs/imv.nix
+    # /pkgs/imv.nix
     ./dunst.nix
     ./neofetch.nix
     ./term/foot.nix
@@ -25,7 +25,7 @@
     #/pkgs/ayurs/ags.nix
     #/pkgs/transg.nix
     ./firefox/firefox.nix
-    #/pkgs/kanshi.nix
+    #  /pkgs/kanshi.nix
     ./wallpaper/wallpaper.nix
   ];
   # pywal.enable = lib.mkDefault true;

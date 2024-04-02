@@ -2,7 +2,7 @@
 
 let
   # wallp = import ../../pkgs/pywal/wallp.nix;
-  wallp = import (if userSettings.theme == "wal" then ../../pkgs/pywal/wallp.nix else ../../pkgs/calp.nix) { inherit pkgs; };
+  wallp = import (if userSettings.theme == "wal" then ../pywal/wallp.nix else ../calp.nix) { inherit pkgs; };
   # wallp = import ../../pkgs/calp.nix {inherit pkgs;};
 
   # wallp = pkgs.pkgs.writeShellScript "wallp" ''
