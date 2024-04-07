@@ -7,7 +7,6 @@
     # pkgs/kde.nix
     ./editor/nvim.nix
     #gs/batsignal.nix
-    ./nyaa/nyaa.nix
     ./trangs-tui/transg.nix
     ./shell/zsh.nix
     ./waybar/waybar.nix

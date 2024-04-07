@@ -7,6 +7,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # transg-tui.url = "github:PanAeon/transg-tui";
     # nixos.url = "nixpkgs/23.11-beta";
+    nyaa = {
+      url = "github:Beastwick18/nyaa";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
