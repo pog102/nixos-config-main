@@ -1,11 +1,12 @@
-{ lib, config, pkgs, ... }:
+{ inputs, lib, config, pkgs, ... }:
 {
   options = {
     nyaa.enable = lib.mkEnableOption "enable nyaa file";
   };
   config = lib.mkIf config.nyaa.enable {
-    home.packages = with pkgs; [ (pkgs.callPackage ./default.nix { }) ];
-
+    home.packages = with pkgs; [
+      inputs.nyaa.packages.x86_64-linux.default
+    ];
     #   home.file.".config/nyaa/config.toml".text = ''
     # default_category = "AllCategories"
     # default_filter = "NoFilter"
@@ -21,10 +22,6 @@
     # [client.command]
     # cmd = "transadd \"{magnet}\""
     # shell_cmd = "sh -c"
-
-
-
-
     #   '';
   };
 }

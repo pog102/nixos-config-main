@@ -11,7 +11,8 @@
   pywal.enable = true;
   hyprland.enable = true;
   nvim.enable = true;
-  # transg.enable = true;
+  transg.enable = true;
+  nyaa.enable = true;
   zsh.enable = true;
   waybar.enable = true;
   git.enable = true;
@@ -82,8 +83,6 @@
     # font-awesome
     dejavu_fonts
     liberation_ttf
-    inputs.nyaa.packages.x86_64-linux.default
-    inputs.trans.packages.x86_64-linux.default
     fira-code
     source-han-code-jp
     fira-code-symbols

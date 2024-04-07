@@ -1,10 +1,12 @@
-{ lib, config, pkgs, ... }:
+{ lib, config, inputs, pkgs, ... }:
 {
   options = {
     transg.enable = lib.mkEnableOption "enable transg file";
   };
   config = lib.mkIf config.transg.enable {
-    home.packages = with pkgs; [ (pkgs.callPackage ./default.nix { }) ];
+    home.packages = with pkgs; [
+      inputs.trans.packages.x86_64-linux.default
+    ];
 
     home.file.".config/transg/transg-tui.toml".text = ''
       refresh_interval = 1200
