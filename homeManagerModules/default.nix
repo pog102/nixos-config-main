@@ -7,7 +7,7 @@
     # pkgs/kde.nix
     ./editor/nvim.nix
     #gs/batsignal.nix
-    ./trangs-tui/transg.nix
+    # ./trangs-tui/transg.nix
     ./shell/zsh.nix
     ./waybar/waybar.nix
     ./git.nix

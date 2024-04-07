@@ -7,6 +7,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # transg-tui.url = "github:PanAeon/transg-tui";
     # nixos.url = "nixpkgs/23.11-beta";
+    trans = {
+      url = "github:PanAeon/transg-tui";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nyaa = {
       url = "github:Beastwick18/nyaa";
       inputs.nixpkgs.follows = "nixpkgs";
