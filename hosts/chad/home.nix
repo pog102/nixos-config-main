@@ -83,7 +83,7 @@
     # font-awesome
     dejavu_fonts
     liberation_ttf
-    ytui-music
+    # ytui-music
     fira-code
     source-han-code-jp
     fira-code-symbols
