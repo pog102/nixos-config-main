@@ -70,7 +70,7 @@ in
         rpc-password = "pwd";
         rpc-port = 9091;
         rpc-url = "/transmission/";
-        rpc-username = "transmission";
+        rpc-username = "chad";
         rpc-whitelist = "127.0.0.1";
         rpc-whitelist-enabled = false;
         scrape-paused-torrents-enabled = true;
