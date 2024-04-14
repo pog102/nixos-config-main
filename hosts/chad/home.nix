@@ -93,8 +93,8 @@
       transmission-remote -U --add "$@" && notify-send -i trans "Transmission" "Torrent added."
     '')
     # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
-    (pkgs.callPackage ../../homeManagerModules/ytui/default.nix { })
-    # (pkgs.callPackage ../../pkgs/temp/default.nix { })
+    # (pkgs.callPackage ../../homeManagerModules/ytui/default.nix { })
+    (pkgs.callPackage ../../homeManagerModules/rofi-games/default.nix { })
 
     (pkgs.makeDesktopItem {
       name = "torrent";
