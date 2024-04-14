@@ -94,7 +94,8 @@
     '')
     # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
     # (pkgs.callPackage ../../homeManagerModules/ytui/default.nix { })
-    (pkgs.callPackage ../../homeManagerModules/rofi-games/default.nix { })
+
+    # (pkgs.callPackage ../../homeManagerModules/rofi-games/default.nix { })
 
     (pkgs.makeDesktopItem {
       name = "torrent";

@@ -12,6 +12,7 @@
 
     home.packages = [
       pkgs.rofi-wayland
+      # pkgs.rofi-calc
     ];
 
     home.file.".local/share/fonts" = {

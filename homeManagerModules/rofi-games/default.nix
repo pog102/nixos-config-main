@@ -9,9 +9,16 @@ pkgs.rustPlatform.buildRustPackage rec {
     owner = "Rolv-Apneseth";
     repo = pname;
     rev = version;
-    hash = "";
+    hash = "sha256-YsrckS89riQgW4xGcSwQUeRQileOldMTXPICsaLOfbk=";
   };
-  cargoHash = "";
+  nativeBuildInputs = [ pkgs.pkg-config ];
+  buildInputs = with pkgs; [
+    glib
+    cairo
+    pango
+  ];
+  # cargoBuildFlags = [ "RUSTFLAGS=\"--cfg rofi_next\"" ];
+  cargoHash = "sha256-MPg7/Er69KAvNF1eGjj5CLczhgJtY6sKqGSmu7cCrjA=";
   #    cargoLock = {
   #   lockFile = "${src}/Cargo.lock";
   # };
