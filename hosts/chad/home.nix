@@ -63,6 +63,7 @@
     sassc
     fzf
     zip
+    nh
     # rnix-lsp
     unzip
     libnotify
@@ -175,6 +176,7 @@
   #
   home.sessionVariables = {
     BROWSER = "firefox";
+    FLAKE = "/home/chad/nixos2/";
     THEME = "${userSettings.theme}";
   };
   xdg.enable = true;
