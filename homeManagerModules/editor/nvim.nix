@@ -241,6 +241,7 @@
               nix = [ "nixpkgs_fmt" ];
               bash = [ "shellcheck" ];
               sh = [ "shellcheck" ];
+              c = [ "clang-format" ];
               # Conform will run multiple formatters sequentially
               # Use a sub-list to run only the first available formatter
               # Use the "*" filetype to run formatters on all filetypes.
@@ -386,6 +387,7 @@
           servers = {
             # tailwindcss.enable = true;
             tsserver.enable = true;
+            clangd.enable = true;
             nixd.enable = true;
             html.enable = true;
             bashls.enable = true;

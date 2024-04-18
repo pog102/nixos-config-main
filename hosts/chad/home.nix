@@ -65,6 +65,7 @@
     zip
     nh
     # rnix-lsp
+    rocmPackages.llvm.clang-tools-extra
     unzip
     libnotify
     swww
