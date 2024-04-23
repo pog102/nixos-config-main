@@ -64,6 +64,8 @@
     fzf
     zip
     nh
+    # youtube-dl
+
     # rnix-lsp
     rocmPackages.llvm.clang-tools-extra
     unzip
