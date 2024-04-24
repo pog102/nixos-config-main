@@ -327,14 +327,22 @@
                 extraConfig = {
                   colored = true;
 
-                  # diff_color = {
-                  #   # added = "green";
-                  #   # modified = "LuaLineDiffChange";
-                  #   # removed = "LuaLineDiffDelete";
-                  #   # added = "LuaLineDiffAdd";
-                  #   # modified = "LuaLineDiffChange";
-                  #   # removed = "LuaLineDiffDelete";
-                  # };
+                  diff_color = {
+                    added = {
+                      fg = "#98be65";
+                    };
+                    modified = {
+
+                      fg = "#ECBE7B";
+                    };
+                    removed = {
+
+                      fg = "#ec5f67";
+                    };
+                    # added = "LuaLineDiffAdd";
+                    # modified = "LuaLineDiffChange";
+                    # removed = "LuaLineDiffDelete";
+                  };
 
                   symbols = {
                     added = " ";
