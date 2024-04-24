@@ -327,14 +327,14 @@
                     "nvim_diagnostic"
                     "nvim_lsp"
                   ];
-                  diagnostics_color = {
-                    error = "DiagnosticError";
-                    warn = "DiagnosticWarn";
-                    info = "DiagnosticInfo";
-                    hint = "DiagnosticHint";
-                    # fg = "#b4befe";
-                    bg = "grey";
-                  };
+                  # diagnostics_color = {
+                  #   error = "DiagnosticError";
+                  #   warn = "DiagnosticWarn";
+                  #   info = "DiagnosticInfo";
+                  #   hint = "DiagnosticHint";
+                  #   # fg = "#b4befe";
+                  #   bg = "grey";
+                  # };
                   # colored = false;
                   symbols = {
                     error = " ";
@@ -343,17 +343,17 @@
                     hint = "󰝶 ";
                   };
                 };
-                # color = {
-                #   #   fg =
-                #   #     # if config.colorschemes.base16.enable
-                #   #     # then colors.base08
-                #   #     # else "none";
-                #   # bg = "ctermbg";
-                #   # bg = "grey";
-                #   #     # if config.colorschemes.base16.enable
-                #   #     # then colors.base00
-                #   #     # else "none";
-                # };
+                color = {
+                  #   fg =
+                  #     # if config.colorschemes.base16.enable
+                  #     # then colors.base08
+                  #     # else "none";
+                  # bg = "ctermbg";
+                  # bg = "grey";
+                  #     # if config.colorschemes.base16.enable
+                  #     # then colors.base00
+                  #     # else "none";
+                };
               }
             ];
 
