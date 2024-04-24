@@ -316,7 +316,24 @@
             ];
 
             lualine_b = [
-              { }
+              {
+                name = "branch";
+                extraConfig = {
+                  icon = "";
+                };
+              }
+              {
+                # file_status = true;
+                extraConfig = {
+                  symbols = {
+                    # modified = " ";
+                    modified = "";
+                    readonly = "";
+                    unnamed = "";
+                  };
+                };
+                name = "filename";
+              }
             ];
 
             lualine_c = [
@@ -373,17 +390,7 @@
               }
             ];
             lualine_y = [
-              {
-                name = "filename";
-                # file_status = true;
-                extraConfig = {
-                  symbols = {
-                    modified = "";
-                    readonly = "";
-                    unnamed = "";
-                  };
-                };
-              }
+              { }
               # "filetype"
               # "progress"
               # separator.right = "";
