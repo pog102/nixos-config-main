@@ -45,7 +45,7 @@
     #format = "%i%s %b"
     # Allow some HTML tags like <i> and <u> in notifications
     markup = full
-	#bar 
+	#bar
     progress_bar_frame_width = 1
     #frame_color = "{color3}"
 
@@ -54,9 +54,9 @@
     progress_bar_max_corner_radius = 40
     transparency = 73
 [shortcuts]
-    close = ctrl+space
-    close_all = ctrl+shift+space
-    history = ctrl+h
+    close = Ctrl+Space
+    close_all = Ctrl+shift+Space
+    history = Ctrl+h
 [urgency_low]
     background ="{background}"
     #foreground ="{color3}"

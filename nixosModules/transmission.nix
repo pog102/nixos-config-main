@@ -2,9 +2,9 @@
 
 let
   tornoty = pkgs.pkgs.writeShellScript "tornoty" ''
-    #!/bin/sh
-      notify-send -i trans "Transmission" "$TR_TORRENT_NAME has completely downloaded" ## && polybar-msg action "#torrents.hook.0"  #&& pkill -SIGRTMIN+2 i3blocks
-    # transmission-remote -l | awk '$2 == "100%"{ system("transmission-remote -t " $1 " --remove") }'
+    touch /home/chad/works
+        notify-send -i trans "Transmission" "$TR_TORRENT_NAME has completely downloaded"  ## && polybar-msg action "#torrents.hook.0"  #&& pkill -SIGRTMIN+2 i3blocks
+      # transmission-remote -l | awk '$2 == "100%"{ system("transmission-remote -t " $1 " --remove") }'
   '';
 in
 {
@@ -14,8 +14,8 @@ in
   config = lib.mkIf config.transmission.enable {
     services.transmission = {
       enable = true;
-      # user = "chad";
-      openRPCPort = true; #Open firewall for RPC
+      user = "chad";
+      # openRPCPort = true; #Open firewall for RPC
       settings = {
         #Override default settings
         # home = "/home/chad";
@@ -77,6 +77,7 @@ in
         # scrape-paused-torrents-enabled = true;
         script-torrent-done-enabled = true;
         script-torrent-done-filename = "${tornoty}";
+        # script-torrent-done-filename = "/home/chad/tor";
         # seed-queue-enabled = true;
         # seed-queue-size = 1;
         # speed-limit-down = 100;

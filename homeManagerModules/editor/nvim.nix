@@ -302,6 +302,9 @@
         comment-nvim.enable = true;
         lualine = {
           enable = true;
+          disabledFiletypes = {
+            statusline = [ "dashboard" "alpha" ];
+          };
           sectionSeparators.left = "";
           sectionSeparators.right = "";
           componentSeparators.left = "";
@@ -316,7 +319,71 @@
               { }
             ];
 
+            lualine_c = [
+              {
+                name = "diagnostics";
+                extraConfig = {
+                  sources = [
+                    "nvim_diagnostic"
+                    "nvim_lsp"
+                  ];
+                  diagnostics_color = {
+                    error = "DiagnosticError";
+                    warn = "DiagnosticWarn";
+                    info = "DiagnosticInfo";
+                    hint = "DiagnosticHint";
+                    # fg = "#b4befe";
+                    bg = "grey";
+                  };
+                  # colored = false;
+                  symbols = {
+                    error = " ";
+                    warn = " ";
+                    info = " ";
+                    hint = "󰝶 ";
+                  };
+                };
+                # color = {
+                #   #   fg =
+                #   #     # if config.colorschemes.base16.enable
+                #   #     # then colors.base08
+                #   #     # else "none";
+                #   # bg = "ctermbg";
+                #   # bg = "grey";
+                #   #     # if config.colorschemes.base16.enable
+                #   #     # then colors.base00
+                #   #     # else "none";
+                # };
+              }
+            ];
+
+
+
+            lualine_x = [
+              {
+                name = "fileformat";
+                extraConfig = {
+                  symbols = {
+                    unix = "";
+                    dos = "";
+                    mac = "";
+                  };
+                };
+
+              }
+            ];
             lualine_y = [
+              {
+                name = "filename";
+                # file_status = true;
+                extraConfig = {
+                  symbols = {
+                    modified = "";
+                    readonly = "";
+                    unnamed = "";
+                  };
+                };
+              }
               # "filetype"
               # "progress"
               # separator.right = "";
@@ -324,6 +391,7 @@
             ];
             lualine_z = [
               {
+                name = "location";
                 # separator.right = "";
                 # padding.left=2;
               }

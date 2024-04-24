@@ -12,7 +12,7 @@
       ../../nixosModules
       # ./settings.nix
     ];
-  nvidia.enable = true;
+  # nvidia.enable = true;
   transmission.enable = true;
   cpu.enable = true;
   steam.enable = true;

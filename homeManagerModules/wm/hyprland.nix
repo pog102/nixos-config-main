@@ -146,7 +146,7 @@ in
         # exec-once= ''${start}'';
         exec-once = [
           # "swww-daemon &"
-          "sleep 1 && swww init &"
+          "sleep 0.1 && swww init &"
           "waybar"
         ];
         decoration = {
@@ -192,7 +192,11 @@ in
           enable_swallow = true;
           swallow_regex = "^(foot)$";
         };
-        layerrule = "blur,rofi";
+        layerrule = [
+          "blur,rofi"
+          # "animaion slide,dunst"
+          "noanim,dunst"
+        ];
 
         "$mod" = "SUPER";
         # source = (if (userSettings.wal) then "~/.config/hypr/myColors.conf" else "~/" );
@@ -224,6 +228,8 @@ in
         bind = [
 
 
+          "CTRL, h, exec, dunstctl history-pop"
+          "CTRL, G, exec, dunstctl close-all"
           "$mod, TAB, movetoworkspace, special"
           "$mod,S,togglespecialworkspace"
           "$mod,p,exec,grimblast copy area"
