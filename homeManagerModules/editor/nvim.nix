@@ -323,6 +323,27 @@
                 };
               }
               {
+                name = "diff";
+                extraConfig = {
+                  colored = true;
+
+                  # diff_color = {
+                  #   # added = "green";
+                  #   # modified = "LuaLineDiffChange";
+                  #   # removed = "LuaLineDiffDelete";
+                  #   # added = "LuaLineDiffAdd";
+                  #   # modified = "LuaLineDiffChange";
+                  #   # removed = "LuaLineDiffDelete";
+                  # };
+
+                  symbols = {
+                    added = " ";
+                    modified = "󰏬 ";
+                    removed = " ";
+                  };
+                };
+              }
+              {
                 # file_status = true;
                 extraConfig = {
                   symbols = {
