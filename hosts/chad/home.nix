@@ -9,6 +9,7 @@
   ];
 
   pywal.enable = true;
+  caligula.enable = true;
   hyprland.enable = true;
   nvim.enable = true;
   transg.enable = true;
