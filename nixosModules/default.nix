@@ -2,7 +2,7 @@
 {
   imports = [
     ./nvidia/nvidia.nix
-    ./transmission.nix
+    # ./transmission.nix
     ./cpu.nix
     ./steam.nix
     ./jellyfin/jellyfin.nix

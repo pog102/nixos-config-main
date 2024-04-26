@@ -358,7 +358,8 @@
                     # modified = " ";
                     modified = "";
                     readonly = "";
-                    unnamed = "";
+                    unnamed = "󰡯";
+                    newfile = "";
                   };
                 };
                 name = "filename";
@@ -420,16 +421,10 @@
             ];
             lualine_y = [
               { }
-              # "filetype"
-              # "progress"
-              # separator.right = "";
-              # padding.left=2;
             ];
             lualine_z = [
               {
                 name = "location";
-                # separator.right = "";
-                # padding.left=2;
               }
             ];
           };
@@ -439,10 +434,6 @@
             ];
 
             lualine_y = [
-              # "filetype"
-              # "progress"
-              # separator.right = "";
-              # padding.left=2;
             ];
             lualine_z = [
               {

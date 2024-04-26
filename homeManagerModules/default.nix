@@ -25,6 +25,7 @@
     #/pkgs/ayurs/ags.nix
     #/pkgs/transg.nix
     ./firefox/firefox.nix
+    ./transmission.nix
     #  /pkgs/kanshi.nix
     ./wallpaper/wallpaper.nix
   ];

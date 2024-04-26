@@ -13,7 +13,6 @@
       # ./settings.nix
     ];
   # nvidia.enable = true;
-  transmission.enable = true;
   cpu.enable = true;
   steam.enable = true;
   # jellyfin.enable = true;
