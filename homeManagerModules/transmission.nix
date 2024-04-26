@@ -8,9 +8,9 @@ let
 in
 {
   options = {
-    git.enable = lib.mkEnableOption "enable transmission";
+    transmission.enable = lib.mkEnableOption "enable transmission";
   };
-  config = lib.mkIf config.git.enable {
+  config = lib.mkIf config.transmission.enable {
 
     home.packages = [ pkgs.transmission ];
 
