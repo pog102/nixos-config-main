@@ -11,6 +11,11 @@
       url = "github:PanAeon/transg-tui";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    caligula = {
+      url = "github:ifd3f/caligula";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nyaa = {
       url = "github:Beastwick18/nyaa";
       inputs.nixpkgs.follows = "nixpkgs";

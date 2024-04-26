@@ -20,6 +20,8 @@
     ./wlsunset.nix
     ./mpv/mpv.nix
     ./rofi/rofi.nix
+    ./caligula.nix
+
     #/pkgs/btop.nix
     ./cursor.nix
     #/pkgs/ayurs/ags.nix
