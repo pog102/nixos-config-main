@@ -96,7 +96,7 @@
     (pkgs.writeShellScriptBin "transadd" ''
       #!/bin/sh
       # transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
-      pgrep -x transmission-da > /dev/null || transmission-daemon
+      if pgrep -x transmission-da > /dev/null || transmission-daemon && sleep 0.7 
       transmission-remote -U --add "$@" > /dev/null; notify-send -i trans "Transmission" "Torrent added."
     '')
     # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
