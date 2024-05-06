@@ -14,7 +14,7 @@
     ./git.nix
     # /pkgs/imv.nix
     ./dunst.nix
-    ./neofetch/neofetch.nix
+    # ./neofetch/neofetch.nix
     ./term/foot.nix
     ./lf/lf.nix
     ./wlsunset.nix

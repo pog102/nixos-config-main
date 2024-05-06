@@ -18,7 +18,7 @@
   waybar.enable = true;
   git.enable = true;
   dunst.enable = true;
-  neofetch.enable = true;
+  # neofetch.enable = true;
   foot.enable = true;
   lf.enable = true;
   wlsunset.enable = true;
@@ -56,6 +56,7 @@
     # wineWowPackages.stable
     # winetricks
     # brightnessctl
+    fastfetch
     chafa
     # libsixel
     nixd
@@ -87,6 +88,10 @@
     # texliveTeTeX
     #texliveFull
     # font-awesome
+    discord
+    # discord-ptb
+    # discord-canary
+
     dejavu_fonts
     liberation_ttf
     # ytui-music
@@ -96,7 +101,7 @@
     (pkgs.writeShellScriptBin "transadd" ''
       #!/bin/sh
       # transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
-      if pgrep -x transmission-da > /dev/null || transmission-daemon && sleep 0.7 
+      pgrep -x transmission-da > /dev/null || transmission-daemon && sleep 0.7 
       transmission-remote -U --add "$@" > /dev/null; notify-send -i trans "Transmission" "Torrent added."
     '')
     # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
