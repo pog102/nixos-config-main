@@ -2,9 +2,8 @@
 
 let
   tornoty = pkgs.pkgs.writeShellScript "tornoty" ''
-    touch /home/chad/works
-        notify-send -i trans "Transmission" "$TR_TORRENT_NAME has completely downloaded"  ## && polybar-msg action "#torrents.hook.0"  #&& pkill -SIGRTMIN+2 i3blocks
-      # transmission-remote -l | awk '$2 == "100%"{ system("transmission-remote -t " $1 " --remove") }'
+      notify-send -a trans -i trans "Transmission" "$TR_TORRENT_NAME has completely downloaded"  ## && polybar-msg action "#torrents.hook.0"  #&& pkill -SIGRTMIN+2 i3blocks
+    # transmission-remote -l | awk '$2 == "100%"{ system("transmission-remote -t " $1 " --remove") }'
   '';
 in
 {

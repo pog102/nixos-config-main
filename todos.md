@@ -14,7 +14,7 @@
 
 # Reconfigure somethings
 - [ ] [btop with color.nix and pywal.nix](./pkgs/btop.nix)
-- [ ] make lualine work with LSP
+- [✓] make lualine work with LSP
 - [✓] [update lualine for nixvim](./pkgs/editor/nvim.nix)
 - [ ] [make systemd sleep-hyrbitd work](./pkgs/systemd.nix)
 - [ ] one external monitor display

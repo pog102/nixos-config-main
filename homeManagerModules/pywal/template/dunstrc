@@ -53,6 +53,11 @@
     progress_bar_corner_radius = 20
     progress_bar_max_corner_radius = 40
     transparency = 73
+#[transmission]
+#   appname = trans
+#   summary = "*signed on*"
+#   urgency = low
+#   script = do_something.sh
 [shortcuts]
     close = Ctrl+Space
     close_all = Ctrl+shift+Space
