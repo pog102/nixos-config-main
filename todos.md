@@ -2,6 +2,7 @@
 - [✓] [transg-tui](https://github.com/PanAeon/transg-tui)
 - [✓] [caligula](https://github.com/ifd3f/caligula)
 - [ ] [wait for ags](https://aylur.github.io/ags-docs/config/installation/)
+    - [ ] [cool layout widget sewlector](https://raw.githubusercontent.com/mierak/mrkdots/master/preview.jpg)
 - [✓] [lf](https://github.com/gokcehan/lf)
 - [✓] [nixvim add lsp icons](./pkgs/editor/nvim.nix)
 - [⧖] [rofi games as a flake package](https://github.com/Rolv-Apneseth/rofi-games)
