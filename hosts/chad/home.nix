@@ -28,7 +28,7 @@
   firefox.enable = true;
   wallpaper.enable = true;
   transmission.enable = true;
-
+  # ags.enable = true;
   nixpkgs = {
     config = {
       allowUnfree = true;

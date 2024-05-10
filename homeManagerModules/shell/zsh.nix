@@ -59,9 +59,9 @@
           # _comp_options+=(globdots)	
 
 
-             if [ ! -f /tmp/.neofetch ]; then
-            touch /tmp/.neofetch
-            neofetch
+             if [ ! -f /tmp/.fastfetch ]; then
+            touch /tmp/.fastfetch
+            fastfetch
           fi
           # HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 

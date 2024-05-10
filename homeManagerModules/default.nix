@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ ... }:
 {
   imports = [
 
@@ -15,6 +15,7 @@
     # /pkgs/imv.nix
     ./dunst.nix
     # ./neofetch/neofetch.nix
+    # ./ayurs/ags.nix
     ./term/foot.nix
     ./lf/lf.nix
     ./wlsunset.nix
