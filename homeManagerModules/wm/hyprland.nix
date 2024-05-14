@@ -138,7 +138,7 @@ in
       enable = true;
       plugins = [
         # ... whatever
-        inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+        # inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
       ];
       settings = {
         env = [
