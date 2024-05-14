@@ -19,7 +19,8 @@
       settings = {
         main = {
 
-          font = "Hack Nerd Font:size=13";
+          # font = "Hack Nerd Font:size=13";
+          font = "JetBrainsMono Nerd Font:size=13";
           # font = "Font Awesome 6 Brands Regular:size=15";
           pad = "20x20";
           dpi-aware = "no";

@@ -15,6 +15,7 @@
   # nvidia.enable = true;
   cpu.enable = true;
   steam.enable = true;
+  docker.enable = true;
   # jellyfin.enable = true;
 
   # Bootloader.

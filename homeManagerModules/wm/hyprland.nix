@@ -1,4 +1,4 @@
-{ config, userSettings, lib, pkgs, ... }:
+{ config, userSettings, lib, pkgs, inputs, ... }:
 
 let
   # wallp = import ../../pkgs/pywal/wallp.nix;
@@ -108,7 +108,9 @@ icon="sun"
   '';
 in
 {
-  options = { hyprland.enable = lib.mkEnableOption "enable hyprland"; };
+  options = {
+    hyprland.enable = lib.mkEnableOption "enable hyprland";
+  };
   config = lib.mkIf config.hyprland.enable {
     home.packages = [
       (pkgs.writeScriptBin "power" ''
@@ -134,6 +136,10 @@ in
     ];
     wayland.windowManager.hyprland = {
       enable = true;
+      plugins = [
+        # ... whatever
+        inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+      ];
       settings = {
         env = [
           # "LIBVA_DRIVER_NAME,nvidia"
