@@ -17,7 +17,6 @@
   waybar.enable = true;
   git.enable = true;
   dunst.enable = true;
-  # neofetch.enable = true;
   foot.enable = true;
   lf.enable = true;
   wlsunset.enable = true;
