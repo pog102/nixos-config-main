@@ -12,7 +12,29 @@ in
   };
   config = lib.mkIf config.transmission.enable {
 
-    home.packages = [ pkgs.transmission ];
+    home.packages = [
+      pkgs.transmission
+
+      (pkgs.writeShellScriptBin "transadd" ''
+        #!/bin/sh
+        # transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
+        pgrep -x transmission-da > /dev/null || transmission-daemon && sleep 0.3
+        transmission-remote -U --add "$@" > /dev/null; notify-send -i trans "Transmission" "Torrent added."
+      '')
+
+      (pkgs.makeDesktopItem {
+        name = "torrent";
+        desktopName = "Torrent";
+        exec = "transadd  %U";
+        terminal = false;
+        noDisplay = true;
+        type = "Application";
+        mimeTypes = [
+          "application/x.bittorrent"
+          "x-scheme-handler/magnet"
+        ];
+      })
+    ];
 
     home.file.".config/transmission-daemon/settings.json".text = ''
       {

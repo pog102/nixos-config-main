@@ -12,7 +12,6 @@
   caligula.enable = true;
   hyprland.enable = true;
   nvim.enable = true;
-  transg.enable = true;
   nyaa.enable = true;
   zsh.enable = true;
   waybar.enable = true;
@@ -28,6 +27,7 @@
   firefox.enable = true;
   wallpaper.enable = true;
   transmission.enable = true;
+  transg.enable = true;
   # ags.enable = true;
   nixpkgs = {
     config = {
@@ -98,29 +98,10 @@
     fira-code
     source-han-code-jp
     fira-code-symbols
-    (pkgs.writeShellScriptBin "transadd" ''
-      #!/bin/sh
-      # transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
-      pgrep -x transmission-da > /dev/null || transmission-daemon && sleep 0.3
-      transmission-remote -U --add "$@" > /dev/null; notify-send -i trans "Transmission" "Torrent added."
-    '')
     # (pkgs.callPackage ../../pkgs/caligula/default.nix { })
     # (pkgs.callPackage ../../homeManagerModules/ytui/default.nix { })
 
     # (pkgs.callPackage ../../homeManagerModules/rofi-games/default.nix { })
-
-    (pkgs.makeDesktopItem {
-      name = "torrent";
-      desktopName = "Torrent";
-      exec = "transadd  %U";
-      terminal = false;
-      noDisplay = true;
-      type = "Application";
-      mimeTypes = [
-        "application/x.bittorrent"
-        "x-scheme-handler/magnet"
-      ];
-    })
 
 
 
