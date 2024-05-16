@@ -31,6 +31,8 @@
   transg.enable = true;
 
   # ags.enable = true;
+
+
   nixpkgs = {
     config = {
       allowUnfree = true;

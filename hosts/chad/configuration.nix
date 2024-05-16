@@ -15,6 +15,10 @@
   # nvidia.enable = true;
   cpu.enable = true;
   steam.enable = true;
+  # idk but some package 
+  # adds it to its dependency
+  programs.nano.enable = false;
+
   # docker.enable = true;
   # jellyfin.enable = true;
 
