@@ -90,14 +90,25 @@ function read_log(func)
     f:close()
     return list
 end
-
 function read_log_table()
     return read_log(function(line)
         local t, p
         t, p = line:match("^.-\"(.-)\" | (.*)$")
+        -- Check if directory exists
+        if p and not utils.file_info(p) then
+            return nil
+        end
         return {title = t, path = p}
     end)
 end
+
+-- function read_log_table()
+--     return read_log(function(line)
+--         local t, p
+--         t, p = line:match("^.-\"(.-)\" | (.*)$")
+--         return {title = t, path = p}
+--     end)
+-- end
 
 -- Write path to log on file end
 -- removing duplicates along the way

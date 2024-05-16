@@ -12,11 +12,13 @@
       ../../nixosModules
       # ./settings.nix
     ];
+  # Currently using NVK drivers
   # nvidia.enable = true;
   cpu.enable = true;
   steam.enable = true;
   # idk but some package 
   # adds it to its dependency
+  # or its the default for nixos 
   programs.nano.enable = false;
 
   # docker.enable = true;
