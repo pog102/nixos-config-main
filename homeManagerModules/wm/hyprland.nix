@@ -108,10 +108,23 @@ icon="sun"
   '';
 in
 {
+  imports = [
+    ../waybar/waybar.nix
+    ../dunst.nix
+    ../rofi/rofi.nix
+  ];
+
   options = {
     hyprland.enable = lib.mkEnableOption "enable hyprland";
+    hyprland.waybar.enable = lib.mkEnableOption "enable hyprland";
+    hyprland.dunst.enable = lib.mkEnableOption "enable hyprland";
+    hyprland.rofi.enable = lib.mkEnableOption "enable hyprland";
   };
   config = lib.mkIf config.hyprland.enable {
+    waybar.enable = config.hyprland.waybar.enable;
+    dunst.enable = config.hyprland.dunst.enable;
+    rofi.enable = config.hyprland.rofi.enable;
+    # waybar.enable = true;
     home.packages = [
       (pkgs.writeScriptBin "power" ''
         #!/bin/sh

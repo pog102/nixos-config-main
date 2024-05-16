@@ -10,17 +10,15 @@
     ./trangs-tui/transg.nix
     ./nyaa/nyaa.nix
     ./shell/zsh.nix
-    ./waybar/waybar.nix
+    # ./waybar/waybar.nix
     ./git.nix
     # /pkgs/imv.nix
-    ./dunst.nix
     # ./neofetch/neofetch.nix
     # ./ayurs/ags.nix
     ./term/foot.nix
     ./lf/lf.nix
     ./wlsunset.nix
     ./mpv/mpv.nix
-    ./rofi/rofi.nix
     ./caligula.nix
 
     #/pkgs/btop.nix
