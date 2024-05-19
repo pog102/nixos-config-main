@@ -48,7 +48,8 @@
           "Home Manager NixOs" = {
             urls = [
               {
-                template = "https://mipmip.github.io/home-manager-option-search/";
+                # template = "https://mipmip.github.io/home-manager-option-search/";
+                template = "https://home-manager-options.extranix.com/";
                 params = [
                   {
                     name = "query";
@@ -63,7 +64,7 @@
           "NixVim" = {
             urls = [
               {
-                template = "https://nix-community.github.io/nixvim/?search=lf";
+                template = "https://nix-community.github.io/nixvim/";
                 params = [
 
                   # {

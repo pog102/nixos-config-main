@@ -149,7 +149,19 @@
       };
 
       plugins = {
-        # toggleterm.enable=true;
+        toggleterm = {
+          enable = true;
+          settings = {
+            # direction = "float";
+            # float_opts = {
+            #   border = "curved";
+            #   height = 30;
+            #   width = 130;
+            # };
+            # open_mapping = "[[<c-/]]";
+            open_mapping = "[[<c-\\>]]";
+          };
+        };
         sniprun = {
           enable = true;
           display = [
@@ -398,12 +410,23 @@
           sectionSeparators.right = "";
           componentSeparators.left = "";
           componentSeparators.right = "";
-
+          # inactiveSections = {
+          #   lualine_b = [
+          #     {
+          #       name = "filename";
+          #     }
+          #   ];
+          # };
           sections = {
             lualine_a = [
-              { }
-            ];
+              {
 
+                name = "mode";
+                extraConfig = {
+                  icon = "";
+                };
+              }
+            ];
             lualine_b = [
               {
                 name = "branch";
@@ -451,6 +474,8 @@
                     newfile = "";
                   };
                 };
+                # icon = get_icon()
+                icons_enabled = true;
                 name = "filename";
               }
             ];
