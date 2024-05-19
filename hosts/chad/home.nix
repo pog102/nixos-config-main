@@ -172,7 +172,7 @@
   #
   home.sessionVariables = {
     BROWSER = "firefox";
-    FLAKE = "/home/chad/nixos2/";
+    FLAKE = "/home/chad/nixos-config-main/";
     THEME = "${userSettings.theme}";
   };
   xdg.enable = true;
