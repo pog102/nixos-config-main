@@ -14,7 +14,6 @@
     ./git.nix
     # /pkgs/imv.nix
     # ./neofetch/neofetch.nix
-    # ./ayurs/ags.nix
     ./term/foot.nix
     ./lf/lf.nix
     ./wlsunset.nix
@@ -23,7 +22,7 @@
 
     #/pkgs/btop.nix
     ./cursor.nix
-    #/pkgs/ayurs/ags.nix
+    ./ayurs/ags.nix
     #/pkgs/transg.nix
     ./firefox/firefox.nix
     ./transmission.nix

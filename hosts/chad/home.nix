@@ -30,7 +30,7 @@
   transmission.enable = true;
   transg.enable = true;
 
-  # ags.enable = true;
+  ags.enable = true;
 
 
   nixpkgs = {
@@ -84,7 +84,9 @@
     # android-studio
     wl-clipboard
     papirus-icon-theme
-    nerdfonts
+    # (nerdfonts.override {fonts = {"JetBreainsMono"}};)
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    # (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
     rustc
     cargo
     pkg-config

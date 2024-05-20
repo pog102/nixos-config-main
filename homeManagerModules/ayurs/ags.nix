@@ -1,11 +1,11 @@
 { config, inputs, lib, pkgs, ... }:
 {
   # add the home manager module
+  imports = [ inputs.ags.homeManagerModules.default ];
   options = {
     ags.enable = lib.mkEnableOption "enable ags file";
   };
   config = lib.mkIf config.ags.enable {
-    imports = [ inputs.ags.homeManagerModules.default ];
 
     programs.ags = {
       enable = true;
@@ -15,7 +15,9 @@
 
       # additional packages to add to gjs's runtime
       extraPackages = with pkgs; [
-        libsoup_3
+        gtksourceview
+        webkitgtk
+        accountsservice
       ];
     };
     #  home.file.".config/ags/style.css".text = ''

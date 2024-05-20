@@ -1,4 +1,4 @@
-{ userSettings, self, inputs, config, lib, pkgs, ... }:
+{ inputs, config, lib, pkgs, ... }:
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
@@ -343,6 +343,7 @@
               bash = [ "shellcheck" ];
               sh = [ "shellcheck" ];
               c = [ "clang-format" ];
+              javascript = [ "prettier" "prettierd" ];
               # Conform will run multiple formatters sequentially
               # Use a sub-list to run only the first available formatter
               # Use the "*" filetype to run formatters on all filetypes.
