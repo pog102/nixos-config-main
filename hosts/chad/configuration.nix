@@ -21,6 +21,7 @@
   # or its the default for nixos 
   programs.nano.enable = false;
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   # docker.enable = true;
   # jellyfin.enable = true;
 
@@ -110,7 +111,6 @@
   #     xkb.variant = "";
   #   };
 
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
   # programs.hyprland.enable = true;
 
   # home-manager."chad" = {
