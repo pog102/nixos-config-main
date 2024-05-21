@@ -255,7 +255,8 @@ in
           "$mod, Return, exec, foot"
           "$mod, W, exec, ${wallp}"
           "$mod, M, exec, ${rofi-pow}"
-          "$mod, D, exec, rofi -show drun -theme gloss -cache-dir /tmp/rofi &"
+          # "$mod, D, exec, rofi -show drun -theme gloss -cache-dir /tmp/rofi &"
+          "$mod, D, exec, rofi -show drun -theme gloss &"
           "$mod, F, fullscreen"
           "$mod, Space, togglefloating"
 
