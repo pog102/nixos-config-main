@@ -12,7 +12,10 @@
 - [ ] [try headlines.nvim](https://github.com/lukas-reineke/headlines.nvim) ?
 - [ ] if u gonna do waybar then add a script for showing and notifying battery status
 - [ ] add wine for windows applications like nvidia app, ps5 controlle
-
+# Follow
+- [ligatues for foot](https://codeberg.org/dnkl/foot/issues/57)
+- [foot fullscreen transparency is directed by wayland](https://gitlab.freedesktop.org/wayland/wayland-protocols/-/issues/116)
+-
 # Reconfigure somethings
 - [ ] [btop with color.nix and pywal.nix](./pkgs/btop.nix)
 - [✓] make lualine work with LSP
