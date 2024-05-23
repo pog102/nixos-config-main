@@ -85,9 +85,10 @@
     wl-clipboard
     papirus-icon-theme
     # (nerdfonts.override {fonts = {"JetBreainsMono"}};)
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
     # (pkgs.nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
     rustc
+    gcc
     cargo
     pkg-config
     # pandoc

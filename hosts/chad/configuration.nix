@@ -29,7 +29,32 @@
   # boot.loader.grub.enable = true;
   # boot.loader.grub.device = "nodev";
   # boot.loader.efi.efiSysMountPoint = "/boot";
+  # boot.loader.grub.useOSProber = true;
+  boot.loader = {
+    timeout = 3;
 
+    efi = {
+      efiSysMountPoint = "/boot";
+    };
+
+    grub = {
+      enable = true;
+      version = 2;
+
+      efiSupport = true;
+      # efiInstallAsRemovable = true; # Otherwise /boot/EFI/BOOT/BOOTX64.EFI isn't generated
+      devices = [ "nodev" ];
+      extraEntriesBeforeNixOS = true;
+      # extraEntries = ''
+      #   menuentry "Reboot" {
+      #     reboot
+      #   }
+      #   menuentry "Poweroff" {
+      #     halt
+      #   }
+      # '';
+    };
+  };
   # swapDevices = [ {
   #     device = "/var/lib/swapfile";
   #     size = 5*1024;
@@ -77,11 +102,11 @@
 
   #  boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    #systemd-boot.configurationLimit = 3;
-  };
+  # boot.loader = {
+  #   systemd-boot.enable = true;
+  #   efi.canTouchEfiVariables = true;
+  #   #systemd-boot.configurationLimit = 3;
+  # };
   networking.hostName = "nixos"; # Define your hostname.
 
   # Configure network proxy if necessary
