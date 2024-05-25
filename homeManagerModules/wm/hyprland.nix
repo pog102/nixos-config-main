@@ -300,6 +300,8 @@ in
           "$mod, mouse:272, movewindow"
           "$mod, mouse:273, resizewindow"
 
+          # "$mod CTRL, mouse:272, resizeactive, 0 -20"
+          # "$mod CTRL, mouse:273, resizeactive, 0 20"
 
         ];
         binde = [

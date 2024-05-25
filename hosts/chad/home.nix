@@ -96,6 +96,7 @@
     #texliveFull
     # font-awesome
     discord
+    bottles
     # discord-ptb
     # discord-canary
 

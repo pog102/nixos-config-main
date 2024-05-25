@@ -10,6 +10,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../nixosModules
+      ../../nixosModules/gnomenetwork.nix
       # ./settings.nix
     ];
   # Currently using NVK drivers
@@ -20,10 +21,10 @@
   # adds it to its dependency
   # or its the default for nixos 
   programs.nano.enable = false;
-
+  programs.dconf.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   # docker.enable = true;
-  # jellyfin.enable = true;
+  jellyfin.enable = true;
 
   # Bootloader.
   # boot.loader.grub.enable = true;

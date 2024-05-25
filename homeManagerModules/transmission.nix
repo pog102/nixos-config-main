@@ -16,10 +16,11 @@ in
       pkgs.transmission
 
       (pkgs.writeShellScriptBin "transadd" ''
-        #!/bin/sh
-        # transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
-        pgrep -x transmission-da > /dev/null || transmission-daemon && sleep 0.3
-        transmission-remote -U --add "$@" > /dev/null; notify-send -i trans "Transmission" "Torrent added."
+                #!/bin/sh
+                # transmission-remote -w "/home/chad/Downloads" -U --add "$@" && notify-send "Transmission" "Torrent added."
+                pgrep -x transmission-da > /dev/null || transmission-daemon && sleep 0.3
+                transmission-remote -U --add "$@" > /dev/null; notify-send -i trans "Transmission" "Torrent added."
+        	exit
       '')
 
       (pkgs.makeDesktopItem {
