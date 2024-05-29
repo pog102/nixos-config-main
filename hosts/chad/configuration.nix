@@ -10,21 +10,21 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../nixosModules
-      ../../nixosModules/gnomenetwork.nix
+      # ../../nixosModules/gnomenetwork.nix
       # ./settings.nix
     ];
   # Currently using NVK drivers
   # nvidia.enable = true;
   cpu.enable = true;
   steam.enable = true;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
   # idk but some package 
   # adds it to its dependency
   # or its the default for nixos 
   programs.nano.enable = false;
-  programs.dconf.enable = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # programs.dconf.enable = true;
   # docker.enable = true;
-  jellyfin.enable = true;
+  # jellyfin.enable = true;
 
   # Bootloader.
   # boot.loader.grub.enable = true;

@@ -149,6 +149,17 @@
       };
 
       plugins = {
+        headlines = {
+          enable = true;
+          settings = {
+            markdown = {
+              headline_highlights = [
+                "Headline1"
+              ];
+            };
+
+          };
+        };
         toggleterm = {
           enable = true;
           settings = {

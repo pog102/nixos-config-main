@@ -15,7 +15,9 @@
 # Follow
 - [ligatues for foot](https://codeberg.org/dnkl/foot/issues/57)
 - [foot fullscreen transparency is directed by wayland](https://gitlab.freedesktop.org/wayland/wayland-protocols/-/issues/116)
--
+- [would be cool for a file manager](https://github.com/yorukot/superfile)
+    - [file preview](https://github.com/yorukot/superfile/issues/26)
+
 # Reconfigure somethings
 - [ ] [btop with color.nix and pywal.nix](./pkgs/btop.nix)
 - [✓] make lualine work with LSP
