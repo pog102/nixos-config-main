@@ -10,11 +10,16 @@
       # autoGroups = {};
       autoCmd = [
 
-        {
-          event = [ "BufWritePre" ];
-          pattern = [ "*" ];
-          callback = { __raw = "function(args) require('conform').format({ bufnr = args.buf }) end"; };
-        }
+        # {
+        #   event = [ "BufWinLeave" ];
+        #   pattern = [ "*" ];
+        #   callback = { __raw = "mkview"; };
+        # }
+        # {
+        #   event = [ "BufWinEnter" ];
+        #   pattern = [ "*" ];
+        #   callback = { __raw = "silent! loadview"; };
+        # }
         {
           event = [ "bufnewfile" ];
           pattern = [ "*.nix" ];
@@ -150,7 +155,7 @@
 
       plugins = {
         headlines = {
-          enable = true;
+          enable = false;
           settings = {
             markdown = {
               headline_highlights = [
@@ -412,7 +417,7 @@
           # keymaps = {
           # };
         };
-        comment-nvim.enable = true;
+        comment.enable = true;
         lualine = {
           enable = true;
           disabledFiletypes = {
@@ -674,7 +679,8 @@
           };
         };
       };
-      options = {
+      opts = {
+        # options = {
         incsearch = true; # Select items found in search
         hlsearch = true; # Highlight searches by default
         ignorecase = true; # Ignore case when searching
@@ -682,6 +688,7 @@
         number = true;
         relativenumber = false;
         showmode = false;
+        # nofoldenable = false;
         undofile = true;
         breakindent = true; # Keep indentation for wrapped lines
         autoindent = true; # Enable auto-indentation
@@ -689,6 +696,10 @@
         softtabstop = 0; # Use hard tabs alwaysShowBufferline
         swapfile = false; # Enable swap files
         clipboard = "unnamedplus";
+        foldmethod = "expr";
+        foldexpr = "nvim_treesitter#foldexpr()";
+        foldlevel = 20;
+        # foldenable = false;
         fillchars = {
           eob = " ";
         };
@@ -704,7 +715,11 @@
         end
       '';
       extraConfigVim = ''
-
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 
 		      au BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
