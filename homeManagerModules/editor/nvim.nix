@@ -21,6 +21,11 @@
         #   callback = { __raw = "silent! loadview"; };
         # }
         {
+          event = [ "BufWritePre" ];
+          pattern = [ "*" ];
+          callback = { __raw = "function(args) require('conform').format({ bufnr = args.buf }) end"; };
+        }
+        {
           event = [ "bufnewfile" ];
           pattern = [ "*.nix" ];
           command = "0r ~/.config/nvim/templates/skel.nix";
@@ -51,14 +56,14 @@
         #     silent = true;
         #   };
         # }
-        {
-          action = ":IncRename ";
-          key = "q";
-          mode = "n";
-          options = {
-            # silent = true;
-          };
-        }
+        # {
+        #   action = ":IncRename ";
+        #   key = "q";
+        #   mode = "n";
+        #   options = {
+        #     # silent = true;
+        #   };
+        # }
         {
           action = "<cmd>lua require('luasnip').jump(1)<CR>";
           key = "<C-L>";
@@ -84,8 +89,8 @@
           };
         }
         {
-          action = "<cmd>Lf<CR>";
-          key = "tt";
+          action = "<cmd>Neotree toggle<CR>";
+          key = "q";
           mode = "n";
           options = {
             silent = true;
@@ -145,7 +150,7 @@
       extraPlugins = with pkgs.vimPlugins; [
         # gkeep-nvim
         # headlines-nvim
-        lf-vim
+        # lf-vim
       ];
 
       clipboard.providers.wl-copy = {
@@ -154,6 +159,22 @@
       };
 
       plugins = {
+        neo-tree = {
+          enable = true;
+
+          # useDefaultMappings = { __raw = "[\"ee\"] = \"close_window\""; };
+          # useDefaultMappings = false;
+          # useDefaultMappings = ''lua
+          #   	 ["ee"] = "close_window"
+          #   	 '';
+          # callback = { __raw = "function(args) require('conform').format({ bufnr = args.buf }) end"; };
+
+        };
+        nvim-ufo = {
+          foldVirtTextHandler = "V";
+          enable = true;
+
+        };
         headlines = {
           enable = false;
           settings = {
@@ -198,7 +219,7 @@
           # browser = "firefox";
         };
         inc-rename = {
-          enable = true;
+          # enable = true;
           # inputBufferType = "dressing";
         };
         dap = {
