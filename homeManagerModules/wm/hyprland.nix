@@ -252,6 +252,7 @@ in
           "$mod, TAB, movetoworkspace, special"
           "$mod,S,togglespecialworkspace"
           "$mod,p,exec,grimblast copy area"
+          # "$mod,v,overview:toggle"
           "$mod, Return, exec, foot"
           "$mod, W, exec, ${wallp}"
           "$mod, M, exec, ${rofi-pow}"

@@ -2,6 +2,7 @@
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ./plug.nix
   ];
   options = { nvim.enable = lib.mkEnableOption "enable hyprland"; };
   config = lib.mkIf config.nvim.enable {
