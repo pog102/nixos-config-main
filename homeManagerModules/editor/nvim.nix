@@ -639,9 +639,14 @@
             nixd.enable = true;
             html.enable = true;
             bashls.enable = true;
-            cssls.enable = true;
-            lua-ls.enable = true;
 
+            cssls = {
+              enable = true;
+            };
+            lua-ls = {
+              enable = true;
+              # settings.hint.enable = true;
+            };
           };
 
         };
@@ -661,9 +666,9 @@
             ];
             window = {
               completion = {
-                winhighlight =
-                  # "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
-                  "FloatBorder:CmpBorder,Normal:CmpBorder";
+                # winhighlight =
+                #   # "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
+                #   "FloatBorder:CmpBorder,Normal:CmpBorder";
                 # winhighlight = "Normal:CmpPmenu,FloatBorder:CmpPmenuBorder,CursorLine:PmenuSel,Search:None";
                 scrollbar = false;
                 sidePadding = 0;
@@ -672,8 +677,8 @@
 
               documentation = {
                 border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
-                winhighlight =
-                  "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
+                # winhighlight =
+                #   "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
                 # "FloatBorder:CmpBorder,Normal:CmpPmenu,CursorLine:CmpSel,Search:PmenuSel";
               };
             };
