@@ -40,7 +40,7 @@
 
       keymaps = [
 
-        # { 
+        # {
         #     action = "!xdg-open <cfile><CR>";
         #     key = "gx";
         # mode = "n";
@@ -226,8 +226,8 @@
         dap = {
           enable = false;
 
-          #       configurations ={ 
-          #       typescript = 
+          #       configurations ={
+          #       typescript =
           #       {
           #
           #        name = "Debug with Firefox";
@@ -698,9 +698,8 @@
               #     "s"
               #   ];
               # };
-              "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-              "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-
+              "<Up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+              "<Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
 
             };
           };
@@ -735,6 +734,10 @@
       };
       # enableMan = true;
       extraConfigLua = ''
+
+
+
+
         local signs = { Error = "", Warn = "", Hint = "", Info = " " }
         for type, icon in pairs(signs) do
           local hl = "DiagnosticSign" .. type
@@ -742,13 +745,12 @@
         end
       '';
       extraConfigVim = ''
+                      au BufReadPost *
+                            \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
+                                \ execute("normal `\"") |
+                            \ endif
 
-		      au BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
-        \ execute("normal `\"") |
-    \ endif
-
-                      '';
+      '';
     };
 
     #environment.variables.EDITOR = "nvim";
