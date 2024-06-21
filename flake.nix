@@ -7,18 +7,16 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # transg-tui.url = "github:PanAeon/transg-tui";
     # nixos.url = "nixpkgs/23.11-beta";
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      # inputs.nixpkgs.follows = "nixpkgs";
-      inputs.hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
-    };
-    Hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-
-      # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
-      inputs.hyprland.follows = "hyprland";
-    };
+    # hyprland = {
+    #   url = "github:hyprwm/Hyprland";
+    #   # inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    #
+    # };
+    # Hyprspace = {
+    #   url = "github:KZDKM/Hyprspace";
+    #   inputs.hyprland.follows = "hyprland";
+    # };
     trans = {
       url = "github:PanAeon/transg-tui";
       inputs.nixpkgs.follows = "nixpkgs";

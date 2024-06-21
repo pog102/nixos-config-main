@@ -10,6 +10,9 @@
     programs.nyaa = {
       enable = true;
       download_client = "RunCommand";
+      # download_client = "Transmission";
+      # download_client = "cmd";
+
       date_format = "%Y-%m-%d %Hh";
       scroll_padding = 6;
       source = {
@@ -21,8 +24,10 @@
         };
       };
       client.cmd = {
-        cmd = "transadd \"{magnet}\"";
-        shell_cmd = "sh -c";
+        cmd = ''transadd "{magnet}"'';
+        # cmd = ''notify-send me'';
+        # cmd = ''curl "{torrent}" > ~/{file}'';
+        # shell_cmd = "bash -c";
       };
     };
   };
