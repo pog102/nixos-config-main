@@ -7,7 +7,7 @@
   config = lib.mkIf config.zsh.enable {
     programs = {
 
-      autojump = {
+      zoxide = {
         enable = true;
         enableZshIntegration = true;
       };
@@ -17,6 +17,7 @@
         shellAliases = {
           ll = "ls -l";
           n = "nvim";
+          cd = "z";
           trans = "transgression-tui";
           ssh = "TERM=linux ssh";
           man = "batman";

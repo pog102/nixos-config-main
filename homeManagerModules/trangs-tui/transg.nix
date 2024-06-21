@@ -7,7 +7,7 @@ let
         transmission-remote -t all -S > /dev/null 2>&1
         ;;
       d)
-        transmission-remote -t all -r > /dev/null 2>&1
+        transmission-remote -t all -rad > /dev/null 2>&1
         ;;
       *)
         usage
