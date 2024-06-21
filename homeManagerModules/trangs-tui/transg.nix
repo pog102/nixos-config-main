@@ -1,4 +1,22 @@
 { lib, config, inputs, pkgs, ... }:
+let
+  trans_all = pkgs.pkgs.writeShellScript "trans_all" ''
+    #!/bin/sh
+    case "$1" in
+      p)
+        transmission-remote -t all -S > /dev/null 2>&1
+        ;;
+      d)
+        transmission-remote -t all -r > /dev/null 2>&1
+        ;;
+      *)
+        usage
+        ;;
+    esac
+
+  '';
+
+in
 {
   options = {
     transg.enable = lib.mkEnableOption "enable transg file";
@@ -35,6 +53,18 @@
       shortcut = "o"
       cmd = "mpv"
       args = ["--fs", "--no-terminal", "{download_dir}/{name}", "&>/dev/null" ]
+
+      [[actions]]
+      description = "Delete everthing"
+      shortcut = "r"
+      cmd = "${trans_all}"
+      args = [ "r" ]
+
+      [[actions]]
+      description = "Pause everthing"
+      shortcut = "P"
+      cmd = "${trans_all}"
+      args = [ "p" ]
 
       # [[actions]]
       # description = "terminal"
