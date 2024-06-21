@@ -31,16 +31,16 @@
 
 
       [[actions]]
-      description = "open in nautilus"
+      description = "open in mpv"
       shortcut = "o"
       cmd = "mpv"
       args = ["--fs", "--no-terminal", "{download_dir}/{name}", "&>/dev/null" ]
 
-      [[actions]]
-      description = "terminal"
-      shortcut = "t"
-      cmd = "notify-send"
-      args = ["exec", "--", "foot", "--working-directory", "\"{location}\""]
+      # [[actions]]
+      # description = "terminal"
+      # shortcut = "t"
+      # cmd = "notify-send"
+      # args = ["exec", "--", "foot", "--working-directory", "\"{location}\""]
 
       # Actions for individual files
       [[file-actions]]

@@ -24,7 +24,7 @@
   programs.nano.enable = false;
   # programs.dconf.enable = true;
   # docker.enable = true;
-  jellyfin.enable = true;
+  # jellyfin.enable = true;
 
   # Bootloader.
   # boot.loader.grub.enable = true;
