@@ -31,9 +31,9 @@
           up = "sudo nixos-rebuild switch --flake .#default";
         };
         initExtraFirst = ''
-          export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop" "man" "bat")
-          export AUTO_NOTIFY_TITLE=" : %command"
-          export AUTO_NOTIFY_BODY="󱎫 : %elapsed s"
+          #export AUTO_NOTIFY_IGNORE=("mpv" "firefox" "n" "btop" "man" "bat")
+          #export AUTO_NOTIFY_TITLE=" : %command"
+          #export AUTO_NOTIFY_BODY="󱎫 : %elapsed s"
 
 
 
@@ -74,15 +74,6 @@
         profileExtra = "if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then Hyprland; fi";
         plugins = [
 
-          # {
-          #    name = "zsh-history-substring-search";
-          #   src = pkgs.fetchFromGitHub {
-          #   owner = "zsh-users";
-          # repo = "zsh-history-substring-search";
-          # rev = "v1.1.0";
-          # sha256 = "0vjw4s0h4sams1a1jg9jx92d6hd2swq4z908nbmmm2qnz212y88r";
-          # };
-          # }
 
           # {
           #   # will source zsh-autosuggestions.plugin.zsh
