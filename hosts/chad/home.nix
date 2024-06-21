@@ -1,4 +1,4 @@
-{ userSettings, config, pkgs, ... }:
+{ userSettings, inputs, config, pkgs, ... }:
 {
   home.username = "chad";
   home.homeDirectory = "/home/chad";
@@ -17,7 +17,7 @@
   };
   caligula.enable = true;
   nvim.enable = true;
-  # nyaa.enable = true;
+  nyaa.enable = true;
   zsh.enable = true;
   git.enable = true;
   foot.enable = true;

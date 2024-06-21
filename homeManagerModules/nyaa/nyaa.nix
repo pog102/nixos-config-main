@@ -1,28 +1,30 @@
 { inputs, lib, config, pkgs, ... }:
 {
+  imports = [
+    inputs.nyaa.homeManagerModule
+  ];
   options = {
     nyaa.enable = lib.mkEnableOption "enable nyaa file";
   };
   config = lib.mkIf config.nyaa.enable {
-    home.packages = with pkgs; [
-      inputs.nyaa.packages.x86_64-linux.default
-    ];
-    #   home.file.".config/nyaa/config.toml".text = ''
-    # default_category = "AllCategories"
-    # default_filter = "NoFilter"
-    # default_sort = "Seeders"
-    # default_search = ""
-    # theme = "Default"
-    # source = "NyaaHtml"
-    # download_client = "command"
-    # date_format = "%Y-%m-%d %Hh"
-    # base_url = "https://nyaa.si/"
-    # timeout = 30
-    #
-    # [client.command]
-    # cmd = "transadd \"{magnet}\""
-    # shell_cmd = "sh -c"
-    #   '';
+    programs.nyaa = {
+      enable = true;
+      download_client = "RunCommand";
+      date_format = "%Y-%m-%d %Hh";
+      scroll_padding = 6;
+      source = {
+        torrentgalaxy = {
+          default_sort = "Seeders";
+        };
+        nyaa = {
+          default_sort = "Seeders";
+        };
+      };
+      client.cmd = {
+        cmd = "transadd \"{magnet}\"";
+        shell_cmd = "sh -c";
+      };
+    };
   };
 }
 
