@@ -88,11 +88,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1718997508,
-        "narHash": "sha256-JqchXAHNonZ6bcdoTtakrG2FZkcIr/BS3cminkOwNz8=",
+        "lastModified": 1719061621,
+        "narHash": "sha256-AnVbJ0ISitTEHVO+efQFC0esMa3dm6WnOrswpgDCuCk=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "624030a82042d5a32cb081552e0d1776f0d19fca",
+        "rev": "9884f5e34a6576af76a523c6be891757b05bc5f5",
         "type": "gitlab"
       },
       "original": {
@@ -342,11 +342,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1718983978,
-        "narHash": "sha256-lp6stESwTLBZUQ5GBivxwNehShmBp4jqeX/1xahM61w=",
+        "lastModified": 1719037157,
+        "narHash": "sha256-aOKd8+mhBsLQChCu1mn/W5ww79ta5cXVE59aJFrifM8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c559542f0aa87971a7f4c1b3478fe33cc904b902",
+        "rev": "cd886711998fe5d9ff7979fdd4b4cbd17b1f1511",
         "type": "github"
       },
       "original": {
@@ -516,11 +516,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1719006090,
-        "narHash": "sha256-F+NQKR0OZWeKYbfnSl311KzDRVJwZNSBds5TKa7c5X0=",
+        "lastModified": 1719089849,
+        "narHash": "sha256-4On9pdZBjTGO4cWh1yFyRzfplQ/sc+xHnL6jc6r2L4g=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6553473774770bf658e9bc15aa22323695495652",
+        "rev": "4d61bb6cf2d7082b395c559894444f69c9b2cbe4",
         "type": "github"
       },
       "original": {
@@ -590,11 +590,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1718979027,
-        "narHash": "sha256-xj33owEyv36Hm8w6B+v24CUN7OkHMDhHOjVMnNtHw/U=",
+        "lastModified": 1719042662,
+        "narHash": "sha256-xwj8hxu02myIPkNsch/v2NbxuRmuvlcphrbYPECE49c=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "4e224d27ae0db889f92ef228ad6cb984b91777fb",
+        "rev": "49452662b7b4dd2467cbac19e0f9820d570d8976",
         "type": "github"
       },
       "original": {
@@ -611,11 +611,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1718693247,
-        "narHash": "sha256-+/83YFyYeU4JLuT1+quPx5j5hNGHJwJgQForH3DBr8E=",
+        "lastModified": 1719059243,
+        "narHash": "sha256-HUwG/XaCveko6sW3eD3wbDZ/CW+Wm4HeEhcH4ObRALs=",
         "owner": "Beastwick18",
         "repo": "nyaa",
-        "rev": "0472a1c3e72e77f6926b9d05974294ed39074d30",
+        "rev": "e25c7618990243c1c9576aa6afa2ed6f1400c63a",
         "type": "github"
       },
       "original": {

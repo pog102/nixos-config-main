@@ -23,11 +23,15 @@
           default_sort = "Seeders";
         };
       };
+      # client.command = {
+      #   cmd = ''transadd "{magnet}"'';
+      #   shell_cmd = "sh -c";
+      # };
       client.cmd = {
         cmd = ''transadd "{magnet}"'';
         # cmd = ''notify-send me'';
         # cmd = ''curl "{torrent}" > ~/{file}'';
-        # shell_cmd = "bash -c";
+        shell_cmd = "sh -c";
       };
     };
   };

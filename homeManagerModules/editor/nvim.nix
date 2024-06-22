@@ -89,14 +89,14 @@
             silent = true;
           };
         }
-        {
-          action = "<cmd>Neotree toggle<CR>";
-          key = "q";
-          mode = "n";
-          options = {
-            silent = true;
-          };
-        }
+        # {
+        #   action = "<cmd>Neotree toggle<CR>";
+        #   key = "q";
+        #   mode = "n";
+        #   options = {
+        #     silent = true;
+        #   };
+        # }
         {
           action = "function() require('dap').continue()";
           key = "<F5>";
@@ -161,7 +161,7 @@
 
       plugins = {
         neo-tree = {
-          enable = true;
+          enable = false;
 
           # useDefaultMappings = { __raw = "[\"ee\"] = \"close_window\""; };
           # useDefaultMappings = false;
@@ -300,64 +300,57 @@
         #
         # };
         dashboard = {
-          enable = false;
-          header = [
-            ""
-            "⡿⠋⠄⣀⣀⣤⣴⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣌⠻⣿⣿"
-            "⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⣿"
-            "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠹"
-            "⣿⣿⡟⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡛⢿⣿⣿⣿⣮⠛⣿⣿⣿⣿⣿⣿⡆"
-            "⡟⢻⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣣⠄⡀⢬⣭⣻⣷⡌⢿⣿⣿⣿⣿⣿"
-            "⠃⣸⡀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠈⣆⢹⣿⣿⣿⡈⢿⣿⣿⣿⣿"
-            "⠄⢻⡇⠄⢛⣛⣻⣿⣿⣿⣿⣿⣿⣿⣿⡆⠹⣿⣆⠸⣆⠙⠛⠛⠃⠘⣿⣿⣿⣿"
-            "⠄⠸⣡⠄⡈⣿⣿⣿⣿⣿⣿⣿⣿⠿⠟⠁⣠⣉⣤⣴⣿⣿⠿⠿⠿⡇⢸⣿⣿⣿"
-            "⠄⡄⢿⣆⠰⡘⢿⣿⠿⢛⣉⣥⣴⣶⣿⣿⣿⣿⣻⠟⣉⣤⣶⣶⣾⣿⡄⣿⡿⢸"
-            "⠄⢰⠸⣿⠄⢳⣠⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣼⣿⣿⣿⣿⣿⣿⡇⢻⡇⢸"
-            "⢷⡈⢣⣡⣶⠿⠟⠛⠓⣚⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢸⠇⠘"
-            "⡀⣌⠄⠻⣧⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠛⠛⢿⣿⣿⣿⣿⣿⡟⠘⠄⠄"
-            "⣷⡘⣷⡀⠘⣿⣿⣿⣿⣿⣿⣿⣿⡋⢀⣠⣤⣶⣶⣾⡆⣿⣿⣿⠟⠁⠄⠄⠄⠄"
-            "⣿⣷⡘⣿⡀⢻⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣿⣿⣿⣿⣷⡿⠟⠉⠄⠄⠄⠄⡄⢀"
-            "⣿⣿⣷⡈⢷⡀⠙⠛⠻⠿⠿⠿⠿⠿⠷⠾⠿⠟⣛⣋⣥⣶⣄⠄⢀⣄⠹⣦⢹⣿"
-            ""
-          ];
-          center = [
-            {
-              icon = "  ";
-              desc = "Find File                               ";
-              action = "Telescope find_files find_command=rg,--hidden,--files";
-              shortcut = "SPC f f";
-            }
-            {
-              icon = "  ";
-              desc = "Recently opened                         ";
-              action = "Telescope oldfiles";
-              shortcut = "SPC f r";
-            }
-            {
-              icon = "פּ  ";
-              desc = "File browser                            ";
-              action = "NvimTreeToggle";
-              shortcut = "SPC f o";
-            }
-            {
-              icon = "  ";
-              desc = "Search for word                         ";
-              action = "Telescope live_grep";
-              shortcut = "SPC f g";
-            }
-            {
-              icon = "  ";
-              desc = "Help                                    ";
-              action = "Telescope help_tags";
-              shortcut = "SPC f h";
-            }
-            {
-              icon = "  ";
-              desc = "Commands                                ";
-              action = "Telescope commands";
-              shortcut = "SPC ?  ";
-            }
-          ];
+          enable = true;
+          settings = {
+            change_to_vcs_root = true;
+            config = {
+              footer = [
+                "Made with love"
+              ];
+              header = [
+                "███╗   ██╗██╗██╗  ██╗██╗   ██╗██╗███╗   ███╗"
+                "████╗  ██║██║╚██╗██╔╝██║   ██║██║████╗ ████║"
+                "██╔██╗ ██║██║ ╚███╔╝ ██║   ██║██║██╔████╔██║"
+                "██║╚██╗██║██║ ██╔██╗ ╚██╗ ██╔╝██║██║╚██╔╝██║"
+                "██║ ╚████║██║██╔╝ ██╗ ╚████╔╝ ██║██║ ╚═╝ ██║"
+                "╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝"
+              ];
+              mru = {
+                limit = 20;
+              };
+              project = {
+                enable = false;
+              };
+              shortcut = [
+                {
+                  action = {
+                    __raw = "function(path) vim.cmd('Telescope find_files') end";
+                  };
+                  desc = "Files";
+                  group = "Label";
+                  icon = " ";
+                  icon_hl = "@variable";
+                  key = "f";
+                }
+                # {
+                #   action = "Telescope app";
+                #   desc = " Apps";
+                #   group = "DiagnosticHint";
+                #   key = "a";
+                # }
+                # {
+                #   action = "Telescope dotfiles";
+                #   desc = " dotfiles";
+                #   group = "Number";
+                #   key = "d";
+                # }
+              ];
+              week_header = {
+                enable = true;
+              };
+            };
+            theme = "hyper";
+          };
         };
         mkdnflow = {
 
@@ -424,7 +417,27 @@
           highlights.indicatorSelected.underline = true;
           alwaysShowBufferline = false;
         };
-        indent-blankline.enable = true;
+        indent-blankline = {
+          enable = true;
+          settings = {
+            exclude = {
+              buftypes = [
+                "terminal"
+                "quickfix"
+              ];
+              filetypes = [
+                "checkhealth"
+                "help"
+                "lspinfo"
+                "packer"
+                "TelescopePrompt"
+                "TelescopeResults"
+                "dashboard"
+                "yaml"
+              ];
+            };
+          };
+        };
         nvim-colorizer.enable = true;
         treesitter = {
           enable = true;
@@ -745,10 +758,10 @@
         end
       '';
       extraConfigVim = ''
-                      au BufReadPost *
-                            \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
-                                \ execute("normal `\"") |
-                            \ endif
+        au BufReadPost *
+              \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
+                  \ execute("normal `\"") |
+              \ endif
 
       '';
     };
