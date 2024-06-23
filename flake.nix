@@ -5,6 +5,10 @@
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     #sops-nix.url = "github:Mic92/sops-nix";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixos-cosmic = {
+      url = "github:lilyinstarlight/nixos-cosmic";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # transg-tui.url = "github:PanAeon/transg-tui";
     # nixos.url = "nixpkgs/23.11-beta";
     # hyprland = {
@@ -83,6 +87,15 @@
                 inherit userSettings;
               };
             }
+
+            {
+              nix.settings = {
+                substituters = [ "https://cosmic.cachix.org/" ];
+                trusted-public-keys = [ "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE=" ];
+              };
+            }
+            inputs.nixos-cosmic.nixosModules.default
+
           ];
           specialArgs = {
             inherit inputs;

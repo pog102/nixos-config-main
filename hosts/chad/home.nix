@@ -15,6 +15,7 @@
     rofi.enable = true;
     dunst.enable = true;
   };
+
   caligula.enable = true;
   nvim.enable = true;
   nyaa.enable = true;
@@ -30,7 +31,7 @@
   transmission.enable = true;
   transg.enable = true;
 
-  ags.enable = true;
+  # ags.enable = true;
 
 
   nixpkgs = {

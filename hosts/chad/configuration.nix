@@ -14,9 +14,11 @@
       # ./settings.nix
     ];
   # Currently using NVK drivers
-  # nvidia.enable = true;
+  nvidia.enable = true;
   cpu.enable = true;
   steam.enable = true;
+  # services.desktopManager.cosmic.enable = true;
+  # services.displayManager.cosmic-greeter.enable = true;
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   # idk but some package 
   # adds it to its dependency
@@ -24,7 +26,7 @@
   programs.nano.enable = false;
   # programs.dconf.enable = true;
   # docker.enable = true;
-  jellyfin.enable = true;
+  # jellyfin.enable = true;
 
   # Bootloader.
   # boot.loader.grub.enable = true;
