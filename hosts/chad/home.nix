@@ -10,7 +10,7 @@
 
   pywal.enable = true;
   hyprland = {
-    enable = true;
+    # enable = true;
     waybar.enable = true;
     rofi.enable = true;
     dunst.enable = true;

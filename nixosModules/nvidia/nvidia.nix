@@ -1,9 +1,25 @@
 { config, lib, pkgs, ... }:
+let
+  nvidia-offload = pkgs.writeShellScriptBin "offload" ''
+    export __NV_PRIME_RENDER_OFFLOAD=1
+    export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
+    export __GLX_VENDOR_LIBRARY_NAME=nvidia
+    export __VK_LAYER_NV_optimus=NVIDIA_only
+    exec "$@"
+  '';
+in
 {
   options = {
     nvidia.enable = lib.mkEnableOption "enable nvidia file";
   };
   config = lib.mkIf config.nvidia.enable {
+    environment.systemPackages = with pkgs; [
+      nvidia-offload
+      pciutils
+    ];
+    # environment.sessionVariables = {
+    #   WLR_NO_HARDWARE_CURSORS = "1";
+    # };
     # Enable OpenGL
     hardware.graphics.enable = true;
 
@@ -13,7 +29,11 @@
     hardware.nvidia = {
       prime = {
         # reverseSync.enable = true;
-        offload.enable = true;
+        offload =
+          {
+            enable = true;
+            enableOffloadCmd = true;
+          };
         # Enable if using an external GPU
         allowExternalGpu = false;
         # offload ={
@@ -39,7 +59,7 @@
       # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
       # Only available from driver 515.43.04+
       # Currently alpha-quality/buggy, so false is currently the recommended setting.
-      open = true;
+      # open = true;
       # open = false;
 
       # Enable the Nvidia settings menu,

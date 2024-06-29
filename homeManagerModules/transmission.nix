@@ -13,7 +13,7 @@ in
   config = lib.mkIf config.transmission.enable {
 
     home.packages = [
-      pkgs.transmission
+      pkgs.transmission_4
 
       (pkgs.writeShellScriptBin "transadd" ''
                 #!/bin/sh
