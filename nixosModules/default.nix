@@ -7,6 +7,7 @@
     ./steam.nix
     ./jellyfin/jellyfin.nix
     ./docker.nix
+    ./kde.nix
   ];
   # pywal.enable = lib.mkDefault true;
   # hyprland.enable = lib.mkDefault true;

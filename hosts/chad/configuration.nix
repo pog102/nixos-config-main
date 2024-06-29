@@ -15,12 +15,12 @@
     ];
   # Currently using NVK drivers
   nvidia.enable = true;
-  services.switcherooControl.enable = true;
   cpu.enable = true;
   steam.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
-  services.xserver.displayManager.defaultSession = "plasma";
+  kde.enable = true;
+  services.switcherooControl.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
+  # jellyfin.enable = true;
   # services.desktopManager.cosmic.enable = true;
   # services.displayManager.cosmic-greeter.enable = true;
   # boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -30,7 +30,6 @@
   programs.nano.enable = false;
   # programs.dconf.enable = true;
   # docker.enable = true;
-  # jellyfin.enable = true;
 
   # Bootloader.
   # boot.loader.grub.enable = true;
